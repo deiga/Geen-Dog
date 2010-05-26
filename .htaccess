@@ -1,0 +1,5 @@
+# 1 Month
+<FilesMatch "\.(html|php|css|ico|gif|js|pdf|jpg|png)$">
+ExpiresDefault "access plus 1 month"
+</FilesMatch>
+

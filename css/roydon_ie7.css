@@ -1,0 +1,37 @@
+#links ul {
+	margin: 6%;
+	padding-left: 10%;
+}
+
+#uutiset p {
+	padding-left: 3%;
+}
+
+#otsake {	
+}
+
+#sivusisalto {
+}
+
+#mainsisalto {
+	/* height: 27em; */
+}
+
+#footer {
+	
+}
+
+#oikea .sisalto {
+    width: 90%;
+    height: 24em;
+}
+
+.sisalto {
+	/* height: 26em; */
+}
+
+.content fieldset {
+	padding: 1%;
+}
+
+

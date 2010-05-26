@@ -1,0 +1,103 @@
+<?php
+    session_start();
+	
+	if ($_SESSION['loggedIn'] != 1) {
+	   $_SESSION['loggedIn'] = 0;
+	}
+	
+	if($_SESSION['loggedIn'] == 0) {
+	   header('Location: http://roydon.fi/login/');
+	}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+	require('../php/functions.php');
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
+	<head>
+		<title>Yll&auml;pito - N&auml;yttelyn lis&auml;&auml;minen</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="author" content="Roydon Ky" />
+		<meta name="language" content="fi" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" type="text/css" href="http://roydon.fi/css/roydon.css" media="all" />
+		<link rel="icon" type="image/ico" href="http://roydon.fi/images/favicon.ico" />
+		<link rel="shortcut icon" type="image/ico" href="http://roydon.fi/images/favicon.ico" />
+		<!--[if IE 6]>
+			<link rel="stylesheet" type="text/css" href="http://roydon.fi/css/roydon_ie6.css" />
+		<![endif]-->
+		<!--[if IE 7]>
+			<link rel="stylesheet" type="text/css" href="http://roydon.fi/css/roydon_ie7.css" />
+		<![endif]-->
+		<!--[if lte IE 6]>
+			<link rel="stylesheet" type="text/css" href="http://roydon.fi/css/roydon_ie5.css" />
+		<![endif]-->
+	</head>
+	<body>
+		<div id="takala">
+			<div id="otsake">
+				<div>
+					<h1>roydon <br /> <span>Kenneltarvikkeet</span></h1>
+				</div>
+				<?php printMenu(0);?>
+			</div>
+			<div id="sivusisalto">
+				<div class="content">
+					<div class="add">
+						<form method="post" action="http://www.roydon.fi/login/addShow.php">
+							<fieldset>
+								<legend>N&auml;yttelyn lis&auml;&auml;minen</legend>
+								<label for="nimi">N&auml;yttelyn nimi:</label><input type="text" value="" id="nimi" name="nimi" />
+								<label for="paiva">N&auml;yttelyn alkamisp&auml;iv&auml;:</label><input class="time" type="text" value="P&auml;iv&auml;" id="paiva" name="paiva" onfocus="value=''" />
+                  <input class="time" type="text" value="Kuukausi" name="kk" id="kk" onfocus="value=''" />
+									<input class="time" type="text" id="vuosi" value="<?php echo date('Y')?>"  name="vuosi" />
+								<label for="kesto">N&auml;yttelyn kesto:</label><input type="text" value="1" name="kesto" id="kesto" />
+								<label for="link">Linkki n&auml;yttelyn kotisivuille:</label><input type="text" value="" name="link" id="link" />
+								<label for="paikka">N&auml;yttelyn paikkakunta:</label><input type="text" value="" name="paikka" id="paikka" />
+								<div id="buttons">
+									<input class="button" type="submit" value="L&auml;het&auml;" />
+								</div>
+								<label class="hiddenLabel" for="kk">Kuukausi</label>
+								<label class="hiddenLabel" for="vuosi">Vuosi</label>
+							</fieldset>
+						</form>
+						<?php
+							$link = connect();
+							if (!$link) {
+    								die('Could not connect: ' . mysql_error());
+							}
+							
+							$nimi = $_POST['nimi'];
+							$paiva = $_POST['paiva'];
+							$kk = $_POST['kk'];
+							$vuosi = $_POST['vuosi'];
+							$paikka = $_POST['paikka'];
+							$link = $_POST['link'];
+							$kesto = $_POST['kesto'];
+							$tbl = 'shows';
+							$db = 'roydonf_roydon';
+							$aika = date("Y-m-d", mktime(0,0,0,$kk,$paiva,$vuosi));
+							
+							$query = "INSERT INTO $db.$tbl(`paikka` ,`aika` ,`kesto` ,`nimi` ,`link`) VALUES ('$paikka', '$aika', '$kesto', '$nimi', '$link')";
+							$db_selected = mysql_select_db($db);
+							if (!$db_selected) {
+  							  die ("Can\'t use '$db' : " . mysql_error());
+							}
+							if (isset($nimi) && isset($paiva) && isset($kesto)) {
+								$result = mysql_query($query);
+							}
+							if (!$result && isset($result)) {
+  							 die('Invalid query: ' . mysql_error());
+							} else if ($result) {
+								echo "Lisäys onnistui!<br />";
+								echo "<a href=\"home.php\">Takaisin</a>";
+							}							
+						?>
+					</div>
+				</div>
+			</div>
+			<?php printFoot();?>
+		</div>
+	</body>
+</html>

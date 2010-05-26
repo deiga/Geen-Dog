@@ -1,0 +1,9 @@
+User-Agent: *
+Allow: /
+Disallow: /login/*
+Disallow: /php/*
+Disallow: /pohja.php
+
+User-Agent: *
+Allow: /sitemap.xml
+

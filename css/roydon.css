@@ -1,0 +1,516 @@
+/* General CSS */
+
+html, body {
+	font-family:Arial, sans-serif;
+	height: 100%;
+	width: auto;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:active {
+	background-color: inherit;
+	color: white;
+}
+
+a:hover {
+  background-color: inherit;
+  color: #006400;
+}
+
+a:visited {
+  background-color: inherit;
+  color: green;
+}
+
+a:link {
+	background-color: inherit;
+	color: green;
+}
+
+ul {
+	list-style-image: url('/images/button15.gif');
+}
+
+legend {
+  font-weight: bold;
+}
+
+#error {
+	color: red;
+	font-weight: bold;
+}
+#takala {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* Header stuff */
+
+#otsake {
+	width: 100%; 
+	background-color: green;
+	-moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  color: white;
+  position: relative;
+  text-align: center;
+  height: auto;
+}
+
+#otsake h1:first-line {
+	text-transform: uppercase;
+}
+	
+#otsake h1:first-letter {
+	font-size: 1.7em;
+}
+
+#otsake hr {
+	margin: 0% 10%;
+	color: white;
+}
+
+#lang {
+	text-align: right;
+	padding-right: 2%;
+	padding-top: 1%;
+	margin-bottom: -2%;
+	position: relative;
+}
+
+#lang a:hover {
+	color: #006400;
+}
+
+#lang a:link , #lang a:visited {
+	color: white;
+	font-weight: normal;
+}
+
+#otsikko h1 {
+	font-size: 4em;
+	margin-top: 2%;
+	padding-top: 1%;
+	margin-bottom: -2%;
+}
+
+#otsikko p {
+	font-weight: bold;
+	font-size: 1.1em;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+#navi {
+	font-size: 1.2em;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	text-align: left;
+	background-color: inherit;
+}
+
+#navilist {
+	list-style: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.navilistitem {
+	display: inline;
+	padding: 5px 10px 5px 10px;
+	border-top: 1px solid #006400;
+	border-left: 1px solid #006400;
+	border-right: 1px solid #006400;
+	-moz-border-radius-topleft: .5em;
+	-moz-border-radius-topright: .5em;
+	-webkit-border-top-left-radius: .5em;
+	-webkit-border-top-right-radius: .5em;
+  border-radius: .5em;
+}
+
+.navilistitem:hover {
+	background-color: #006400;
+	color: Green;
+}
+
+.navilistitem a:active { 
+	color: green;
+}					
+		
+.navilistitem a:hover {
+	color: green;
+}
+
+.navilistitem a:link , .navilistitem a:visited {
+  color: white;
+  font-weight: normal;
+}
+
+#navilist .currpage {
+  background-color: #d4d4d4;
+}
+
+#navi .currpage a:link , #navi .currpage a:visited {
+  color: #006400;
+}
+
+/* Content stuff */
+
+#mainsisalto , #sivusisalto , #errorsisalto {
+	position: relative;
+	min-height: 25em;
+	height: auto !important;
+	height: 25em;
+	padding-top: 0;
+	margin-top: 0;
+	margin-right: 0;
+	border-bottom: 1px solid #006400;
+	border-left: 1px solid #006400;
+	border-right: 1px solid #006400;
+}
+
+#errorsisalto {
+  margin-top: -1.7%;
+  padding: 0;
+}
+
+#vasen {
+	background-color: #d4d4d4;
+	color: inherit;
+	float:left;
+	width: 70%;
+	min-height: 25em;
+	position: absolute;
+	text-align: center;
+}
+	
+#oikea {
+	background-color: #d4d4d4;
+	color: inherit;
+	min-height:25em;
+	height: auto !important;
+	height: 25em;
+	position: absolute;
+	left:71%;
+	width: 29%;
+}
+
+#vasen , #oikea {
+	height: auto;
+}
+
+#lyhes {
+	text-align: left;
+	padding-left: 5%;
+}
+
+/* !Opera haxes begin */
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+  #otsake {
+    background:transparent url('/images/otsake_round.svg');
+  }
+  #navilist .currpage {
+    background: transparent url('/images/curr_round.svg');
+  }
+  #navilist .currpage:hover {
+    background: transparent url('/images/curr_round.svg');
+  }
+  .navilistitem {
+    border: none;
+    background: transparent url('/images/navi_round.svg');
+  }
+  #navi li:hover {
+    background:transparent url('/images/navi_hover_round.svg');
+  }
+  #oikea {
+    padding-right: 1px;
+  }
+}
+/* !Opera haxes end */
+		
+#uutiset {
+	margin: 0 5%;
+	padding: 1% 0 0;
+	height: 14em;
+	overflow-y: auto;
+}
+
+#uutiset .contentfield {
+	height: 90%;
+	border: 1px solid green;
+	margin: 0;
+	line-height: 1.5em;
+}
+
+#uutiset legend {
+	font-size: 1.2em;
+}
+
+#uutiset .uutinen:first-line {	
+	font-weight: bold;
+}
+
+#uutiset .uutinen {	
+	text-align: left;
+	overflow: inherit;
+	padding-left: 3%;
+	margin-bottom: 0;
+}
+
+#links h4 {
+    margin-bottom: 2%;
+}
+#links ul {
+    margin-top: 0;
+	margin-left: -5%;
+}
+
+#links li {
+    font-size: smaller;
+}
+
+/* Footer stuff */
+		
+#footer {
+	color:gray;
+	font-size: small;
+	margin: 0 auto;
+	width: 100%;
+	background-color: inherit;
+	position: relative;
+	text-align: center;
+}
+
+#footer a:active , #footer a:visited , #footer a {
+	color: #A9A9A9;
+}
+
+#footer a:hover {
+	text-decoration: underline;
+}
+
+#nayttely p {
+	margin-top: 1px;
+	text-align: right;
+}
+
+#nayttely h3 {
+	margin-bottom: 0;
+}
+
+#nayttely span {
+	padding: 3% 0 0 1%;
+	display: block;
+	font-size: medium;
+}
+			
+.sisalto {
+	margin: 0;
+	padding: 1em 1em 0;
+	overflow: auto;
+	height: 100%;
+}
+
+.content {	
+	background-color: #d4d4d4;
+	color: inherit;
+	min-height: 25em;
+	width: 100%;
+	text-align: left;
+	padding-top: 3%;
+	padding-bottom: 1px;
+}
+
+.contentfield {
+	border: 1px solid #006400; /*DarkGreen*/
+	padding-left: 1%;
+	margin: 0 10% 0 5%;
+	text-align: left;
+	line-height: 2em;
+}
+
+.content  p {
+	text-align: center;
+	padding-bottom: 1%;
+}
+
+.error {
+  text-align: left !important;
+  width: 60%;
+}
+
+.content span {
+	color: #006400; /*DarkGreen*/
+}
+
+.pretty-tbl { 
+	border-collapse: collapse; 
+	margin: 0 auto;
+}
+
+.pretty-tbl caption {
+	padding: 0 0 1% 1%;
+	caption-side: top;
+	text-align: left;
+	font-weight: bold;
+	min-width: 26em;
+}
+
+.pretty-tbl td, .pretty-tbl th {
+	padding: 0.3em;
+	text-align: center;
+	background-color: #006400; /*DarkGreen*/
+}
+
+.pretty-tbl td {
+	padding: 0.3em 0.8em;
+	background-color: #8FBC8F; /*DarkSeaGreen*/
+	border-bottom: 1px dashed #006400; /*DarkGreen*/
+}
+
+.pretty-tbl th {
+	border-bottom: 2px solid black;
+}
+
+.pretty-tbl a {
+	color: #006400; /*DarkGreen*/
+}
+
+.pretty-tbl tr.odd td {
+	background-color: #3CB371;
+}
+
+#login {
+	min-height: 10em;
+	height: auto !important;
+	height: 15em;
+	position: relative;
+}
+
+#login .content {
+  height: 15em;
+	padding-top: 2%;
+}
+
+#login .contentfield {
+	padding-left: 5%;
+}
+
+#loginform {
+	float: right;
+	width: auto;
+}
+#logTex {
+	float: left;
+	padding-left: 3%;
+	width: 60%;
+}
+
+#logTex p {
+	text-align: left;
+	padding-left: 2%;
+}
+
+#logintbl {
+	padding-right: 20%;
+}
+
+#login .contentfield legend {
+  font-size-adjust: 0.7;
+  margin-right: 10%;
+}
+
+.content > p , .content > h3 , .content > h2 {
+	padding-left: 5%;
+}
+
+.add input , .add select {
+	margin: 1.8em 0 0 0;
+	width: 47%;
+	clear: right;
+}
+
+.add label {
+	display: block;
+	float: left;
+	clear: left;
+	text-align: right;
+	width: 46%;
+	padding-top: 0.25em;
+	margin: 1em 5px 0 0;
+}
+
+.addd input:focus , select:focus {
+	border: 1px solid #006400; /*DarkGreen*/
+}
+
+.add fieldset {
+	padding: 1% 20px 20px;
+  	border: 1px solid #3E4A49;
+  	margin-right: 5%;
+}
+
+.add fieldset fieldset {
+	margin-bottom: 2%;
+}
+
+.add form {
+	border:2px solid #006400; /*DarkGreen*/
+	color:#3E4A49;
+	padding: 10px 20px 20px;
+	margin: 0px 20%;
+}
+
+.add #buttons {
+  text-align: right;
+  margin: -10px 0 -10px 0;
+}
+
+.add input.button {
+  width: auto;
+  background: #FFFFFF;
+  border: 2px solid #006400; /*DarkGreen*/
+}
+
+.add input.time {
+	width: 14%;
+	float: none;
+	margin: 1.8em 4px 0 0;
+}
+
+#years {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#yearslist {
+  list-style: none;
+  padding: 0;
+}
+
+.ylistI {
+  display: inline;
+	padding: 5px 10px;
+	margin: 2%;
+}
+
+.add .hiddenLabel {
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  float: left;
+  clear: none;
+  width: 0;
+}
+
+.add #addResult {
+	margin: 1% 20% 0 20%;
+	text-align: center;
+}
