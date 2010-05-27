@@ -1,5 +1,6 @@
 <?php	
-
+    require('arka.php');
+    
     function initSession() {
         session_start();
         
@@ -50,8 +51,6 @@
    	  	    	return $qer2;
    		} else return $qer;
 	}
-	
-	require('arka.php');
 	
 	// Function to print out the menu of a page. Languages are 0 = Finnish, 1 = English
 	function printMenu($lang = 0) {
