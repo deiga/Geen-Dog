@@ -1,5 +1,5 @@
 <?php
-	require('php/functions.php');
+	require_once "php/functions.php";
 	
 	echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>

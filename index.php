@@ -1,5 +1,6 @@
 <?php
-	require('php/functions.php');
+	require_once "php/functions.php";
+	
 	$link = connect();
 	if (!$link) {
     		die('Could not connect: ' . mysql_error());

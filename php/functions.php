@@ -1,6 +1,6 @@
 <?php	
-    require('arka.php');
-    
+    require_once "arka.php";
+
     function initSession() {
         session_start();
         

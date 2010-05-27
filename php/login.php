@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-	require('functions.php');
+	require_once "functions.php";
 	$link = connect();
 	if (!$link) {
     		die('Could not connect: ' . mysql_error());
