@@ -11,7 +11,7 @@
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
-	require('../php/functions.php');
+	require_once "../php/functions.php";
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
@@ -35,13 +35,17 @@
 	</head>
 	<body>
 		<div id="takala">
+		  <!-- !HEADER -->
 			<div id="otsake">
 				<div>
 					<h1>roydon <br /> <span>Kenneltarvikkeet</span></h1>
 				</div>
 				<?php printMenu(0);?>
 			</div>
+      <!-- !END HEADER -->
+		  <!-- !SIVUSISALTO -->
 			<div id="sivusisalto">
+		    <!-- !CONTENT -->
 				<div class="content">
 					<div class="add">
 						<form method="" action="http://roydon.fi/login/addNews.php">
@@ -95,8 +99,11 @@
 							 }	
             ?>             
 					</div>
-				</div>
-			</div>
+					<p id="back">
+					 <a href="/login" title="Back">&lt;&lt; Takaisin</a>
+				  </p>
+				</div> <!-- !END CONTENT -->
+			</div> <!-- !END SIVUSISALTO -->
 			<?php printFoot();?>
 		</div>
 	</body>

@@ -72,6 +72,12 @@ legend {
 	font-size: 1.7em;
 }
 
+#otsikko {
+margin: 0 auto;
+  width: 70%;
+  border-bottom: 1px solid white;
+}
+
 #otsake hr {
 	margin: 0% 10%;
 	color: white;
@@ -163,7 +169,7 @@ legend {
 
 /* Content stuff */
 
-#mainsisalto , #sivusisalto , #errorsisalto {
+#mainsisalto , #sivusisalto{
 	position: relative;
 	min-height: 25em;
 	height: auto !important;
@@ -174,11 +180,6 @@ legend {
 	border-bottom: 1px solid #006400;
 	border-left: 1px solid #006400;
 	border-right: 1px solid #006400;
-}
-
-#errorsisalto {
-  margin-top: -1.7%;
-  padding: 0;
 }
 
 #vasen {
@@ -513,4 +514,12 @@ legend {
 .add #addResult {
 	margin: 1% 20% 0 20%;
 	text-align: center;
+}
+
+#back {
+  width: 100%;
+  text-align: right;
+  padding: 0;
+  position: relative;
+  right: 3%;
 }

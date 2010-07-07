@@ -1,5 +1,9 @@
 <?php	
     require_once "arka.php";
+    
+    if (!date_default_timezone_set('Europe/Helsinki')) {
+      print("Fale");
+    }
 
     function initSession() {
         session_start();
@@ -56,7 +60,6 @@
 	function printMenu($lang = 0) {
   	$year = date('Y');
   	$month = date('m');
-		echo "<hr />\n";
 		echo "<div id=\"navi\">\n";
 		echo "			<ul id='navilist'>\n";
 		if ($lang == 1) {
