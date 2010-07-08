@@ -35,7 +35,7 @@
 				<?php printMenu(0);?>
 			</div>
 			<div id="sivusisalto">
-				<div class="content">
+				<div id="content">
 					<h2>404 - Sivua ei löytynyt</h2>
 					<p class="error">
 				    Sivua jolle yrititte ei ole olemassa tai sitä ei löydy tällä hetkellä.<br />

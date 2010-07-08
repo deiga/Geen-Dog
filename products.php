@@ -8,7 +8,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="Roydon Ky" />
 		<meta name="language" content="fi" />
-		<meta name="description" content="Listaus osasta kenneltarvikkeista, joita myymme. Varastotilanteita ei ilmoiteta, ottakaa yhteytt&auml; ja kysyk&auml;&auml;" />
+		<meta name="description" content="Listaus osasta kenneltarvikkeista, joita myymme. Varastotilanteita ei ilmoiteta, ottakaa yhteyttä ja kysykää" />
 		<meta name="keywords" content=" roydon, kennel tarvikkeet, koira tarvikkeet" />
 		<link rel="stylesheet" type="text/css" href="css/roydon.css" media="all" />
 		<link rel="icon" type="image/ico" href="images/favicon.ico" />
@@ -38,9 +38,9 @@
 				<?php printMenu(0);?>
 			</div>
 			<div id="sivusisalto">
-				<div class="content">
+				<div id="content">
 					<div>
-						T&auml;h&auml;n tulee listaus osasta tuotteista mit&auml; roydon myy, kaikkia tuotteita ei esitet&auml;, eik&auml; varastotilanteita ilmoiteta.
+						Tähän tulee listaus osasta tuotteista mitä roydon myy, kaikkia tuotteita ei esitetä, eikä varastotilanteita ilmoiteta.
 					</div>
 				</div>
 			</div>

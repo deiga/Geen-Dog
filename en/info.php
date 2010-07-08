@@ -38,7 +38,7 @@
 				<?php printMenu(1);?>
 			</div>
 			<div id="sivusisalto">
-				<div class="content">
+				<div id="content">
 					<div>
 						Here we will add the history of the company.
 					</div>

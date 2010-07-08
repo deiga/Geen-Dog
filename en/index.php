@@ -74,7 +74,7 @@
 								  <fieldset class="contentfield">
 									<legend>Uutiset</legend>';
                   while ($row = mysql_fetch_row($newsresult)) {
-										echo "<p class=\"uutinen\">\n".date_conv_short($row[0])." - $row[3] <br />\n$row[4]\n</p>";
+										echo "<p class='uutinen'>\n".date_conv_short($row[0])." - $row[3] <br />\n$row[4]\n</p>";
 									}
 								  echo '</fieldset>
                   </div>';
@@ -91,7 +91,7 @@
 								while ($row = mysql_fetch_row($showresult)) {
 								  /* row has 5 fields, 0 = Paikkakunta, 1 = date, 2 = length of show, 3 = Name of the show, 4 = link to homepage of show */
 									if (soonShow($row[1],$row[2])) {
-										echo date_conv($row[1], $row[2])." ".$row[0]."<br /><a href=\"$row[4]\" >$row[3]</a><br />\n";
+										echo date_conv($row[1], $row[2])." ".$row[0]."<br /><a href='$row[4]' >$row[3]</a><br />\n";
 										break;
 									}
 								}

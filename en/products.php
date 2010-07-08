@@ -38,7 +38,7 @@
 				<?php printMenu(1);?>
 			</div>
 			<div id="sivusisalto">
-				<div class="content">
+				<div id="content">
 					<div>
 						This page will be a listing of some of the products we sell. Not all products will be displayed, nor will we list how much we have in stock.
 					</div>

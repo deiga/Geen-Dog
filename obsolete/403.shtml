@@ -4,7 +4,7 @@
 		<title>403 - Forbidden page</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="Roydon Ky" />
-		<meta name="description" content="N&auml;yttelyit&auml; kiert&auml;v&auml; kenneltarvikeliike." />
+		<meta name="description" content="Näyttelyitä kiertävä kenneltarvikeliike." />
 		<meta name="keywords" content=" roydon, kennel tarvikkeet, koira tarvikkeet" />
 		<link rel="stylesheet" type="text/css" href="http://roydon.fi/css/roydon.css" media="all" />
 		<link rel="icon" type="image/ico" href="http://roydon.fi/images/favicon.ico" />
@@ -32,18 +32,18 @@
 				<hr />
 				<div id="navi">
 					<ul>
-						<li id='index' class='navilistitem'><a href="http://www.roydon.fi" title="Homepage">Etusivu</a></li>
+						<li id='index' class=''><a href="http://www.roydon.fi" title="Homepage">Etusivu</a></li>
 						<!--
-<li id='info' class='navilistitem'><a href="http://www.roydon.fi/info.php" title="About Us">Esittely</a></li>
-						<li id='products' class='navilistitem'><a href="http://www.roydon.fi/products.php" title="Products">Tuotteet</a></li>
+<li id='info' class=''><a href="http://www.roydon.fi/info.php" title="About Us">Esittely</a></li>
+						<li id='products' class=''><a href="http://www.roydon.fi/products.php" title="Products">Tuotteet</a></li>
 -->
-						<li id='nayttelyt' class='navilistitem'><a href="http://www.roydon.fi/nayttelyt.php" title="Attending dogshows">N&auml;yttelyt</a></li>
-						<li id='contact' class='navilistitem'><a href="http://www.roydon.fi/contact.php" title="Contact Us">Ota Yhteytt&auml;</a></li>
+						<li id='nayttelyt' class=''><a href="http://www.roydon.fi/nayttelyt.php" title="Attending dogshows">Näyttelyt</a></li>
+						<li id='contact' class=''><a href="http://www.roydon.fi/contact.php" title="Contact Us">Ota Yhteyttä</a></li>
 					</ul>
 				</div>
 			</div>
 			<div id="errorsisalto">
-				<div class="content">
+				<div id="content">
 					<h2>Pääsy sivulle estetty</h2>
 					<p class="error">Sivua jolle yrititte on salattu, tai kyseiseen kansioon ei ole pääsyä.<br />
 

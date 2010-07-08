@@ -23,7 +23,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="Roydon Ky" />
 		<meta name="description" content="Which dogshows we will be attending in finland in the year <?php echo $year; ?>" />
-		<meta name="keywords" content="roydon, kennel tarvikkeet, koira tarvikkeet, koira n&auml;yttely" />
+		<meta name="keywords" content="roydon, kennel tarvikkeet, koira tarvikkeet, koira näyttely" />
 		<link rel="stylesheet" type="text/css" href="http://roydon.fi/css/roydon.css" media="all" />
 		<link rel="icon" type="image/ico" href="http://roydon.fi/images/favicon.ico" />
 		<link rel="shortcut icon" type="image/ico" href="http://roydon.fi/images/favicon.ico" />
@@ -52,8 +52,8 @@
 				<?php printMenu(1);?>
 			</div>
 			<div id="sivusisalto">
-				<div class="content">
-						<table class="pretty-tbl" summary="Taulukko n&auml;kym&auml; tulevista n&auml;yttelyist&auml;.">
+				<div id="content">
+						<table class="pretty-tbl" summary="Taulukko näkymä tulevista näyttelyistä.">
 							<caption>You can find us at these dow shows in 
 							<?php
 							 if ($year == date('Y') ) {
@@ -82,12 +82,12 @@
 							while ($row = mysql_fetch_row($result)) {
 								if ($even % 2) {
 									/*
-echo "<tr><td>".date_conv($row[1], $row[2])."</td><td><a href=\"$row[4]\">$row[3]</a></td><td>$row[0]</td></tr>\n";
+echo "<tr><td>".date_conv($row[1], $row[2])."</td><td><a href='$row[4]'>$row[3]</a></td><td>$row[0]</td></tr>\n";
 								} else {
-									echo "<tr class=\"odd\"><td>".date_conv($row[1], $row[2])."</td><td><a href=\"$row[4]\" >$row[3]</a></td><td>$row[0]</td></tr>\n";
-*/echo "<tr><td headers='tblTime'>".date_conv($row[1], $row[2])."</td>\n<td headers='tblName'><a href=\"$row[4]\">$row[3]</a></td>\n<td headers='tblPlace'>$row[0]</td></tr>\n";
+									echo "<tr class='odd'><td>".date_conv($row[1], $row[2])."</td><td><a href='$row[4]' >$row[3]</a></td><td>$row[0]</td></tr>\n";
+*/echo "<tr><td headers='tblTime'>".date_conv($row[1], $row[2])."</td>\n<td headers='tblName'><a href='$row[4]'>$row[3]</a></td>\n<td headers='tblPlace'>$row[0]</td></tr>\n";
 						    		} else {
-						    			echo "<tr class=\"odd\"><td headers='tblTime'>".date_conv($row[1], $row[2])."</td><td headers='tblName'><a href=\"$row[4]\" >$row[3]</a></td><td headers='tblPlace'>$row[0]</td></tr>\n";
+						    			echo "<tr class='odd'><td headers='tblTime'>".date_conv($row[1], $row[2])."</td><td headers='tblName'><a href='$row[4]' >$row[3]</a></td><td headers='tblPlace'>$row[0]</td></tr>\n";
 								}
 								$even++;
 							}
@@ -104,12 +104,12 @@ echo "<tr><td>".date_conv($row[1], $row[2])."</td><td><a href=\"$row[4]\">$row[3
 							   while ($row = mysql_fetch_row($result)) {
 							   	if ($even % 2) {
 							   		/*
-echo "<tr><td>".date_conv($row[1], $row[2])."</td><td><a href=\"$row[4]\">$row[3]</a></td><td>$row[0]</td></tr>\n";
+echo "<tr><td>".date_conv($row[1], $row[2])."</td><td><a href='$row[4]'>$row[3]</a></td><td>$row[0]</td></tr>\n";
 							   	} else {
-							   		echo "<tr class=\"odd\"><td>".date_conv($row[1], $row[2])."</td><td><a href=\"$row[4]\" >$row[3]</a></td><td>$row[0]</td></tr>\n";
-*/echo "<tr><td headers='tblTime'>".date_conv($row[1], $row[2])."</td>\n<td headers='tblName'><a href=\"$row[4]\">$row[3]</a></td>\n<td headers='tblPlace'>$row[0]</td></tr>\n";
+							   		echo "<tr class='odd'><td>".date_conv($row[1], $row[2])."</td><td><a href='$row[4]' >$row[3]</a></td><td>$row[0]</td></tr>\n";
+*/echo "<tr><td headers='tblTime'>".date_conv($row[1], $row[2])."</td>\n<td headers='tblName'><a href='$row[4]'>$row[3]</a></td>\n<td headers='tblPlace'>$row[0]</td></tr>\n";
 						    		} else {
-						    			echo "<tr class=\"odd\"><td headers='tblTime'>".date_conv($row[1], $row[2])."</td><td headers='tblName'><a href=\"$row[4]\" >$row[3]</a></td><td headers='tblPlace'>$row[0]</td></tr>\n";
+						    			echo "<tr class='odd'><td headers='tblTime'>".date_conv($row[1], $row[2])."</td><td headers='tblName'><a href='$row[4]' >$row[3]</a></td><td headers='tblPlace'>$row[0]</td></tr>\n";
 							   	}
 							   	$even++;
 							   }

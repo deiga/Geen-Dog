@@ -1,20 +1,12 @@
 <?php
-   	require_once "../php/functions.php";
-   	
-   	initSession();
-	
-	if($_SESSION['loggedIn'] == 0) {
-	   header('Location: http://roydon.fi/login/');
-	}
+ 	require_once "../php/functions.php";
+ 	
+ 	initSession();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<?php
-   	require_once "../php/functions.php";
-?>
-
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
-		<title>Yll&auml;pito - Valikko</title>
+		<title>Ylläpito - Valikko</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="Roydon Ky" />
 		<meta name="description" content="Ylläpitosivusto" />
@@ -35,14 +27,16 @@
 	<body>
 		<div id="takala">
 			<div id="otsake">
-				<div>
-					<h1>roydon <br /> <span>Kenneltarvikkeet</span></h1>
+				<div id="otsikko">
+					<h1>roydon</h1>
+					<p>Kenneltarvikkeet</p>
 				</div>
 				<?php printMenu(0);?>
 			</div>
 			<div id="sivusisalto">
-				<div class="content">
+				<div id="content">
 				    <h3>Hei <?php echo $_SESSION['userName'];?></h3>
+				    <p><?php echo $_SESSION['msg']; ?></p>
 				    <p>
 				    Täältä pääset muokkaamaan sivujen sisältöä!
 				    </p>

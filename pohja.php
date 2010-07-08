@@ -10,7 +10,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="Roydon Ky" />
 		<meta name="language" content="fi" />
-		<meta name="description" content="N&auml;yttelyit&auml; kiert&auml;v&auml; kenneltarvikeliike." />
+		<meta name="description" content="Näyttelyitä kiertävä kenneltarvikeliike." />
 		<meta name="keywords" content=" roydon, kennel tarvikkeet, koira tarvikkeet" />
 		<link rel="stylesheet" type="text/css" href="css/roydon.css" media="all" />
 		<link rel="icon" type="image/ico" href="images/favicon.ico" />
@@ -39,7 +39,7 @@
 				<?php printMenu(0);?>
 			</div>
 			<div id="sivusisalto">
-				<div class="content">
+				<div id="content">
 				</div>
 			</div>
 			<?php printFoot();?>

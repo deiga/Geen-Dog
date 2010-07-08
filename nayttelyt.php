@@ -19,11 +19,11 @@
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
 	<head>
-		<title>Roydon - N&auml;yttelyt - <?php echo $year; ?></title>
+		<title>Roydon - Näyttelyt - <?php echo $year; ?></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="Roydon Ky" />
-		<meta name="description" content="N&auml;yttelyt, joissa olemme paikalla myymässä kenneltarvikkeita vuonna <?php echo $year; ?>." />
-		<meta name="keywords" content=" roydon, kennel tarvikkeet, koira tarvikkeet, koira n&auml;yttely" />
+		<meta name="description" content="Näyttelyt, joissa olemme paikalla myymässä kenneltarvikkeita vuonna <?php echo $year; ?>." />
+		<meta name="keywords" content=" roydon, kennel tarvikkeet, koira tarvikkeet, koira näyttely" />
 		<link rel="stylesheet" type="text/css" href="css/roydon.css" media="all" />
 		<link rel="icon" type="image/ico" href="images/favicon.ico" />
 		<link rel="shortcut icon" type="image/ico" href="http://roydon.fi/images/favicon.ico" />
@@ -52,10 +52,10 @@
 				<?php printMenu(0);?>
 			</div>
 			<div id="sivusisalto">
-				<div class="content">
+				<div id="content">
 				  <?php if (isset($year)) { ?>
-						<table class="pretty-tbl" summary="Taulukko n&auml;kym&auml; tulevista n&auml;yttelyist&auml;.">
-							<caption>Seuraavista n&auml;yttelyist&auml; löyd&auml;t meid&auml;t vuonna 
+						<table class="pretty-tbl" summary="Taulukko näkymä tulevista näyttelyistä.">
+							<caption>Seuraavista näyttelyistä löydät meidät vuonna 
 							<?php
 							 if ($year == date('Y') ) {
 							   if ( date('m') >= 8 ) {
@@ -81,9 +81,9 @@
 						      
 						      while ($row = mysql_fetch_row($result)) {
 						    	if ($even % 2) {
-						          	echo "<tr><td headers='tblTime'>".date_conv($row[1], $row[2])."</td>\n<td headers='tblName'><a href=\"$row[4]\">$row[3]</a></td>\n<td headers='tblPlace'>$row[0]</td></tr>\n";
+						          	echo "<tr><td headers='tblTime'>".date_conv($row[1], $row[2])."</td>\n<td headers='tblName'><a href='$row[4]'>$row[3]</a></td>\n<td headers='tblPlace'>$row[0]</td></tr>\n";
 						    	} else {
-						    		echo "<tr class=\"odd\"><td headers='tblTime'>".date_conv($row[1], $row[2])."</td><td headers='tblName'><a href=\"$row[4]\" >$row[3]</a></td><td headers='tblPlace'>$row[0]</td></tr>\n";
+						    		echo "<tr class='odd'><td headers='tblTime'>".date_conv($row[1], $row[2])."</td><td headers='tblName'><a href='$row[4]' >$row[3]</a></td><td headers='tblPlace'>$row[0]</td></tr>\n";
 						    	}
 						    	$even++;
 						      }
@@ -97,9 +97,9 @@
 	                           }
 						          while ($row = mysql_fetch_row($result)) {
 						    	   	if ($even % 2) {
-						    	   		echo "<tr><td headers='tblTime'>".date_conv($row[1], $row[2])."</td>\n<td headers='tblName'><a href=\"$row[4]\">$row[3]</a></td>\n<td headers='tblPlace'>$row[0]</td></tr>\n";
+						    	   		echo "<tr><td headers='tblTime'>".date_conv($row[1], $row[2])."</td>\n<td headers='tblName'><a href='$row[4]'>$row[3]</a></td>\n<td headers='tblPlace'>$row[0]</td></tr>\n";
 						    		} else {
-						    			echo "<tr class=\"odd\"><td headers='tblTime'>".date_conv($row[1], $row[2])."</td><td headers='tblName'><a href=\"$row[4]\" >$row[3]</a></td><td headers='tblPlace'>$row[0]</td></tr>\n";
+						    			echo "<tr class='odd'><td headers='tblTime'>".date_conv($row[1], $row[2])."</td><td headers='tblName'><a href='$row[4]' >$row[3]</a></td><td headers='tblPlace'>$row[0]</td></tr>\n";
 						    	   	}
 						    	   	$even++;
 						    	  }
@@ -110,7 +110,7 @@
 						<?php } ?>
 						<div id="years">
 						  <?php yearList(); ?>
-						<p>Suomen koiran&auml;yttelyiden ajankohtia ja pitopaikan l&ouml;yd&auml;tte <a href="http://www.kennelliitto.fi/FI/toiminta/nayttelyt/kvkr2008/" title="Suomen kennelliiton koiran&auml;yttelysivusto">Suomen kennelliiton</a> sivuilta.</p>
+						<p>Suomen koiranäyttelyiden ajankohtia ja pitopaikan löydätte <a href="http://www.kennelliitto.fi/FI/toiminta/nayttelyt/kvkr2008/" title="Suomen kennelliiton koiranäyttelysivusto">Suomen kennelliiton</a> sivuilta.</p>
 					</div>
 
 				</div>

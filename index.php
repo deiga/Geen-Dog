@@ -32,8 +32,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="language" content="fi" />
 		<meta name="author" content="Roydon Ky" />
-		<meta name="description" content="N&auml;yttelyit&auml; kiert&auml;v&auml; kenneltarvikeliike. T&auml;&auml;lt&auml; l&ouml;yd&auml;t tiedot meist&auml; ja mistä meidät löytää." />
-		<meta name="keywords" content="roydon, kennel tarvikkeet, koira tarvikkeet, rajala, kennel tarvike, kiert&auml;v&auml;, porvoo, roidon" />
+		<meta name="description" content="Näyttelyitä kiertävä kenneltarvikeliike. Täältä löydät tiedot meistä ja mistä meidät löytää." />
+		<meta name="keywords" content="roydon, kennel tarvikkeet, koira tarvikkeet, rajala, kennel tarvike, kiertävä, porvoo, roidon" />
     <link rel="stylesheet" type="text/css" href="/css/roydon.css" media="all" />
 		<link rel="icon" type="image/ico" href="/images/favicon.ico" />
 		<link rel="shortcut icon" type="image/ico" href="/images/favicon.ico" />
@@ -75,7 +75,7 @@
 									<legend>Uutiset</legend>';
 										while ($row = mysql_fetch_row($newsresult)) {
 
-											echo "<p class=\"uutinen\">\n".date_conv_short($row[0])." - $row[1] <br />\n$row[2]\n</p>";
+											echo "<p class='uutinen'>\n".date_conv_short($row[0])." - $row[1] <br />\n$row[2]\n</p>";
 										}
 								  echo '</fieldset>
 							   </div>';
@@ -86,28 +86,28 @@
 				<div id="oikea">
 					<div class="sisalto">
 						<div id="nayttely">
-							<h3>Seuraavaksi l&ouml;yd&auml;t meid&auml;t:</h3>
+							<h3>Seuraavaksi löydät meidät:</h3>
 							<span>
 							<?php
 								while ($row = mysql_fetch_row($showresult)) {
 								  /* row has 5 fields, 0 = Paikkakunta, 1 = date, 2 = length of show, 3 = Name of the show, 4 = link to homepage of show */
 									if (soonShow($row[1],$row[2])) {
-										echo date_conv($row[1], $row[2])." ".$row[0]."<br /><a href=\"$row[4]\" >$row[3]</a><br />\n";
+										echo date_conv($row[1], $row[2])." ".$row[0]."<br /><a href='$row[4]' >$row[3]</a><br />\n";
 										break;
 									}
 								}
 							?>
 							</span>
 							<p>
-								<a href="nayttelyt.php?year=<?php echo $year ?>" title="Attending dogshows">Lis&auml;&auml; n&auml;yttelyit&auml;...</a>
+								<a href="nayttelyt.php?year=<?php echo $year ?>" title="Attending dogshows">Lisää näyttelyitä...</a>
 							</p>
 						</div>
 						<div id="links" class="robots-nocontent">
-							<h4>Linkkej&auml;</h4>
+							<h4>Linkkejä</h4>
 							<ul>
 								<li><a href="http://www.kennelliitto.fi/fi" title="Suomen Kennelliitto">Suomen Kennelliitto</a></li>
 								<li><a href="http://www.airedalenterrieri.fi/" title="SATY Ry">Suomen Airedalenterrieriyhdistys</a></li>
-								<li><a href="http://www.terrierijarjesto.fi/" title="STJ Ry">Suomen Terrierij&auml;rjest&ouml; Ry</a></li>
+								<li><a href="http://www.terrierijarjesto.fi/" title="STJ Ry">Suomen Terrierijärjestö Ry</a></li>
 								<li><a href="http://www.lakelandinterrierit.net/" title="Lakelandinterrierit ry">Lakelandinterrierit Ry</a></li>
 							</ul>
 						</div>
