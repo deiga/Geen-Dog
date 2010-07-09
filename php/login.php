@@ -1,11 +1,9 @@
 <?php
-    session_start();
+  session_start();
     
 	require_once "functions.php";
 	$link = connect();
-	if (!$link) {
-    		die('Could not connect: ' . mysql_error());
-	}
+	not_connected($link);
 
 	$user = $_POST['user'];
 	$pass = $_POST['passwd'];
@@ -20,9 +18,7 @@
 	}
 	
 	$result = mysql_query($query);
-	if (!$result) {
-  	  die('Invalid query: ' . mysql_error());
-	}
+	inv_query($result);
 
     /*
 while($row = mysql_fetch_row($result)){ 

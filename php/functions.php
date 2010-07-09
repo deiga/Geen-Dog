@@ -1,7 +1,7 @@
 <?php 
   require_once "arka.php";
     
-  date_default_timezone_set('Europe/Helsinki');
+  /* date_default_timezone_set('Europe/Helsinki'); */
 
   function initSession($login = '') {
     session_start();
@@ -12,7 +12,10 @@
     
     if($_SESSION['loggedIn'] == 0 && $login == '') {
       header('Location: http://roydon.fi/login/');
+    } else if ($_SESSION['loggedIn'] == 1 && $login == 'login') {
+      header('Location: http://roydon.fi/login/home.php');
     }
+    
   }
   
   function lengthConv($dur) {
@@ -71,8 +74,8 @@
       echo "        <li id='shows' class='rounded-top'><a href='shows.php?year=$year' title='Attending dogshows'>Dog shows</a></li>\n";
       echo "        <li id='contact' class='rounded-top'><a href='contact.php' title='Contact Us'>Contact Us</a></li>\n";
       if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
-          echo "              <li id='logout' class='rounded-top'><a href='/php/logout.php' title='Logout'>Logout</a></li>\n";
-            }
+        echo "              <li id='logout' class='rounded-top'><a href='/php/logout.php' title='Logout'>Logout</a></li>\n";
+      }
       
     } else if ($lang == 0) {
       echo "        <li id='index' class='rounded-top'><a href='/index.php' title='Homepage'>Etusivu</a></li>\n";
@@ -144,5 +147,31 @@
       }
     }
     echo' </ul>';
+  }
+  
+  // Function to print table rows for shows
+  function printShowRow($row) {
+    echo "<tr><td headers='show_time'>".date_conv($row[1], $row[2])."</td>\n";
+    echo "<td headers='show_name'><a href='$row[4]'>$row[3]</a></td>\n";
+    echo "<td headers='show_place'>$row[0]</td>";
+    if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
+      echo "<td header='show_admin'>Poista</td></tr>\n";
+    } else {
+      echo "\n</tr>\n";
+    }
+  }
+  
+  // Function for invalid queries
+  function inv_query($res, $res2 = true) {
+    if (!$res || !$res2) {
+      die('Invalid query: ' . mysql_error());
+    }
+  }
+  
+  // Function for dead connections
+  function not_connected($conn) {
+    if (!$conn) {
+      die('Could not connect: ' . mysql_error());
+    }
   }
 ?>

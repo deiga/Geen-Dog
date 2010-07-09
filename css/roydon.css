@@ -389,7 +389,7 @@ legend {
 	min-width: 26em;
 }
 
-.pretty-tbl td, .pretty-tbl th {
+.pretty-tbl td , .pretty-tbl th {
 	padding: 0.3em;
 	text-align: center;
 	background-color: #006400; /*DarkGreen*/
@@ -409,7 +409,7 @@ legend {
 	color: #006400; /*DarkGreen*/
 }
 
-.pretty-tbl tr.odd td {
+.pretty-tbl tr:nth-child(2n+0) td {
 	background-color: #3CB371;
 }
 

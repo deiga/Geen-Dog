@@ -2,9 +2,7 @@
 	setcookie("testCookie", "1", time()+(60*60*2));
 	require($_SERVER['DOCUMENT_ROOT'].'/php/functions.php');
 	$link = connect();
-	if (!$link) {
-    		die('Could not connect: ' . mysql_error());
-	}
+	not_connected($link);
 	
 	$year = date('Y');
 	
@@ -20,9 +18,7 @@
 	$showresult = mysql_query($showquery);
 	$newsresult = mysql_query($newsquery);
 
-	if (!$showresult || !$newsresult) {
-   		 die('Invalid query: ' . mysql_error());
-	}
+	inv_query($showresult, $newsresult);
 	echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

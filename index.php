@@ -3,12 +3,10 @@
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <?php
-  require_once "php/functions.php";
+  require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
 	
 	$link = connect();
-	if (!$link) {
-    		die('Could not connect: ' . mysql_error());
-	}
+	not_connected($link);
 	$year = date('Y');
 
 	$db = 'roydonf_roydon';
@@ -22,9 +20,7 @@
 	
 	$showresult = mysql_query($showquery);
 	$newsresult = mysql_query($newsquery);
-	if (!$showresult || !$newsresult) {
-   		 die('Invalid query: ' . mysql_error());
-	}
+	inv_query($showresult, $newsresult);
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
 	<head>
