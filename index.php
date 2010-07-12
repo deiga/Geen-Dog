@@ -14,9 +14,7 @@
 	$newsquery = 'SELECT * FROM `news` WHERE date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) ORDER BY date DESC';
 	
 	$db_selected = mysql_select_db($db);
-	if (!$db_selected) {
-  	  die ("Can\'t use '$db' : " . mysql_error());
-	}
+	inv_db($db, $db_selected);
 	
 	$showresult = mysql_query($showquery);
 	$newsresult = mysql_query($newsquery);
@@ -48,9 +46,7 @@
 		<div id="takala">
 			<?php oldBrowse(); ?>
 			<div id="otsake">
-				<div id="lang">		
-					<a href="en/" title="In English">In English</a>
-				</div>
+				<?php langLink(0); ?>
 				<div id="otsikko">
 					<h1>roydon</h1>
 					<p>Kenneltarvikkeet</p>
@@ -73,7 +69,8 @@
 
 											echo "<p class='uutinen'>\n".date_conv_short($row[0])." - $row[1] <br />\n$row[2]\n</p>";
 										}
-								  echo '</fieldset>
+								  echo '</fieldset>\n
+								  <a href="/uutiset.php" title="Lisää uutisia">Lisää...</a>\n
 							   </div>';
                 }; 
                 ?> 

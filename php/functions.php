@@ -18,6 +18,7 @@
     
   }
   
+  // Function to convert days into seconds
   function lengthConv($dur) {
     return ($dur-1) * 86400;
   }
@@ -25,7 +26,7 @@
   // Function to convert mysql date's into representation of a duration.
   function date_conv($in, $long) {
     
-    if ( $long > 1) {
+    if ( $long > 1 ) {
       $out = date('d.', (strtotime($in)))."-".date('d.m.', (strtotime($in))+lengthConv($long));
       return $out;
     }
@@ -45,6 +46,7 @@
   
     $month = 0;
     $year1 = $year + 1;
+    
     if ($year == date('Y')) {
       $month = date('m');
       $day = date('d');
@@ -53,12 +55,13 @@
       return $qer;
     }
     
-      $qer2 = "SELECT * FROM `shows` WHERE aika > '$year-00-00' ORDER BY aika ASC";
-      $qer[1] = "SELECT * FROM `shows` WHERE aika > '$year-$month-$day' ORDER BY aika ASC";
-      $qer[2] = "SELECT * FROM `shows` WHERE aika > '$year-00-00' AND aika <= '$year-$month-$day' ORDER BY aika ASC";
-      if ( $month < 06 ) {
-              return $qer2;
-      } else return $qer;
+    $qer2 = "SELECT * FROM `shows` WHERE aika > '$year-00-00' ORDER BY aika ASC";
+    $qer[1] = "SELECT * FROM `shows` WHERE aika > '$year-$month-$day' ORDER BY aika ASC";
+    $qer[2] = "SELECT * FROM `shows` WHERE aika > '$year-00-00' AND aika <= '$year-$month-$day' ORDER BY aika ASC";
+    
+    if ( $month < 06 ) {
+      return $qer2;
+    } else return $qer;
   }
   
   // Function to print out the menu of a page. Languages are 0 = Finnish, 1 = English
@@ -72,29 +75,17 @@
       //echo "        <li id='info' class='rounded-top'><a href='info.php' title='About Us'>About Us</a></li>\n";
       //echo "        <li id='products' class='rounded-top'><a href='products.php' title='Products'>Products</a></li>\n";
       echo "        <li id='shows' class='rounded-top'><a href='shows.php?year=$year' title='Attending dogshows'>Dog shows</a></li>\n";
-      echo "        <li id='contact' class='rounded-top'><a href='contact.php' title='Contact Us'>Contact Us</a></li>\n";
-      if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
-        echo "              <li id='logout' class='rounded-top'><a href='/php/logout.php' title='Logout'>Logout</a></li>\n";
-      }
-      
+      echo "        <li id='contact' class='rounded-top'><a href='contact.php' title='Contact Us'>Contact Us</a></li>\n";   
     } else if ($lang == 0) {
       echo "        <li id='index' class='rounded-top'><a href='/index.php' title='Homepage'>Etusivu</a></li>\n";
       //echo "        <li id='info' class='rounded-top'><a href='/info.php' title='About Us'>Esittely</a></li>\n";
       //echo "        <li id='products' class='rounded-top'><a href='/products.php' title='Products'>Tuotteet</a></li>\n";
       echo "        <li id='nayttelyt' class='rounded-top'><a href='/nayttelyt.php?year=$year' title='Attending dogshows'>Näyttelyt</a></li>\n";
       echo "        <li id='contact' class='rounded-top'><a href='/contact.php' title='Contact Us'>Ota Yhteyttä</a></li>\n";
-      if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
-          echo "              <li id='logout' class='rounded-top'><a href='/php/logout.php' title='Logout'>Logout</a></li>\n";
-            }
-    } else if ($lang == 2) {
-      echo "        <li id='home' class='rounded-top'><a href='/index.php' title='Homepage'>Etusivu</a></li>\n";
-      //echo "        <li id='info' class='rounded-top'><a href='../info.php' title='About Us'>Esittely</a></li>\n";
-      //echo "        <li id='products' class='rounded-top'><a href='../products.php' title='Products'>Tuotteet</a></li>\n";
-      echo "        <li id='nayttelyt' class='rounded-top'><a href='/nayttelyt.php?year=$year' title='Attending dogshows'>Näyttelyt</a></li>\n";
-      echo "        <li id='contact' class='rounded-top'><a href='/contact.php' title='Contact Us'>Ota Yhteyttä</a></li>\n";
-      if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
-          echo "              <li id='logout' class='rounded-top'><a href='/php/logout.php' title='Logout'>Logout</a></li>\n";
-            }
+    }
+    
+    if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
+      echo "              <li id='logout' class='rounded-top'><a href='/php/logout.php' title='Logout'>Logout</a></li>\n";
     }
     echo "      </ul>\n";
     echo "    </div>\n";
@@ -172,6 +163,26 @@
   function not_connected($conn) {
     if (!$conn) {
       die('Could not connect: ' . mysql_error());
+    }
+  }
+  
+  // Function for printing language link
+  function langLink($lang = 0) {
+    if ($lang == 0) {
+      echo "<div id='lang'>\n
+              <a href='en/' title='In English'>In English</a>\n
+            </div>";
+    } else if ($lang == 1) {
+      echo "<div id='lang'>\n
+              <a href='http://roydon.fi/' title='Suomeksi'>Suomeksi</a>\n
+            </div>";
+    }
+  }
+  
+  // Function for unusable db's
+  function inv_db($db, $selected) {
+    if (!$selected) {
+      die ("Can\'t use '$db' : " . mysql_error());
     }
   }
 ?>

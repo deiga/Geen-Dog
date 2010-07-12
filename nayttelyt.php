@@ -13,9 +13,7 @@
   $q2 = $q[2];
   
   $db_selected = mysql_select_db($db);
-  if (!$db_selected) {
-      die ("Can\'t use '$db' : " . mysql_error());
-  }
+  inv_db($db, $db_selected);
   
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
@@ -43,9 +41,7 @@
     <div id="takala">
       <?php oldBrowse(); ?>
       <div id="otsake">
-        <div id="lang">
-          <a href="http://roydon.fi/en" title="In English" target="_top">In English</a>
-        </div>
+        <?php langLink(0); ?>
         <div id="otsikko">
           <h1>roydon</h1>
           <p>Kenneltarvikkeet</p>

@@ -13,9 +13,7 @@
 	$query = "SELECT * FROM $tbl WHERE username = '$user' AND password = md5('$pass')";
 	
 	$db_selected = mysql_select_db($db);
-	if (!$db_selected) {
-  	  die ("Can\'t use '$db' : " . mysql_error());
-	}
+	inv_db($db, $db_selected);
 	
 	$result = mysql_query($query);
 	inv_query($result);

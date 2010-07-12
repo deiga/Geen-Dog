@@ -1,7 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<?php 
-  require($_SERVER['DOCUMENT_ROOT'].'/php/functions.php');
+<?php
+  require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
   initSession('shows');
+  echo '<?xml version="1.0" encoding="UTF-8"?>';
+?>
+<!DOCTYPE html>
+<?php
+  
   $link = connect();
   not_connected($link);
   $year = $_REQUEST['year'];
@@ -11,9 +15,7 @@
   $q2 = $q[2];
   
   $db_selected = mysql_select_db($db);
-  if (!$db_selected) {
-      die ("Can\'t use '$db' : " . mysql_error());
-  } 
+  inv_db($db, $db_selected); 
 ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -41,9 +43,7 @@
     <div id="takala">
       <?php oldBrowse(); ?>
       <div id="otsake">
-        <div id="lang">
-          <a href="http://roydon.fi/" title="Suomeksi" target="_top">Suomeksi</a>
-        </div>
+<?php langLink(1); ?>
         <div id="otsikko">
           <h1>roydon</h1>
           <p>Kennelaccessories</p>

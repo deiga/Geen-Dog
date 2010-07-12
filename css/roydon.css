@@ -57,6 +57,7 @@ legend {
 	background-color: green;
 	-moz-border-radius: 1em;
   -webkit-border-radius: 1em;
+  -khtml-border-radius: 1em;
   border-radius: 1em;
   color: white;
   position: relative;
@@ -93,6 +94,7 @@ legend {
 
 #lang a:hover {
 	color: #006400;
+	text-decoration: underline;
 }
 
 #lang a:link , #lang a:visited {
@@ -134,7 +136,6 @@ legend {
 	border-top: 1px solid #006400;
 	border-left: 1px solid #006400;
 	border-right: 1px solid #006400;
-
 }
 
 .rounded {
@@ -239,27 +240,13 @@ legend {
 
 /* !Opera haxes begin */
 @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
-  #otsake {
-    background:transparent url('/images/otsake_round.svg');
-  }
-  #navilist .currpage {
-    background: transparent url('/images/curr_round.svg');
-  }
-  #navilist .currpage:hover {
-    background: transparent url('/images/curr_round.svg');
-  }
-  #navilist li {
-    border: none;
-    background: transparent url('/images/navi_round.svg');
-  }
-  #navi li:hover {
-    background:transparent url('/images/navi_hover_round.svg');
-  }
-  #oikea {
-    padding-right: 1px;
-  }
+
 }
 /* !Opera haxes end */
+
+#content > #uutiset {
+  height: auto;
+}
 		
 #uutiset {
 	margin: 0 5%;
