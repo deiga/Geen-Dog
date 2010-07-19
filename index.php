@@ -82,6 +82,7 @@
 							<h3>Seuraavaksi löydät meidät:</h3>
 							<span>
 							<?php
+							if (mysql_num_rows($showresult) > 0 ) {
 								while ($row = mysql_fetch_row($showresult)) {
 								  /* row has 5 fields, 0 = Paikkakunta, 1 = date, 2 = length of show, 3 = Name of the show, 4 = link to homepage of show */
 									if (soonShow($row[1],$row[2])) {
@@ -89,6 +90,9 @@
 										break;
 									}
 								}
+						  } else {
+						    echo "Ei tulevia näyttelyitä tällähetkellä.";
+						  }
 							?>
 							</span>
 							<p>

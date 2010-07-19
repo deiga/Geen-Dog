@@ -7,13 +7,13 @@
   $link = connect();
   not_connected($link);
   $year = $_REQUEST['year'];
-  $db = 'roydonf_roydon';
-  $q = date_query($year);
-  $q1 = $q[1];
-  $q2 = $q[2];
+  if ($year == '') {
+    $year = date('Y');
+  }
   
-  $db_selected = mysql_select_db($db);
-  inv_db($db, $db_selected);
+  $db = 'roydonf_roydon';
+  inv_db($db);
+  $q = date_query($year);
   
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
@@ -23,11 +23,10 @@
     <meta name="author" content="Roydon Ky" />
     <meta name="description" content="Näyttelyt, joissa olemme paikalla myymässä kenneltarvikkeita vuonna <?php echo $year; ?>." />
     <meta name="keywords" content=" roydon, kennel tarvikkeet, koira tarvikkeet, koira näyttely" />
-    <link rel="stylesheet" type="text/css" href="css/roydon.css" media="all" />
     <link rel="icon" type="image/ico" href="images/favicon.ico" />
     <link rel="shortcut icon" type="image/ico" href="http://roydon.fi/images/favicon.ico" />
-    <script type="text/javascript" src="/js/roydon.js"></script>
-    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="css/roydon.css" media="all" />
+     <!--[if IE 6]>
       <link rel="stylesheet" type="text/css" href="css/roydon_ie6.css" />
     <![endif]-->
     <!--[if IE 7]>
@@ -36,6 +35,20 @@
     <!--[if lte IE 6]>
       <link rel="stylesheet" type="text/css" href="css/roydon_ie5.css" />
     <![endif]-->
+    <script type="text/javascript" src="/js/roydon.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('a.delete').click(function(e) {
+          e.preventDefault();
+          var parent = $(this).parent().parent();
+          $.post("php/delShow.php", { del: parent.attr("id") }, 
+            function() {
+              parent.fadeOut("fast");
+            });
+        });
+      });
+    </script>
   </head>
   <body onload="curpage()">
     <div id="takala">
@@ -50,7 +63,6 @@
       </div>
       <div id="sivusisalto">
         <div id="content">
-          <?php if (isset($year)) { ?>
             <table class="pretty-tbl" summary="Taulukko näkymä tulevista näyttelyistä.">
               <caption>Seuraavista näyttelyistä löydät meidät vuonna 
               <?php
@@ -62,44 +74,23 @@
               ?>
               :</caption>
               <thead>
-                <th scope="col" id="show_time">Aika</th>
-                <th scope="col" id="show_name">Nimi</th>
-                <th scope="col" id="show_place">Paikka</th>
-                <?php
-                  if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
-                    echo "  <th scope='col' id='show_admin'>Ylläpito</th>\n";
-                  }         
-                ?>
+                <tr>
+                  <th scope="col" id="show_time">Aika</th>
+                  <th scope="col" id="show_name">Nimi</th>
+                  <th scope="col" id="show_place">Paikka</th>
+                  <?php
+                    if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
+                     echo "  <th scope='col' id='show_admin'>Ylläpito</th>\n";
+                    }         
+                  ?>
+                </tr>
               </thead>
               <tbody>
                 <?php
-                  if ($year == date('Y') && date('m') >= 06) {
-                    $result = mysql_query($q1);
-                  } else $result = mysql_query($q);
-                  
-                  inv_query($result);
-                  
-                  while ($row = mysql_fetch_row($result)) {
-                    printShowRow($row);
-                  }
-                  if ($year == date('Y') && date('m') >= 06) {
-                 ?>
-                <tr>
-                  <td headers="show_name" colspan="4">
-                    <strong>Menneet näyttelyt tältä vuodelta</strong>
-                  </td>
-                </tr>
-                 <?php
-                    $result = mysql_query($q2);
-                    inv_query($result);
-                    while ($row = mysql_fetch_row($result)) {
-                      printShowRow($row);
-                    }
-                  }
+                  printTbody($year, $q, 0);
                 ?>
               </tbody>
             </table>
-            <?php } ?>
             <div id="years">
               <?php yearList(); ?>
             <p>Suomen koiranäyttelyiden ajankohtia ja pitopaikan löydätte <a href="http://www.kennelliitto.fi/FI/toiminta/nayttelyt/kvkr2008/" title="Suomen kennelliiton koiranäyttelysivusto">Suomen kennelliiton</a> sivuilta.</p>

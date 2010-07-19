@@ -35,17 +35,21 @@
 				<?php printMenu(0);?>
 			</div>
 			<div id="sivusisalto">
-				<div id="content">
+				<div id="content" class="admin">
 				    <h3>Hei <?php echo $_SESSION['userName'];?></h3>
-				    <p><?php echo $_SESSION['msg']; ?></p>
+				    <?php
+				      if (isset($_SESSION['msg']) && empty($_SESSION['msg']) ) {
+				        echo ("<p>". $_SESSION['msg'] ."</p>");
+				      }
+            ?>
 				    <p>
 				    Täältä pääset muokkaamaan sivujen sisältöä!
 				    </p>
 				    <ul>
-				      <li><a href="addShow.php">Näyttelyitten lisääminen</a></li>
-				      <li><a href="#">Näytteliden poistaminen</a></li>
-				      <li><a href="addNews.php">Uutisten lisääminen</a></li>
-				      <li><a href="#">Uutisten poistaminen</a></li>
+				      <li><a href="addShow.php">Näyttelyn lisääminen</a></li>
+				      <li><a href="/nayttelyt.php">Näyttelyn poistaminen</a></li>
+				      <li><a href="addNews.php">Uutisen lisääminen</a></li>
+				      <li><a href="/uutiset.php">Uutisen poistaminen</a></li>
 				    </ul>
 				</div>
 			</div>

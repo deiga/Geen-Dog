@@ -11,11 +11,8 @@
   $year = $_REQUEST['year'];
   $db = 'roydonf_roydon';
   $q = date_query($year);
-  $q1 = $q[1];
-  $q2 = $q[2];
   
-  $db_selected = mysql_select_db($db);
-  inv_db($db, $db_selected); 
+  inv_db($db); 
 ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -74,30 +71,7 @@
               </thead>
               <tbody>
             <?php
-              
-              if ($year == date('Y') && date('m') >= 06) {
-                $result = mysql_query($q1);
-              } else $result = mysql_query($q);
-              
-              inv_query($result);
-
-              while ($row = mysql_fetch_row($result)) {
-                printShowRow($row);
-              }             
-              if ($year == date('Y') && date('m') >= 06) {
-            ?>
-              <tr>
-                <td headers="show_name" colspan="3">
-                  <strong>Past shows this year</strong>
-                </td>
-              </tr>
-            <?php
-                $result = mysql_query($q2);
-                inv_query($result);
-                while ($row = mysql_fetch_row($result)) {
-                  printShowRow($row);
-                }
-              }
+              printTbody($year, $q, 1);
             ?>
               </tbody>
             </table>

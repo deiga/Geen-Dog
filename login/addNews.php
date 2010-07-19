@@ -61,7 +61,9 @@
             <?php
                $link = connect();
                if (!$link) {
-                    die('Could not connect: ' . mysql_error());
+                    $errmsg = 'Could not connect: ' . mysql_error();
+                    die($errmsg);
+                    error_log($errmsg);
                }
                
                $topic = mysql_real_escape_string($_POST['head']);
@@ -72,9 +74,7 @@
                $db = 'roydonf_roydon';
                $aika = date("Y-m-d");
                
-               if (!mysql_select_db($db)) {
-                  die ("Can\'t use '$db' : " . mysql_error());
-               }
+               inv_db($db);
                
                if (isset($topic, $cont) && !empty($topic) && !empty($cont)) {
                     $query = "INSERT INTO $db.$tbl(`date` ,`head` ,`content` ,`headEn` ,`contEn`) VALUES ('$aika', '$topic', '$cont', '$topicEN', '$contEN')";
@@ -82,7 +82,9 @@
                }
          
                if (!$result && isset($result)) {
-                 die('Invalid query: ' . mysql_error());
+                 $errmsg = 'Invalid query: ' . mysql_error();
+      die($errmsg);
+      error_log($errmsg);
                } else if ($result ) {
                  $_SESSION['msg'] = "Lisäys onnistui!";
                  echo "Lisäys onnistui!";

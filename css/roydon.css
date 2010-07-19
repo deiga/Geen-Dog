@@ -140,7 +140,6 @@ legend {
 
 .rounded {
   -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
   border-radius: 10px; /* future proofing */
   -khtml-border-radius: 10px; /* for old Konqueror browsers */
 }
@@ -148,11 +147,9 @@ legend {
 .rounded-top {
   -moz-border-radius-topleft: .5em;
 	-moz-border-radius-topright: .5em;
-	-webkit-border-top-left-radius: .5em;
-	-webkit-border-top-right-radius: .5em;
   /* future proofing */
-  border-radius-topleft: .5em;
-	border-radius-topright: .5em;
+  border-top-left-radius: .5em;
+	border-top-right-radius: .5em;
   /* for old Konqueror browsers */
   -khtml-border-radius-topleft: .5em;
 	-khtml-border-radius-topright: .5em;
@@ -225,7 +222,7 @@ legend {
 	height: auto !important;
 	height: 25em;
 	position: absolute;
-	left:71%;
+	left: 71%;
 	width: 29%;
 }
 
@@ -241,8 +238,23 @@ legend {
 /* !Opera haxes begin */
 @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
 
+  #oikea {
+    left: 71.1%;
+  }
+
 }
 /* !Opera haxes end */
+
+/* !Webkit haxes begin */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  
+  #oikea {
+    width: 29.1%;
+  }
+}
+
+/* !Webkit haxes end */
 
 #content > #uutiset {
   height: auto;
@@ -341,6 +353,11 @@ legend {
 	padding-bottom: 1px;
 }
 
+#content.admin {
+  padding: 3% 10% 1px 10%;
+  width: auto;
+}
+
 .contentfield {
 	border: 1px solid #006400; /*DarkGreen*/
 	padding-left: 1%;
@@ -352,6 +369,14 @@ legend {
 #content  p {
 	text-align: center;
 	padding-bottom: 1%;
+}
+
+#content.admin p {
+  text-align: left;
+}
+
+#content.admin ul {
+  padding-left: 10%;
 }
 
 .error {

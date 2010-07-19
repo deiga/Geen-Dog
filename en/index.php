@@ -10,8 +10,7 @@
   $showquery = 'SELECT * FROM `shows` ORDER BY aika ASC';
   $newsquery = 'SELECT * FROM `news` WHERE date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) ORDER BY date DESC';
   
-  $db_selected = mysql_select_db($db);
-  inv_db($db, $db_selected);
+  inv_db($db);
   
   $showresult = mysql_query($showquery);
   $newsresult = mysql_query($newsquery);
@@ -81,6 +80,7 @@
               <h3>You can find us next in:</h3>
               <span>
               <?php
+              if (mysql_num_rows($showresult)) {
                 while ($row = mysql_fetch_row($showresult)) {
                   /* row has 5 fields, 0 = Paikkakunta, 1 = date, 2 = length of show, 3 = Name of the show, 4 = link to homepage of show */
                   if (soonShow($row[1],$row[2])) {
@@ -88,6 +88,9 @@
                     break;
                   }
                 }
+              } else {
+                echo "No upcoming shows at this time.";
+              }
               ?>
               </span>
               <p>

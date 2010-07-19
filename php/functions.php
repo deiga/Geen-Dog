@@ -140,29 +140,72 @@
     echo' </ul>';
   }
   
+  // Function to print table body for shows
+  function printTbody($year, $q, $lang = 0) {
+      
+   printNewShows($year, $q);
+    if ($year == date('Y') && date('m') >= 06) {
+      echo "<tr>\n";
+      echo "\t<td headers='show_name' colspan='4'>\n";
+      if ($lang == 0) {
+        echo "\t\t<strong>Menneet näyttelyt tältä vuodelta</strong>\n";
+      } else if ($lang == 1) {
+        echo "\t\t<strong>Past shows this year</strong>\n";
+      }
+      echo "\t</td>\n";
+      echo "</tr>\n";
+      printPastShows($q[2]); 
+    }
+  }
+  
+  // Function to print upcoming shows
+  function printNewShows($year, $query) {
+    if ($year == date('Y') && date('m') >= 06) {
+      $result = mysql_query($query[1]);
+    } else $result = mysql_query($query);
+    
+    inv_query($result);
+    
+    while ($row = mysql_fetch_row($result)) {
+      printShowRow($row);
+    }
+  }
+  
+  // Function to print shows from the beginning of the year
+  function printPastShows($query) {
+    $result = mysql_query($query);
+    inv_query($result);
+    while ($row = mysql_fetch_row($result)) {
+      printShowRow($row);
+    }
+  }
+  
   // Function to print table rows for shows
   function printShowRow($row) {
-    echo "<tr><td headers='show_time'>".date_conv($row[1], $row[2])."</td>\n";
+    echo "<tr id='$row[1]'><td headers='show_time'>".date_conv($row[1], $row[2])."</td>\n";
     echo "<td headers='show_name'><a href='$row[4]'>$row[3]</a></td>\n";
     echo "<td headers='show_place'>$row[0]</td>";
-    if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
-      echo "<td header='show_admin'>Poista</td></tr>\n";
-    } else {
-      echo "\n</tr>\n";
+    if (loggedIn()) {
+      echo "<td header='show_admin'><a href='' class='delete'>Poista</a></td>";
     }
+    echo "\n</tr>\n";
   }
   
   // Function for invalid queries
   function inv_query($res, $res2 = true) {
     if (!$res || !$res2) {
-      die('Invalid query: ' . mysql_error());
+      $errmsg = 'Invalid query: ' . mysql_error();
+      die($errmsg);
+      error_log($errmsg);
     }
   }
   
   // Function for dead connections
   function not_connected($conn) {
     if (!$conn) {
-      die('Could not connect: ' . mysql_error());
+      $errmsg = 'Could not connect: ' . mysql_error();
+                    die($errmsg);
+                    error_log($errmsg);
     }
   }
   
@@ -180,9 +223,23 @@
   }
   
   // Function for unusable db's
-  function inv_db($db, $selected) {
-    if (!$selected) {
-      die ("Can\'t use '$db' : " . mysql_error());
+  function inv_db($db) {
+    if (!mysql_select_db($db)) {
+      $errmsg = "Can\'t use '$db' : " . mysql_error();
+      die($errmsg);
+      error_log($errmsg);
     }
+  }
+  
+  // Function to test if logged in
+  function loggedIn() {
+    return (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1);
+  }
+  
+  // Function to delete rows from shows
+  function deleteRow($date) {
+    $query = sprintf("DELETE FROM shows WHERE aika = '%s'", mysql_real_escape_string($date));
+    $result = mysql_query($query);
+    inv_query($result);
   }
 ?>
