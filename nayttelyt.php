@@ -47,6 +47,9 @@
               parent.fadeOut("fast");
             });
         });
+        $('.yearLink').click(function() {
+          $('pretty-tbl').load('nayttelyt.php','year=' . $('yearLink').text())
+        });
       });
     </script>
   </head>

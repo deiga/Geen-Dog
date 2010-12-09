@@ -132,10 +132,11 @@
     echo '<ul id="yearslist">';
     for ($i = 2008; $i <= date('Y'); $i++) { 
       if ($lang == 0) {
-          echo "<li class='ylistI'><a href='nayttelyt.php?year=$i'>$i</a></li>";
+         $langTxt = 'nayttelyt.php';
       } else if ($lang == 1) {
-          echo "<li class='ylistI'><a href='shows.php?year=$i'>$i</a></li>";
+          $langTxt='shows.php';
       }
+      echo "<li id='yearLink' class='ylistI'><a href='$langTxt?year=$i'>$i</a></li>" . PHP_EOL;
     }
     echo' </ul>';
   }
