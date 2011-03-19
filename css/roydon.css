@@ -53,7 +53,7 @@ legend {
 /* Header stuff */
 
 #otsake {
-	width: 100%; 
+	width: 100%;
 	background-color: green;
 	-moz-border-radius: 1em;
   -webkit-border-radius: 1em;
@@ -68,7 +68,7 @@ legend {
 #otsake h1:first-line {
 	text-transform: uppercase;
 }
-	
+
 #otsake h1:first-letter {
 	font-size: 1.7em;
 }
@@ -124,15 +124,18 @@ legend {
 	background-color: inherit;
 }
 
-#navilist {
+#navilist , #prod-navi {
 	list-style: none;
 	padding-bottom: 0;
 	margin-bottom: 0;
 }
 
-#navilist li {
+#navilist li , #prod-navi {
   display: inline;
 	padding: 5px 10px 5px 10px;
+}
+
+#navilist li {
 	border-top: 1px solid #006400;
 	border-left: 1px solid #006400;
 	border-right: 1px solid #006400;
@@ -169,10 +172,10 @@ legend {
 }
 
 
-#navilist li a:active { 
+#navilist li a:active {
 	color: green;
-}					
-		
+}
+
 #navilist li a:hover {
 	color: green;
 }
@@ -214,7 +217,7 @@ legend {
 	position: absolute;
 	text-align: center;
 }
-	
+
 #oikea {
 	background-color: #d4d4d4;
 	color: inherit;
@@ -248,7 +251,7 @@ legend {
 /* !Webkit haxes begin */
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  
+
   #oikea {
     width: 29.1%;
   }
@@ -259,7 +262,7 @@ legend {
 #content > #uutiset {
   height: auto;
 }
-		
+
 #uutiset {
 	margin: 0 5%;
 	padding: 1% 0 0;
@@ -278,11 +281,11 @@ legend {
 	font-size: 1.2em;
 }
 
-#uutiset .uutinen:first-line {	
+#uutiset .uutinen:first-line {
 	font-weight: bold;
 }
 
-#uutiset .uutinen {	
+#uutiset .uutinen {
 	text-align: left;
 	overflow: inherit;
 	padding-left: 3%;
@@ -302,7 +305,7 @@ legend {
 }
 
 /* Footer stuff */
-		
+
 #footer {
 	color:gray;
 	font-size: small;
@@ -335,7 +338,7 @@ legend {
 	display: block;
 	font-size: medium;
 }
-			
+
 .sisalto {
 	margin: 0;
 	padding: 1em 1em 0;
@@ -343,7 +346,7 @@ legend {
 	height: 100%;
 }
 
-#content {	
+#content {
 	background-color: #d4d4d4;
 	color: inherit;
 	min-height: 25em;
@@ -388,8 +391,8 @@ legend {
 	color: #006400; /*DarkGreen*/
 }
 
-.pretty-tbl { 
-	border-collapse: collapse; 
+.pretty-tbl {
+	border-collapse: collapse;
 	margin: 0 auto;
 }
 

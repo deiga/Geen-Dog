@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<?php 
+<?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
@@ -36,11 +36,25 @@
         <?php printMenu(0);?>
       </div>
       <div id="sivusisalto">
-        <div id="content">
-          <div>
-            Tähän tulee listaus osasta tuotteista mitä roydon myy, kaikkia tuotteita ei esitetä, eikä varastotilanteita ilmoiteta.
-          </div>
-        </div>
+        <section id="content">
+          <header>
+            <h2>Tuotteet</h2>
+            <nav>
+              <ul id="prod-navi">
+                <li><a href="">Turkinhoitoaineet</a></li>
+                <li><a href="">Turkinhoitotarvikkeet</a></li>
+                <li><a href="">Koulutus</a></li>
+                <li><a href="">Syötävät</a></li>
+                <li><a href="">Makupalat</a></li>
+                <li><a href="">Taluttimet, pannat ja valjaat</a></li>
+                <li><a href="">Laadukkaat Handler?s näyttelyhihnat</a></li>
+                <li><a href="">Häkit ja makuualustat, trimmauspöydät</a></li>
+                <li><a href="">Lelut</a></li>
+                <li><a href="">Muut tuotteet:</a></li>
+              </ul>
+            </nav>
+          </header>
+        </section>
       </div>
       <?php printFoot();?>
     </div>
