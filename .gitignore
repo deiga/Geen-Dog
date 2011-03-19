@@ -1,7 +1,8 @@
 .DS_Store
 cgi-bin/
 random/
-googleafe4af63f30937da.html
-y_key_5517d0735cf33def.html
+/googleafe4af63f30937da.html
+/y_key_5517d0735cf33def.html
 php/arka.php
-error_log
+*/*log*
+/error_log
