@@ -124,13 +124,13 @@ legend {
 	background-color: inherit;
 }
 
-#navilist , #prod-navi {
+#navilist {
 	list-style: none;
 	padding-bottom: 0;
 	margin-bottom: 0;
 }
 
-#navilist li , #prod-navi {
+#navilist li {
   display: inline;
 	padding: 5px 10px 5px 10px;
 }
