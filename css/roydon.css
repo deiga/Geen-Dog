@@ -337,6 +337,7 @@ legend {
   margin: 0;
   padding: 0;
   padding-bottom: 1em;
+  text-align: justify;
 }
 
 .products nav > ul > li {
