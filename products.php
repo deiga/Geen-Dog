@@ -137,9 +137,10 @@
             <h3>Taluttimet, pannat ja valjaat</h3>
             <ul>
               <li>Itse valmistetut nahkahihnat, 1- ja 2-lukkoiset</li>
-              <li>Erittäin laaja valikoima itse valmistettuja nylonhihnoja näyttelyihin ja kotikäyttöön</li>
-              <li>	- useita eri värejä, pituuksia, leveyksiä/paksuuksia, myös</li>
-              <li>heijastimella</li>
+              <li>Erittäin laaja valikoima itse valmistettuja nylonhihnoja näyttelyihin ja kotikäyttöön
+                <ul>
+                  <li>useita eri värejä, pituuksia, leveyksiä/paksuuksia, myös heijastimella</li>
+                </ul>
               <li>Eripaksuiset ja -väriset noutajahihnat</li>
               <li>Resco-näyttelytaluttimet</li>
               <li>Jakajat</li>
@@ -171,7 +172,7 @@
             <ul>
               <li>Puuhapallot</li>
               <li>Kestävät everlastingpallot</li>
-              <li>Kestävät Rompn?roll ja ?? pallot</li>
+              <li>Kestävät Romp n' roll ja ?? pallot</li>
               <li>Hyvä valikoima lateksi-, pehmo-, vinyyli- ja kumileluja</li>
               <li>Vesilelut</li>
               <li>Vinkuvat karvahiiret</li>
