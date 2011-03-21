@@ -330,7 +330,11 @@ legend {
 
 .products > section {
   border-top: 1px dashed #006400;
-  margin-left: 5%;
+  margin: 0 5%;
+}
+
+.products > section > * {
+  margin-left: 1%;
 }
 
 /* PRODUCTS END */
