@@ -337,12 +337,16 @@ legend {
   margin: 0;
 }
 
-.products nav > ul >li {
+.products nav > ul > li {
   display: inline;
   padding: 2px 4px;
   font-size: 0.8em;
-
 }
+
+.products nav > ul > li:first-child {
+  padding: 0 2px 4px 2px;
+}
+
 .products > section {
   border-top: 2px dashed #006400;
   margin: 0 5%;
