@@ -95,7 +95,7 @@ legend {
 
 #lang a:hover {
 	color: #006400;
-	text-decoration: underline;
+/*  text-decoration: underline;*/
 }
 
 #lang a:link , #lang a:visited {
@@ -134,9 +134,6 @@ legend {
 #navilist li {
   display: inline;
 	padding: 5px 10px 5px 10px;
-}
-
-#navilist li {
 	border-top: 1px solid #006400;
 	border-left: 1px solid #006400;
 	border-right: 1px solid #006400;
@@ -171,6 +168,7 @@ legend {
 
 #navilist .currpage:hover {
   background-color: #d4d4d4;
+  text-decoration: none;
 }
 
 
@@ -178,9 +176,6 @@ legend {
 	color: green;
 }
 
-#navilist li a:hover {
-	color: green;
-}
 
 #navilist li a:link , #navilist li a:visited {
   color: white;
