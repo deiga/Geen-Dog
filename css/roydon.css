@@ -337,6 +337,10 @@ legend {
   margin-left: 1%;
 }
 
+.products section:last-child {
+  margin-bottom: 5%;
+}
+
 /* PRODUCTS END */
 
 #nayttely p {
