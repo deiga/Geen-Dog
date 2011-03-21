@@ -132,6 +132,7 @@
               <li>Racinel makupalat</li>
             </ul>
           </section>
+
           <section>
             <h3>Taluttimet, pannat ja valjaat</h3>
             <ul>
