@@ -18,6 +18,7 @@ a:active {
 
 a:hover {
   background-color: inherit;
+  text-decoration: underline;
   color: #006400;
 }
 
