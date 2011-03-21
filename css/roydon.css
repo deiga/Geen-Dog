@@ -328,8 +328,21 @@ legend {
 
 /* PRODUCTS BEGIN */
 
+.products > header {
+  margin: 0 5%;
+}
+
+.products nav > ul {
+  list-style: none outside none;
+  margin: 0;
+}
+
+.products nav > ul >li {
+  display: inline;
+  padding: 2px 4px;
+}
 .products > section {
-  border-top: 1px dashed #006400;
+  border-top: 2px dashed #006400;
   margin: 0 5%;
 }
 
