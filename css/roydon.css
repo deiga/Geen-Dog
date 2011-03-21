@@ -162,6 +162,7 @@ legend {
 #navilist li:hover {
 	background-color: #006400;
 	color: Green;
+	text-decoration: none;
 }
 
 #navilist .currpage {
