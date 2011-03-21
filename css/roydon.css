@@ -337,7 +337,7 @@ legend {
   margin: 0;
   padding: 0;
   padding-bottom: 1em;
-  text-align: justify;
+  text-align: center;
 }
 
 .products nav > ul > li {
@@ -350,7 +350,7 @@ legend {
   padding: 2px 2px 2px 0;
 }
 
-.products nav > ul > li:first-child {
+.products nav > ul > li:last-child {
   padding: 2px 0 2px 2px;
 }
 
