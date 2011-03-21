@@ -328,7 +328,7 @@ legend {
 
 /* PRODUCTS BEGIN */
 
-#products > section {
+.products > section {
   border-top: 1px dashed #006400;
   margin-left: 5%;
 }
