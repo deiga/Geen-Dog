@@ -304,7 +304,7 @@ legend {
     font-size: smaller;
 }
 
-/* Footer stuff */
+/* FOOTER BEGIN */
 
 #footer {
 	color:gray;
@@ -323,6 +323,17 @@ legend {
 #footer a:hover {
 	text-decoration: underline;
 }
+
+/* FOOTER END */
+
+/* PRODUCTS BEGIN */
+
+#products > section {
+  border-top: 1px dashed #006400;
+  margin-left: 5%;
+}
+
+/* PRODUCTS END */
 
 #nayttely p {
 	margin-top: 1px;

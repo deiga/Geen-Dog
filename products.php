@@ -36,7 +36,7 @@
         <?php printMenu(0);?>
       </div>
       <div id="sivusisalto">
-        <section id="content">
+        <section id="content products">
           <header>
             <h2>Tuotteet</h2>
             <nav>
