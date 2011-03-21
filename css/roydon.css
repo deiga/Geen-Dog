@@ -349,8 +349,12 @@ legend {
   padding: 2px 2px 2px 0;
 }
 
+.products nav > ul > li:first-child {
+  padding: 2px 0 2px 2px;
+}
+
 .products > section {
-  border-top: 1.5px dashed #006400;
+  border-top: 2px dashed #006400;
   margin: 0 5%;
 }
 
