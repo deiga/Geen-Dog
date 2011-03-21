@@ -1,0 +1,5 @@
+obsolete
+random
+.git*
+.DS_Store
+.exclude
