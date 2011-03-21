@@ -340,6 +340,8 @@ legend {
 .products nav > ul >li {
   display: inline;
   padding: 2px 4px;
+  font-size: 0.8em;
+
 }
 .products > section {
   border-top: 2px dashed #006400;
