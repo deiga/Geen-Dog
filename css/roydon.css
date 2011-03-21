@@ -335,16 +335,17 @@ legend {
 .products nav > ul {
   list-style: none outside none;
   margin: 0;
+  padding: 0;
 }
 
 .products nav > ul > li {
   display: inline;
-  padding: 2px 4px;
+  padding: 2px 2px;
   font-size: 0.8em;
 }
 
 .products nav > ul > li:first-child {
-  padding: 0 2px 4px 2px;
+  padding: 2px 0 2px 2px;
 }
 
 .products > section {
