@@ -32,8 +32,8 @@
         break;
     }
     bindtextdomain('roydon', '/home/roydonf/public_html/locale');
-    bind_textdomain_codeset('roydon', 'UTF-8');
     textdomain('roydon');
+    bind_textdomain_codeset('roydon', 'UTF-8');
   }
 
   // Function to convert days into seconds
@@ -95,11 +95,11 @@
       echo "        <li id='shows' class='rounded-top'><a href='shows.php?year=$year' title='Attending dogshows'>Dog shows</a></li>\n";
       echo "        <li id='contact' class='rounded-top'><a href='contact.php' title='Contact Us'>Contact Us</a></li>\n";
     } else if ($lang == 0) {
-      echo "        <li id='index' class='rounded-top'><a href='/index.php' title='Homepage'>Etusivu</a></li>\n";
+      echo "        <li id='index' class='rounded-top'><a href='/index.php' title='Homepage'>" . _('navi.home') . "</a></li>\n";
       //echo "        <li id='info' class='rounded-top'><a href='/info.php' title='About Us'>Esittely</a></li>\n";
-      //echo "        <li id='products' class='rounded-top'><a href='/products.php' title='Products'>Tuotteet</a></li>\n";
-      echo "        <li id='nayttelyt' class='rounded-top'><a href='/nayttelyt.php?year=$year' title='Attending dogshows'>Näyttelyt</a></li>\n";
-      echo "        <li id='contact' class='rounded-top'><a href='/contact.php' title='Contact Us'>Ota Yhteyttä</a></li>\n";
+      //echo "        <li id='products' class='rounded-top'><a href='/products.php' title='Products'>" . _('navi.products') . "</a></li>\n";
+      echo "        <li id='nayttelyt' class='rounded-top'><a href='/nayttelyt.php?year=$year' title='Attending dogshows'>" . _('navi.shows') . "</a></li>\n";
+      echo "        <li id='contact' class='rounded-top'><a href='/contact.php' title='Contact Us'>" . _('navi.contact') . "</a></li>\n";
     }
 
     if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
@@ -140,7 +140,7 @@
     if ($lang == 1) {
       echo "\tQuestions or comments regarding the site to &#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;";
     } else if ($lang == 0) {
-      echo "\tSivuihin liittyvät kysymykset ja kommentit &#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105; <a class='robots-nocontent' href='/login'>Ylläpito</a>";
+      echo "\t" . _('contact.web') . " &#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105; <a class='robots-nocontent' href='/login'>Ylläpito</a>";
     }
     echo "<address>";
     echo "Kuninkaantie 752 <br /> FI 07110 HINTHAARA\n <br />";

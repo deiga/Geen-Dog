@@ -60,14 +60,14 @@
         <?php langLink(0); ?>
         <div id="otsikko">
           <h1>roydon</h1>
-          <p>Kenneltarvikkeet</p>
+          <p><?php echo _('header.subtitle'); ?></p>
         </div>
         <?php printMenu(0);?>
       </div>
       <div id="sivusisalto" class="shadow">
         <section id="content">
             <table class="pretty-tbl" summary="Taulukko näkymä tulevista näyttelyistä.">
-              <caption>Seuraavista näyttelyistä löydät meidät vuonna
+              <caption><?php echo _('show.title'); ?>
               <?php
                if ($year == date('Y') ) {
                  if ( date('m') >= 8 ) {
@@ -78,9 +78,9 @@
               :</caption>
               <thead>
                 <tr>
-                  <th scope="col" id="show_time">Aika</th>
-                  <th scope="col" id="show_name">Nimi</th>
-                  <th scope="col" id="show_place">Paikka</th>
+                  <th scope="col" id="show_time"><?php echo _('show.time'); ?></th>
+                  <th scope="col" id="show_name"><?php echo _('show.name'); ?></th>
+                  <th scope="col" id="show_place"><?php echo _('show.location'); ?></th>
                   <?php
                     if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
                      echo "  <th scope='col' id='show_admin'>Ylläpito</th>\n";

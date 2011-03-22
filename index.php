@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
-
+  locale($_GET['lang']);
 	$link = connect();
 	not_connected($link);
 	$year = date('Y');
@@ -49,7 +49,7 @@
 				<?php langLink(0); ?>
 				<div id="otsikko">
 					<h1>roydon</h1>
-					<p>Kenneltarvikkeet</p>
+					<p><?php echo _('header.subtitle'); ?></p>
 				</div>
 				<?php printMenu(0);?>
 			</div>
@@ -64,13 +64,13 @@
 							 if (mysql_num_rows($newsresult) > 0) {
 							   echo '<div id="uutiset">
 								  <fieldset class="contentfield">
-									<legend>Uutiset</legend>';
+									<legend>_("news.title")</legend>';
 										while ($row = mysql_fetch_row($newsresult)) {
 
 											echo "<p class='uutinen'>\n".date_conv_short($row[0])." - $row[1] <br />\n$row[2]\n</p>";
 										}
 								  echo '</fieldset>\n
-								  <a href="/uutiset.php" title="Lisää uutisia">Lisää...</a>\n
+								  <a href="/uutiset.php" title="Lisää uutisia">_("news.more")</a>\n
 							   </div>';
                 };
                 ?>
@@ -79,7 +79,7 @@
 				<div id="oikea">
 					<aside class="sisalto">
 						<section id="nayttely">
-							<h3>Seuraavaksi löydät meidät:</h3>
+							<h3><?php echo _('show.next.title'); ?></h3>
 							<span>
 							<?php
 							if (mysql_num_rows($showresult) > 0 ) {
@@ -91,16 +91,16 @@
 									}
 								}
 						  } else {
-						    echo "Ei tulevia näyttelyitä tällähetkellä.";
+						    echo "<?php echo _('show.next.negative'); ?>.";
 						  }
 							?>
 							</span>
 							<p>
-								<a href="nayttelyt.php?year=<?php echo $year ?>" title="Attending dogshows">Lisää näyttelyitä...</a>
+								<a href="nayttelyt.php?year=<?php echo $year ?>" title="Attending dogshows"><?php echo _('show.next.more'); ?>...</a>
 							</p>
 						</section>
 						<section id="links" class="robots-nocontent">
-							<h4>Linkkejä</h4>
+							<h4><?php echo _('links.title'); ?></h4>
 							<ul>
 								<li><a href="http://www.kennelliitto.fi/fi" title="Suomen Kennelliitto">Suomen Kennelliitto</a></li>
 								<li><a href="http://www.airedalenterrieri.fi/" title="SATY Ry">Suomen Airedalenterrieriyhdistys</a></li>

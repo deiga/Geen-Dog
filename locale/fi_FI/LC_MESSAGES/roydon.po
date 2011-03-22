@@ -1,50 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: test\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-03-22 17:06+0200\n"
+"PO-Revision-Date: 2011-03-22 17:16+0200\n"
+"Last-Translator: Timo Sand <timo@timosand.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: /home/roydonf/public_html\n"
+"X-Poedit-Language: Finnish\n"
+"X-Poedit-Country: FINLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: contact.php:34
+#: index.php:52
+#: nayttelyt.php:63
 msgid "header.subtitle"
 msgstr "Kenneltarvikkeet"
 
-msgid "navi.home"
-msgstr "Etusivu"
+#: contact.php:42
+msgid "contact.title"
+msgstr "Meihin saat yhteyden"
 
-msgid "navi.shows"
-msgstr "Näyttelyt"
+#: contact.php:44
+msgid "contact.general"
+msgstr "Yleiset kysymykset"
 
-msgid "navi.products"
-msgstr "Tuotteet"
+#: contact.php:45
+msgid "contact.products"
+msgstr "Tuote-, saatavuus- ja hintakyselyt"
 
-msgid "navi.contact"
-msgstr "Ota Yhteyttä"
+#: contact.php:46
+msgid "contact.web"
+msgstr "Sivuihin liittyvät kysymykset ja kommentit"
 
-msgid "show.next"
+#: contact.php:47
+msgid "contact.mail"
+msgstr "Postitse"
+
+#: contact.php:48
+msgid "contact.phone"
+msgstr "Puhelimella"
+
+#: index.php:82
+msgid "show.next.title"
 msgstr "Seuraavaksi löydät meidät"
 
-msgid "show.more"
-msgstr "Lisää näyttelyitä..."
+#: index.php:99
+msgid "show.next.more"
+msgstr "Lisää näyttelyitä"
 
+#: index.php:103
+msgid "links.title"
+msgstr "Linkkejä"
+
+#: nayttelyt.php:70
 msgid "show.title"
 msgstr "Seuraavista näyttelyistä löydät meidät vuonna"
 
+#: nayttelyt.php:81
 msgid "show.time"
 msgstr "Aika"
 
+#: nayttelyt.php:82
 msgid "show.name"
 msgstr "Nimi"
 
+#: nayttelyt.php:83
 msgid "show.location"
 msgstr "Paikka"
 
-msgid "link.title"
-msgstr "linkkejä"
-
+#: products.php:43
 msgid "product.title"
 msgstr "Tuotteet"
 
+#: php/functions.php:98
+msgid "navi.home"
+msgstr "Etusivu"
 
-"Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2011-03-22 15:21+0200\n"
-"PO-Revision-Date: 2011-03-22 15:21+0200\n"
-"Last-Translator: Timo Joachim Sand <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+#: php/functions.php:101
+msgid "navi.shows"
+msgstr "Näyttelyt"
+
+#: php/functions.php:102
+msgid "navi.contact"
+msgstr "Ota Yhteyttä"
 
