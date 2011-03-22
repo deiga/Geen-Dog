@@ -194,7 +194,7 @@ legend {
 	background-color: #d4d4d4;
 	color: inherit;
 	float:left;
-	width: 71%;
+	width: 70.9%;
 	min-height: 25em;
 	position: absolute;
 	text-align: center;
@@ -225,8 +225,8 @@ legend {
 /* !Opera haxes begin */
 @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
 
-  #oikea {
-    left: 71.1%;
+  #vasen {
+    width: 71%;
   }
 
 }
