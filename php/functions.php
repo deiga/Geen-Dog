@@ -217,14 +217,12 @@
   // Function for printing language link
   function langLink($lang = 0) {
     if ($lang == 0) {
-      echo "<span style='display: none;'>/en" . $_SERVER['PHP_SELF'] . "</span>";
       echo "<div id='lang'>\n
-              <a href='http://roydon.fi/en/" . $_SERVER['PHP_SELF'] . "' title='In English'>In English</a>\n
+              <a href='en/' title='In English'>In English</a>\n
             </div>";
     } else if ($lang == 1) {
-      echo "<span style='display: none;'>" . ltrim($_SERVER['PHP_SELF'], '/en') . "</span>";
       echo "<div id='lang'>\n
-              <a href='http://roydon.fi/" . ltrim($_SERVER['PHP_SELF'], '/en') . "' title='Suomeksi'>Suomeksi</a>\n
+              <a href='http://roydon.fi/' title='Suomeksi'>Suomeksi</a>\n
             </div>";
     }
   }
