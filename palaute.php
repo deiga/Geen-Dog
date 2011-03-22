@@ -3,7 +3,7 @@
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
   require_once('php/recaptchalib.php');
   $publickey = "6LdZQQQAAAAAAHm66YKZX86nHz6V_XpL9VbWtLKm";
-  
+
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
   <head>
@@ -49,20 +49,19 @@
             <fieldset>
               <legend>Palautelomake</legend>
               <form method="post" action="php/mail.php">
-                Aihe: 
+                Aihe:
                 <input type="text" name="subject" /><br />
-                Lähettäjä: 
+                Lähettäjä:
                 <input type="text" name="email" /><br />
-                Viesti: 
+                Viesti:
                 <textarea name="message" rows="7" cols="50"></textarea><br />
                 <?php echo recaptcha_get_html($publickey); ?>
-                <input type="submit" value="Lähetä" /> 
+                <input type="submit" value="Lähetä" />
                 <input type="reset" value="Tyhjennä lomake" />
               </form>
             </fieldset>
           </div>
-          
-        </div>
+        </section>
       </div>
       <?php printFoot();?>
     </div>

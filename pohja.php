@@ -1,6 +1,6 @@
 <?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
-  
+
   echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -38,7 +38,7 @@
       </div>
       <div id="sivusisalto" class="shadow">
         <section id="content">
-        </div>
+        </section>
       </div>
       <?php printFoot();?>
     </div>

@@ -78,7 +78,7 @@
 				</div>
 				<div id="oikea">
 					<div class="sisalto">
-						<div id="nayttely">
+						<section id="nayttely">
 							<h3>Seuraavaksi löydät meidät:</h3>
 							<span>
 							<?php
@@ -98,7 +98,7 @@
 							<p>
 								<a href="nayttelyt.php?year=<?php echo $year ?>" title="Attending dogshows">Lisää näyttelyitä...</a>
 							</p>
-						</div>
+						</section>
 						<div id="links" class="robots-nocontent">
 							<h4>Linkkejä</h4>
 							<ul>

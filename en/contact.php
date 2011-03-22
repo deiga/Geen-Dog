@@ -49,7 +49,7 @@
               </address>
             </fieldset>
           </div>
-        </div>
+        </section>
       </div>
       <?php printFoot(1);?>
     </div>

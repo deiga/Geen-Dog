@@ -222,31 +222,6 @@ legend {
 	padding-left: 5%;
 }
 
-/* !Opera haxes begin */
-@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
-
-  #oikea {
-    left: 71.1%;
-  }
-
-  #vasen {
-    width: 71%;
-  }
-
-}
-/* !Opera haxes end */
-
-/* !Webkit haxes begin */
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-
-  #oikea {
-    width: 29.1%;
-  }
-}
-
-/* !Webkit haxes end */
-
 #content > #uutiset {
   height: auto;
 }
@@ -297,8 +272,7 @@ legend {
 footer {
 	color:gray;
 	font-size: small;
-	margin: 0 auto;
-	margin-top: 2px;
+	margin: 5px auto 0;
 	width: 100%;
 	background-color: inherit;
 	position: relative;
@@ -623,9 +597,35 @@ a:link {
 /* LINKS END */
 
 /* FIXES BEGIN */
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+/* !Opera haxes begin */
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+
+  #oikea {
+    left: 71.1%;
+  }
+
+  #vasen {
+    width: 71%;
+  }
+
+}
+/* !Opera haxes end */
+
+/* !Webkit haxes begin */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+  #oikea {
+    width: 29.1%;
+  }
+}
+
+/* !Webkit haxes end */
 /* FIXES END */

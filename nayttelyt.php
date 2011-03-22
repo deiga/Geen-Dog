@@ -1,4 +1,4 @@
-<?php 
+<?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
   initSession('shows');
 ?>
@@ -10,11 +10,11 @@
   if ($year == '') {
     $year = date('Y');
   }
-  
+
   $db = 'roydonf_roydon';
   inv_db($db);
   $q = date_query($year);
-  
+
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
   <head>
@@ -42,7 +42,7 @@
         $('a.delete').click(function(e) {
           e.preventDefault();
           var parent = $(this).parent().parent();
-          $.post("php/delShow.php", { del: parent.attr("id") }, 
+          $.post("php/delShow.php", { del: parent.attr("id") },
             function() {
               parent.fadeOut("fast");
             });
@@ -67,13 +67,13 @@
       <div id="sivusisalto" class="shadow">
         <section id="content">
             <table class="pretty-tbl" summary="Taulukko näkymä tulevista näyttelyistä.">
-              <caption>Seuraavista näyttelyistä löydät meidät vuonna 
+              <caption>Seuraavista näyttelyistä löydät meidät vuonna
               <?php
                if ($year == date('Y') ) {
                  if ( date('m') >= 8 ) {
-                   echo ($year." - ".($year+1)); 
+                   echo ($year." - ".($year+1));
                  } else echo $year;
-               } else echo $year;  
+               } else echo $year;
               ?>
               :</caption>
               <thead>
@@ -84,7 +84,7 @@
                   <?php
                     if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
                      echo "  <th scope='col' id='show_admin'>Ylläpito</th>\n";
-                    }         
+                    }
                   ?>
                 </tr>
               </thead>
@@ -99,7 +99,7 @@
             <p>Suomen koiranäyttelyiden ajankohtia ja pitopaikan löydätte <a href="http://www.kennelliitto.fi/FI/toiminta/nayttelyt/kvkr2008/" title="Suomen kennelliiton koiranäyttelysivusto">Suomen kennelliiton</a> sivuilta.</p>
           </div>
 
-        </div>
+        </section>
       </div>
       <?php printFoot();?>
     </div>
