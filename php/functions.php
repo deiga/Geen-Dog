@@ -15,7 +15,25 @@
     } else if ($_SESSION['loggedIn'] == 1 && $login == 'login') {
       header('Location: http://roydon.fi/login/home.php');
     }
+  }
 
+  function locale($code = 'fi') {
+    switch ($code) {
+      case 'en':
+        setlocale(LC_MESSAGES, 'en_US.UTF-8');
+        break;
+
+      case 'se':
+        setlocale(LC_MESSAGES, 'sv_SE.UTF-8');
+        break;
+
+      default:
+        setlocale(LC_MESSAGES, 'fi_FI.UTF-8');
+        break;
+    }
+    bindtextdomain('roydon', '/locales');
+    bind_textdomain_codeset('roydon', 'UTF-8');
+    textdomain('roydon');
   }
 
   // Function to convert days into seconds

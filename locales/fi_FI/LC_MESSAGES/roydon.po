@@ -1,0 +1,50 @@
+msgid "header.subtitle"
+msgstr "Kenneltarvikkeet"
+
+msgid "navi.home"
+msgstr "Etusivu"
+
+msgid "navi.shows"
+msgstr "Näyttelyt"
+
+msgid "navi.products"
+msgstr "Tuotteet"
+
+msgid "navi.contact"
+msgstr "Ota Yhteyttä"
+
+msgid "show.next"
+msgstr "Seuraavaksi löydät meidät"
+
+msgid "show.more"
+msgstr "Lisää näyttelyitä..."
+
+msgid "show.title"
+msgstr "Seuraavista näyttelyistä löydät meidät vuonna"
+
+msgid "show.time"
+msgstr "Aika"
+
+msgid "show.name"
+msgstr "Nimi"
+
+msgid "show.location"
+msgstr "Paikka"
+
+msgid "link.title"
+msgstr "linkkejä"
+
+msgid "product.title"
+msgstr "Tuotteet"
+
+
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2011-03-22 15:21+0200\n"
+"PO-Revision-Date: 2011-03-22 15:21+0200\n"
+"Last-Translator: Timo Joachim Sand <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
