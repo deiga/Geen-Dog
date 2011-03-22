@@ -1,6 +1,6 @@
 <?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
-  
+
   initSession('login');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -38,7 +38,7 @@
             <div id="logTex">
               <h2>Ylläpito</h2>
               <p>Jos haluat ylläpitää sivuston sisältöä kirjaudu omilla tunnuksillasi tänne.
-               <br />Jos taasen et tiedä tunnuksia ota yhteyttä ylläpitoon. 
+               <br />Jos taasen et tiedä tunnuksia ota yhteyttä ylläpitoon.
                <br />Jos sinulla ei ole tunnuksia, eikä kuuluisi ollakkaan, sitten ehdotan siirtymään meidän etusivulle.
                     </p>
             </div>
@@ -64,8 +64,8 @@
                 </table>
               </fieldset>
             </form>
-            
-        </div>
+
+        </section>
       </div>
       <?php printFoot();?>
     </div>

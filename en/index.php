@@ -3,15 +3,15 @@
   require($_SERVER['DOCUMENT_ROOT'].'/php/functions.php');
   $link = connect();
   not_connected($link);
-  
+
   $year = date('Y');
-  
+
   $db = 'roydonf_roydon';
   $showquery = 'SELECT * FROM `shows` ORDER BY aika ASC';
   $newsquery = 'SELECT * FROM `news` WHERE date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) ORDER BY date DESC';
-  
+
   inv_db($db);
-  
+
   $showresult = mysql_query($showquery);
   $newsresult = mysql_query($newsquery);
 
@@ -54,11 +54,11 @@
       </div>
       <div id="mainsisalto" class="shadow">
         <div id="vasen">
-          <div class="sisalto">
-              <div id="lyhes">
+          <section class="sisalto">
+              <section id="lyhes">
                 <h2>Welcome</h2>
                 This is the homepage of Roydon Ky, a company, selling kennelaccessories, from porvoo. Here you can find information about our company, about some of the products we sell and which dog shows we will be attending.
-              </div>
+              </section>
               <?php
                if (mysql_num_rows($newsresult) > 0) {
                   echo '<div id="uutiset">
@@ -70,13 +70,13 @@
                   echo '</fieldset>
                   <a href="news.php" title="More news">More...</a>\n
                   </div>';
-                }; 
-              ?> 
-          </div>
+                };
+              ?>
+          </section>
         </div>
         <div id="oikea">
-          <div class="sisalto">
-            <div id="nayttely">
+          <aside class="sisalto">
+            <section id="nayttely">
               <h3>You can find us next in:</h3>
               <span>
               <?php
@@ -96,16 +96,16 @@
               <p>
                 <a href="shows.php?year=<?php echo $year ?>" title="Attending dogshows">More dog shows...</a>
               </p>
-            </div>
-            <div id="links" class="robots-nocontent">
+            </section>
+            <section id="links" class="robots-nocontent">
               <h4>Links</h4>
               <ul>
                 <li><a href="http://www.kennelliitto.fi/fi" title="Suomen Kennelliitto" >Finnish Kennel Club</a></li>
                 <li><a href="http://www.airedalenterrieri.fi/" title="SATY Ry" >Finnish Airedale Terrier association</a></li>
                 <li><a href="http://www.terrierijarjesto.fi/" title="STJ Ry" >Finlands Terrierorganization</a></li>
               </ul>
-            </div>
-          </div>
+            </section>
+          </aside>
         </div>
       </div>
       <?php printFoot(1);?>

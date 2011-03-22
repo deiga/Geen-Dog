@@ -140,7 +140,7 @@
               <li>Erittäin laaja valikoima itse valmistettuja nylonhihnoja näyttelyihin ja kotikäyttöön
                 <ul>
                   <li>useita eri värejä, pituuksia, leveyksiä/paksuuksia, myös heijastimella</li>
-                </ul>
+                </ul></li>
               <li>Eripaksuiset ja -väriset noutajahihnat</li>
               <li>Resco-näyttelytaluttimet</li>
               <li>Jakajat</li>

@@ -1,6 +1,6 @@
 <?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
-  
+
   initSession();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -46,7 +46,7 @@
                   <legend>Suomeksi</legend>
                   <label for="head">Uutisen otsikko:</label><input type="text" value="" name="head" id="head" />
                   <label for="content">Uutisen sisältö:</label><input type="text" value="" id="content" name="content"  />
-                  
+
                 </fieldset>
                 <fieldset>
                   <legend>Englanniksi</legend>
@@ -65,7 +65,7 @@
                     die($errmsg);
                     error_log($errmsg);
                }
-               
+
                $topic = mysql_real_escape_string($_POST['head']);
                $topicEN = mysql_real_escape_string($_POST['headEN']);
                $cont = mysql_real_escape_string($_POST['content']);
@@ -73,14 +73,14 @@
                $tbl = 'news';
                $db = 'roydonf_roydon';
                $aika = date("Y-m-d");
-               
+
                inv_db($db);
-               
+
                if (isset($topic, $cont) && !empty($topic) && !empty($cont)) {
                     $query = "INSERT INTO $db.$tbl(`date` ,`head` ,`content` ,`headEn` ,`contEn`) VALUES ('$aika', '$topic', '$cont', '$topicEN', '$contEN')";
                     $result = mysql_query($query);
                }
-         
+
                if (!$result && isset($result)) {
                  $errmsg = 'Invalid query: ' . mysql_error();
       die($errmsg);
@@ -88,13 +88,13 @@
                } else if ($result ) {
                  $_SESSION['msg'] = "Lisäys onnistui!";
                  echo "Lisäys onnistui!";
-               }  
-            ?>             
+               }
+            ?>
           </div>
           <p id="back">
            <a href="/login" title="Back">&lt;&lt; Takaisin</a>
           </p>
-        </div> <!-- !END CONTENT -->
+        </section> <!-- !END CONTENT -->
       </div> <!-- !END SIVUSISALTO -->
       <?php printFoot();?>
     </div>

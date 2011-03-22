@@ -5,14 +5,14 @@
 ?>
 <!DOCTYPE html>
 <?php
-  
+
   $link = connect();
   not_connected($link);
   $year = $_REQUEST['year'];
   $db = 'roydonf_roydon';
   $q = date_query($year);
-  
-  inv_db($db); 
+
+  inv_db($db);
 ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -50,13 +50,13 @@
       <div id="sivusisalto" class="shadow">
         <section id="content">
             <table class="pretty-tbl" summary="Taulukko näkymä tulevista näyttelyistä.">
-              <caption>You can find us at these dow shows in 
+              <caption>You can find us at these dow shows in
               <?php
                if ($year == date('Y') ) {
                  if ( date('m') >= 8 ) {
-                   echo ($year." - ".($year+1)); 
+                   echo ($year." - ".($year+1));
                  } else echo $year;
-               } else echo $year;  
+               } else echo $year;
               ?>
               :</caption>
               <thead>
@@ -66,7 +66,7 @@
                 <?php
                   if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
                     echo "  <th scope='col' id='show_admin'>Admin</th>\n";
-                  }         
+                  }
                 ?>
               </thead>
               <tbody>
@@ -79,7 +79,7 @@
               <?php yearList(1); ?>
               <p>You can find the information of all dog shows in Finnland at the page <a href="http://www.kennelliitto.fi/EN/events/shows/shows2008/" title="Finnish Kennel Club shows">Finnish Kennel Club</a></p>
             </div>
-        </div>
+        </section>
       </div>
       <?php printFoot(1);?>
     </div>

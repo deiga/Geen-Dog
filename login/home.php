@@ -1,6 +1,6 @@
 <?php
  	require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
- 	
+
  	initSession();
  	echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
@@ -51,7 +51,7 @@
 				      <li><a href="addNews.php">Uutisen lisääminen</a></li>
 				      <li><a href="/uutiset.php">Uutisen poistaminen</a></li>
 				    </ul>
-				</div>
+				</section>
 			</div>
 			<?php printFoot();?>
 		</div>

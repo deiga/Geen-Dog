@@ -4,17 +4,17 @@
 <!DOCTYPE html>
 <?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
-  
+
   $link = connect();
   not_connected($link);
   $year = date('Y');
 
   $db = 'roydonf_roydon';
   $newsquery = 'SELECT * FROM `news` ORDER BY date DESC';
-  
+
   $db_selected = mysql_select_db($db);
   inv_db($db, $db_selected);
-  
+
   $newsresult = mysql_query($newsquery);
   inv_query($newsresult);
 ?>
@@ -59,13 +59,13 @@
                 <fieldset class="contentfield">
                 <legend>News:</legend>';
                   while ($row = mysql_fetch_row($newsresult)) {
-            
+
                     echo "<p class='uutinen'>\n".date_conv_short($row[0])." - $row[1] <br />\n$row[2]\n</p>";
                   }
                 echo '</fieldset>
               </div>';
             ?>
-          </div>
+          </section>
         </div>
       </div>
       <?php printFoot();?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
   require($_SERVER['DOCUMENT_ROOT'].'/php/functions.php');
   echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
@@ -40,8 +40,8 @@
           <div>
             Here we will add the history of the company.
           </div>
-        
-        </div>
+
+        </section>
       </div>
       <?php printFoot(1);?>
     </div>

@@ -55,11 +55,11 @@
 			</div>
 			<div id="mainsisalto" class="shadow">
 				<div id="vasen">
-					<div class="sisalto">
-							<div id="lyhes">
+					<section class="sisalto">
+							<section id="lyhes">
 								<h2>Tervetuloa Roydon Ky:n kotisivuille</h2>
 								Roydon on koiranäyttelyitä kiertävä kenneltarvikeliike. Sivuiltamme löydät tiedot näyttelyistä, joissa käymme, ja myös tiedot miten meihin saa yhteyden.
-							</div>
+							</section>
 							<?php
 							 if (mysql_num_rows($newsresult) > 0) {
 							   echo '<div id="uutiset">
@@ -74,7 +74,7 @@
 							   </div>';
                 };
                 ?>
-					</div>
+					</section>
 				</div>
 				<div id="oikea">
 					<aside class="sisalto">
