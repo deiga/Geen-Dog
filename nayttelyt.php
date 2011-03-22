@@ -58,12 +58,12 @@
     <div id="takala">
       <?php oldBrowse(); ?>
       <div id="otsake" class="shadow">
-        <?php langLink(0); ?>
+        <?php langLink($_GET['lang']); ?>
         <div id="otsikko">
           <h1>roydon</h1>
           <p><?php echo _('header.subtitle'); ?></p>
         </div>
-        <?php printMenu(0);?>
+        <?php printMenu();?>
       </div>
       <div id="sivusisalto" class="shadow">
         <section id="content">
@@ -97,7 +97,10 @@
             </table>
             <div id="years">
               <?php yearList(); ?>
-            <p>Suomen koiranäyttelyiden ajankohtia ja pitopaikan löydätte <a href="http://www.kennelliitto.fi/FI/toiminta/nayttelyt/kvkr2008/" title="Suomen kennelliiton koiranäyttelysivusto">Suomen kennelliiton</a> sivuilta.</p>
+              <p>
+                <?php echo _('show.more.info'); ?>:
+                <a href="http://www.kennelliitto.fi/FI/toiminta/nayttelyt/kvkr2008/" title="SKL näyttelysivusto"><?php echo _('links.kennelclub'); ?></a>
+              </p>
           </div>
 
         </section>

@@ -31,7 +31,7 @@
           <h1>roydon</h1>
           <p>Kenneltarvikkeet</p>
         </div>
-        <?php printMenu(0);?>
+        <?php printMenu();?>
       </div>
       <div id="login">
         <section id="content">

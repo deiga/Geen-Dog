@@ -28,12 +28,12 @@
     <div id="takala">
       <?php oldBrowse(); ?>
       <div id="otsake" class="shadow">
-        <?php langLink(0); ?>
+        <?php langLink($_GET['lang']); ?>
         <div id="otsikko">
           <h1>roydon</h1>
           <p>Kenneltarvikkeet</p>
         </div>
-        <?php printMenu(0);?>
+        <?php printMenu();?>
       </div>
       <div id="sivusisalto" class="shadow">
         <section id="content">

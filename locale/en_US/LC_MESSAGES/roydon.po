@@ -90,3 +90,35 @@ msgstr "Dog shows"
 msgid "navi.contact"
 msgstr "Contact Us"
 
+#: php/functions.php:243
+msgid "lang.text"
+msgstr "Suomeksi"
+
+#: index.php:67
+msgid "news.title"
+msgstr "News"
+
+#: index.php:73
+msgid "news.more"
+msgstr "More"
+
+#: index.php:105
+#: nayttelyt.php:102
+msgid "links.kennelclub"
+msgstr "Finnish Kennel Club"
+
+#: index.php:106
+msgid "links.airedale"
+msgstr "Finnish Airedale Terrier Club"
+
+#: index.php:107
+msgid "links.terriers"
+msgstr "Finnish Terrier Club"
+
+#: index.php:108
+msgid "links.lakeland"
+msgstr "Finnish Lakeland Terrier Club"
+
+#: nayttelyt.php:100
+msgid "show.info.more"
+msgstr "Additional information about finnsih dog shows"

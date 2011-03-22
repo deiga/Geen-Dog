@@ -46,12 +46,12 @@
 		<div id="takala">
 			<?php oldBrowse(); ?>
 			<div id="otsake" class="shadow">
-				<?php langLink(0); ?>
+				<?php langLink($_GET['lang']); ?>
 				<div id="otsikko">
 					<h1>roydon</h1>
 					<p><?php echo _('header.subtitle'); ?></p>
 				</div>
-				<?php printMenu(0);?>
+				<?php printMenu();?>
 			</div>
 			<div id="mainsisalto" class="shadow">
 				<div id="vasen">
@@ -70,7 +70,7 @@
 											echo "<p class='uutinen'>\n".date_conv_short($row[0])." - $row[1] <br />\n$row[2]\n</p>";
 										}
 								  echo '</fieldset>\n
-								  <a href="/uutiset.php" title="Lisää uutisia">_("news.more")</a>\n
+								  <a href="/uutiset.php" title="Lisää uutisia">_("news.more")...</a>\n
 							   </div>';
                 };
                 ?>
@@ -102,10 +102,10 @@
 						<section id="links" class="robots-nocontent">
 							<h4><?php echo _('links.title'); ?></h4>
 							<ul>
-								<li><a href="http://www.kennelliitto.fi/fi" title="Suomen Kennelliitto">Suomen Kennelliitto</a></li>
-								<li><a href="http://www.airedalenterrieri.fi/" title="SATY Ry">Suomen Airedalenterrieriyhdistys</a></li>
-								<li><a href="http://www.terrierijarjesto.fi/" title="STJ Ry">Suomen Terrierijärjestö Ry</a></li>
-								<li><a href="http://www.lakelandinterrierit.net/" title="Lakelandinterrierit ry">Lakelandinterrierit Ry</a></li>
+								<li><a href="http://www.kennelliitto.fi/fi" title="Suomen Kennelliitto"><?php echo _('links.kennelclub'); ?></a></li>
+								<li><a href="http://www.airedalenterrieri.fi/" title="SATY Ry"><?php echo _('links.airedale'); ?></a></li>
+								<li><a href="http://www.terrierijarjesto.fi/" title="STJ Ry"><?php echo _('links.terriers'); ?></a></li>
+								<li><a href="http://www.lakelandinterrierit.net/" title="Lakelandinterrierit ry"><?php echo _('links.lakelands'); ?></a></li>
 							</ul>
 						</section>
 					</aside>

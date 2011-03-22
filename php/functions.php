@@ -83,18 +83,11 @@
   }
 
   // Function to print out the menu of a page. Languages are 0 = Finnish, 1 = English
-  function printMenu($lang = 0) {
+  function printMenu() {
     $year = date('Y');
     $month = date('m');
-    echo "<div id='navi'>\n";
+    echo "<navi id='navi'>\n";
     echo "      <ul id='navilist'>\n";
-    if ($lang == 1) {
-      echo "        <li id='index' class='rounded-top'><a href='index.php' title='Homepage'>Homepage</a></li>\n";
-      //echo "        <li id='info' class='rounded-top'><a href='info.php' title='About Us'>About Us</a></li>\n";
-      //echo "        <li id='products' class='rounded-top'><a href='products.php' title='Products'>Products</a></li>\n";
-      echo "        <li id='shows' class='rounded-top'><a href='shows.php?year=$year' title='Attending dogshows'>Dog shows</a></li>\n";
-      echo "        <li id='contact' class='rounded-top'><a href='contact.php' title='Contact Us'>Contact Us</a></li>\n";
-    } else if ($lang == 0) {
       echo "        <li id='index' class='rounded-top'><a href='/index.php' title='Homepage'>" . _('navi.home') . "</a></li>\n";
       //echo "        <li id='info' class='rounded-top'><a href='/info.php' title='About Us'>Esittely</a></li>\n";
       //echo "        <li id='products' class='rounded-top'><a href='/products.php' title='Products'>" . _('navi.products') . "</a></li>\n";
@@ -106,7 +99,7 @@
       echo "              <li id='logout' class='rounded-top'><a href='/php/logout.php' title='Logout'>Logout</a></li>\n";
     }
     echo "      </ul>\n";
-    echo "    </div>\n";
+    echo "</navi>\n";
   }
 
   // Function to determine if the upcoming show has alreadu begun, if yes display the next show.
@@ -233,16 +226,10 @@
   }
 
   // Function for printing language link
-  function langLink($lang = 0) {
-    if ($lang == 0) {
-      echo "<div id='lang'>\n
-              <a href='en/' title='In English'>In English</a>\n
-            </div>";
-    } else if ($lang == 1) {
-      echo "<div id='lang'>\n
-              <a href='http://roydon.fi/' title='Suomeksi'>Suomeksi</a>\n
-            </div>";
-    }
+  function langLink($lang = fi) {
+      echo "<div id='lang'>\n";
+      echo "  <a href='?lang=$lang' title='" . _('lang.text') . "'>" . _('lang.text') . "</a>\n";
+      echo "</div>";
   }
 
   // Function for unusable db's

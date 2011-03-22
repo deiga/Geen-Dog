@@ -45,12 +45,12 @@
     <div id="takala">
       <?php oldBrowse(); ?>
       <div id="otsake" class="shadow">
-        <?php langLink(1); ?>
+        <?php langLink($_GET['lang']); ?>
         <div id="otsikko">
           <h1>roydon</h1>
           <p>Kennelaccessories</p>
         </div>
-        <?php printMenu(1);?>
+        <?php printMenu();?>
       </div>
       <div id="sivusisalto" class="shadow">
         <section id="content">

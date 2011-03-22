@@ -31,7 +31,7 @@
         <div>
           <h1>roydon <br /> <span>Kenneltarvikkeet</span></h1>
         </div>
-        <?php printMenu(0);?>
+        <?php printMenu();?>
       </div>
       <!-- !END HEADER -->
       <!-- !SIVUSISALTO -->
