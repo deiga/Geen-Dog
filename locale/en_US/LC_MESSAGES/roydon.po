@@ -122,3 +122,7 @@ msgstr "Finnish Lakeland Terrier Club"
 #: nayttelyt.php:100
 msgid "show.info.more"
 msgstr "Additional information about finnsih dog shows"
+
+#: php/functions.php:132
+msgid "footer.admin"
+msgstr "Admin"

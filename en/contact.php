@@ -51,7 +51,7 @@
           </div>
         </section>
       </div>
-      <?php printFoot(1);?>
+      <?php printFoot();?>
     </div>
   </body>
 </html>

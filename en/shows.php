@@ -76,12 +76,12 @@
               </tbody>
             </table>
             <div id="years">
-              <?php yearList(1); ?>
+              <?php yearList(); ?>
               <p>You can find the information of all dog shows in Finnland at the page <a href="http://www.kennelliitto.fi/EN/events/shows/shows2008/" title="Finnish Kennel Club shows">Finnish Kennel Club</a></p>
             </div>
         </section>
       </div>
-      <?php printFoot(1);?>
+      <?php printFoot();?>
     </div>
   </body>
 </html>

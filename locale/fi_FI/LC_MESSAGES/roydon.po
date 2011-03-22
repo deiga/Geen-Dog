@@ -122,3 +122,7 @@ msgstr "Lakelandinterrieri Ry"
 #: nayttelyt.php:100
 msgid "show.info.more"
 msgstr "Lisätietoja suomen koiranäyttelyistä"
+
+#: php/functions.php:132
+msgid "footer.admin"
+msgstr "Ylläpito"

@@ -127,13 +127,9 @@
   }
 
   // Function to print the pages footers, depending on language.
-  function printFoot($lang = 0) {
+  function printFoot() {
     echo "<footer>\n";
-    if ($lang == 1) {
-      echo "\tQuestions or comments regarding the site to &#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;";
-    } else if ($lang == 0) {
-      echo "\t" . _('contact.web') . " &#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105; <a class='robots-nocontent' href='/login'>Ylläpito</a>";
-    }
+    echo "\t" . _('contact.web') . " &#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105; <a class='robots-nocontent' href='/login'>" . _('footer.admin') . "</a>";
     echo "<address>";
     echo "Kuninkaantie 752 <br /> FI 07110 HINTHAARA\n <br />";
     echo "+358 (0)40 020 0521";
@@ -142,15 +138,10 @@
   }
 
   // Function to print link list fo different years
-  function yearList($lang = 0) {
+  function yearList() {
     echo '<ul id="yearslist">';
     for ($i = 2008; $i <= date('Y'); $i++) {
-      if ($lang == 0) {
-         $langTxt = 'nayttelyt.php';
-      } else if ($lang == 1) {
-          $langTxt='shows.php';
-      }
-      echo "<li id='yearLink' class='ylistI'><a href='$langTxt?year=$i'>$i</a></li>" . PHP_EOL;
+      echo "<li id='yearLink' class='ylistI'><a href='nayttelyt.php?year=$i'>$i</a></li>" . PHP_EOL;
     }
     echo' </ul>';
   }
