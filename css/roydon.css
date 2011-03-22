@@ -281,7 +281,7 @@ legend {
 
 /* FOOTER BEGIN */
 
-#footer {
+footer {
 	color:gray;
 	font-size: small;
 	margin: 0 auto;
@@ -291,7 +291,7 @@ legend {
 	text-align: center;
 }
 
-#footer a:active , #footer a:visited , #footer a {
+#footer > a:active , #footer > a:visited , footer > a {
 	color: #A9A9A9;
 }
 
