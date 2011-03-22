@@ -25,7 +25,7 @@
     <![endif]-->
   </head>
   <body onload="curpage()">
-    <div id="takala" class="shadow">
+    <div id="takala">
       <?php oldBrowse(); ?>
       <div id="otsake">
         <?php langLink(0); ?>
@@ -35,7 +35,7 @@
         </div>
         <?php printMenu(0);?>
       </div>
-      <div id="sivusisalto">
+      <div id="sivusisalto" class="shadow">
         <section id="content" class="products">
           <header>
             <h2>Tuotteet</h2>
