@@ -112,8 +112,15 @@ legend {
 	border-right: 1px solid #006400;
 }
 
+.shadow {
+  box-shadow: 5px 5px 2px #ccc;
+  -moz-box-shadow: 5px 5px 2px #ccc;
+  -webkit-box-shadow: 5px 5px 2px #ccc;
+}
+
 .rounded {
   -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px; /* future proofing */
   -khtml-border-radius: 10px; /* for old Konqueror browsers */
 }
@@ -199,7 +206,7 @@ legend {
 	height: auto !important;
 	height: 25em;
 	position: absolute;
-	left: 71%;
+	left: 71.01%;
 	width: 29%;
 }
 

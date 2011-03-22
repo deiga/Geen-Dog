@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
-	
+
 	$link = connect();
 	not_connected($link);
 	$year = date('Y');
@@ -12,10 +12,10 @@
 	$db = 'roydonf_roydon';
 	$showquery = 'SELECT * FROM `shows` ORDER BY aika ASC';
 	$newsquery = 'SELECT * FROM `news` WHERE date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) ORDER BY date DESC';
-	
+
 	$db_selected = mysql_select_db($db);
 	inv_db($db, $db_selected);
-	
+
 	$showresult = mysql_query($showquery);
 	$newsresult = mysql_query($newsquery);
 	inv_query($showresult, $newsresult);
@@ -72,8 +72,8 @@
 								  echo '</fieldset>\n
 								  <a href="/uutiset.php" title="Lisää uutisia">Lisää...</a>\n
 							   </div>';
-                }; 
-                ?> 
+                };
+                ?>
 					</div>
 				</div>
 				<div id="oikea">

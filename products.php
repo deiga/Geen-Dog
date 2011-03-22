@@ -25,7 +25,7 @@
     <![endif]-->
   </head>
   <body onload="curpage()">
-    <div id="takala">
+    <div id="takala" class="shadow">
       <?php oldBrowse(); ?>
       <div id="otsake">
         <?php langLink(0); ?>
