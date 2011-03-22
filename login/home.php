@@ -34,7 +34,7 @@
 				</div>
 				<?php printMenu(0);?>
 			</div>
-			<div id="sivusisalto">
+			<div id="sivusisalto" class="shadow">
 				<section id="content" class="admin">
 				    <h3>Hei <?php echo $_SESSION['userName'];?></h3>
 				    <?php

@@ -52,7 +52,7 @@
         </div>
         <?php printMenu(1);?>
       </div>
-      <div id="mainsisalto">
+      <div id="mainsisalto" class="shadow">
         <div id="vasen">
           <div class="sisalto">
               <div id="lyhes">

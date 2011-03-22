@@ -291,6 +291,7 @@ footer {
 	color:gray;
 	font-size: small;
 	margin: 0 auto;
+	margin-top: 2px;
 	width: 100%;
 	background-color: inherit;
 	position: relative;

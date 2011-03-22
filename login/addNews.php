@@ -35,7 +35,7 @@
       </div>
       <!-- !END HEADER -->
       <!-- !SIVUSISALTO -->
-      <div id="sivusisalto">
+      <div id="sivusisalto" class="shadow">
         <!-- !CONTENT -->
         <section id="content">
           <div class="add">

@@ -33,7 +33,7 @@
         </div>
         <?php printMenu(0);?>
       </div>
-      <div id="sivusisalto">
+      <div id="sivusisalto" class="shadow">
         <section id="content">
           <div class="add">
             <form method="post" action="http://www.roydon.fi/login/addShow.php">

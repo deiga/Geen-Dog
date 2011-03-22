@@ -52,7 +52,7 @@
         </div>
         <?php printMenu(0);?>
       </div>
-      <div id="sivusisalto">
+      <div id="sivusisalto" class="shadow">
         <section id="content">
             <?php
               echo '<div id="uutiset">

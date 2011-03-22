@@ -34,7 +34,7 @@
 				</div>
 				<?php printMenu(0);?>
 			</div>
-			<div id="sivusisalto">
+			<div id="sivusisalto" class="shadow">
 				<section id="content">
 					<h2>404 - Sivua ei löytynyt</h2>
 					<p class="error">

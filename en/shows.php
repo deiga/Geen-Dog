@@ -47,7 +47,7 @@
         </div>
         <?php printMenu(1);?>
       </div>
-      <div id="sivusisalto">
+      <div id="sivusisalto" class="shadow">
         <section id="content">
             <table class="pretty-tbl" summary="Taulukko näkymä tulevista näyttelyistä.">
               <caption>You can find us at these dow shows in 
