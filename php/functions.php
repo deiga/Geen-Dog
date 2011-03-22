@@ -31,7 +31,7 @@
         setlocale(LC_MESSAGES, 'fi_FI.UTF-8');
         break;
     }
-    bindtextdomain('roydon', '/locales');
+    bindtextdomain('roydon', '/home/roydonf/public_html/locale');
     bind_textdomain_codeset('roydon', 'UTF-8');
     textdomain('roydon');
   }

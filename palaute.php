@@ -2,7 +2,7 @@
 <?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
   require_once('php/recaptchalib.php');
-  $publickey = "6LdZQQQAAAAAAHm66YKZX86nHz6V_XpL9VbWtLKm";
+  $publickey = "6LcFtcISAAAAAO_K4LUS51ESMyF3ggacwFRcqDOn ";
 
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
