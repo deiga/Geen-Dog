@@ -30,10 +30,10 @@ legend {
 #otsake {
 	width: 100%;
 	background-color: green;
-	-moz-border-radius: 1em;
-  -webkit-border-radius: 1em;
-  -khtml-border-radius: 1em;
-  border-radius: 1em;
+	-moz-border-radius: 1em 1em 0 0;
+  -webkit-border-radius: 1em 1em 0 0;
+  -khtml-border-radius: 1em 1em 0 0;
+  border-radius: 1em 1em 0 0;
   color: white;
   position: relative;
   text-align: center;
@@ -128,6 +128,8 @@ legend {
 .rounded-top {
   -moz-border-radius-topleft: .5em;
 	-moz-border-radius-topright: .5em;
+  -webkit-border-radius-topleft: .5em;
+  -webkit-border-radius-topright: .5em;
   /* future proofing */
   border-top-left-radius: .5em;
 	border-top-right-radius: .5em;
