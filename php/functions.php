@@ -93,7 +93,6 @@
       //echo "        <li id='products' class='rounded-top'><a href='/products.php' title='Products'>" . _('navi.products') . "</a></li>\n";
       echo "        <li id='nayttelyt' class='rounded-top'><a href='/nayttelyt.php?year=$year' title='Attending dogshows'>" . _('navi.shows') . "</a></li>\n";
       echo "        <li id='contact' class='rounded-top'><a href='/contact.php' title='Contact Us'>" . _('navi.contact') . "</a></li>\n";
-    }
 
     if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == 1) {
       echo "              <li id='logout' class='rounded-top'><a href='/php/logout.php' title='Logout'>Logout</a></li>\n";
