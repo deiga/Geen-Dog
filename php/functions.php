@@ -232,12 +232,8 @@
           echo "  <a href='?lang=fi' title='" . _('lang.text') . "'>" . _('lang.text') . "</a>\n";
           break;
 
-        case 'fi':
-          echo "  <a href='?lang=en' title='" . _('lang.text') . "'>" . _('lang.text') . "</a>\n";
-          break;
-
         default:
-          echo "  <a href='?lang=fi' title='" . _('lang.text') . "'>" . _('lang.text') . "</a>\n";
+          echo "  <a href='?lang=en' title='" . _('lang.text') . "'>" . _('lang.text') . "</a>\n";
           break;
       }
 
