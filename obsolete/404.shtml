@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div id="errorsisalto">
-				<div id="content">
+				<section id="content">
 					<h2>404 - Sivua ei löytynyt</h2>
 					<p class="error">Sivua jolle yrititte ei ole olemassa tai sitä ei löydy tällä hetkellä.<br />
 					Olkaa hyvä ja koittakaa uudestaan, varmistakaa että sivun osoite on kirjoitettu oikein. Jos päädyitte tälle sivulle jostain meidän linkeistä, niin olkaa hyvä ja ottakaa yhteys ylläpitoon.</p>

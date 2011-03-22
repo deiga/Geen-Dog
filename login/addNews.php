@@ -37,7 +37,7 @@
       <!-- !SIVUSISALTO -->
       <div id="sivusisalto">
         <!-- !CONTENT -->
-        <div id="content">
+        <section id="content">
           <div class="add">
             <form method="post" action="http://roydon.fi/login/addNews.php">
               <fieldset>

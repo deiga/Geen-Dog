@@ -35,7 +35,7 @@
 				<?php printMenu(0);?>
 			</div>
 			<div id="sivusisalto">
-				<div id="content" class="admin">
+				<section id="content" class="admin">
 				    <h3>Hei <?php echo $_SESSION['userName'];?></h3>
 				    <?php
 				      if (isset($_SESSION['msg']) && empty($_SESSION['msg']) ) {

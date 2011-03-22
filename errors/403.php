@@ -35,7 +35,7 @@
 				<?php printMenu(0);?>
 			</div>
 			<div id="sivusisalto">
-				<div id="content">
+				<section id="content">
 					<h2>Pääsy sivulle estetty</h2>
 					<p class="error">Sivua jolle yrititte on salattu, tai kyseiseen kansioon ei ole pääsyä.<br />
 

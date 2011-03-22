@@ -34,7 +34,7 @@
         <?php printMenu(0);?>
       </div>
       <div id="login">
-        <div id="content">
+        <section id="content">
             <div id="logTex">
               <h2>Ylläpito</h2>
               <p>Jos haluat ylläpitää sivuston sisältöä kirjaudu omilla tunnuksillasi tänne.

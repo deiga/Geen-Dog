@@ -53,7 +53,7 @@
         <?php printMenu(0);?>
       </div>
       <div id="sivusisalto">
-        <div id="content">
+        <section id="content">
             <?php
               echo '<div id="uutiset">
                 <fieldset class="contentfield">

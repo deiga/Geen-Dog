@@ -65,7 +65,7 @@
         <?php printMenu(0);?>
       </div>
       <div id="sivusisalto">
-        <div id="content">
+        <section id="content">
             <table class="pretty-tbl" summary="Taulukko näkymä tulevista näyttelyistä.">
               <caption>Seuraavista näyttelyistä löydät meidät vuonna 
               <?php

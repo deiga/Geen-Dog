@@ -37,7 +37,7 @@
         <?php printMenu(0);?>
       </div>
       <div id="sivusisalto">
-        <div id="content">
+        <section id="content">
         </div>
       </div>
       <?php printFoot();?>

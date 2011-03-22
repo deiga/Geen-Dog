@@ -118,12 +118,16 @@
 
   // Function to print the pages footers, depending on language.
   function printFoot($lang = 0) {
-    echo "<footer id='footer'>\n";
+    echo "<footer>\n";
     if ($lang == 1) {
       echo "\tQuestions or comments regarding the site to &#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;";
     } else if ($lang == 0) {
       echo "\tSivuihin liittyvät kysymykset ja kommentit &#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105; <a class='robots-nocontent' href='/login'>Ylläpito</a>";
     }
+    echo "<address>";
+    echo "Address: Roydon, Kuninkaantie 752, FI 07110 HINTHAARA\n";
+    echo "Phone: +358 (0)400 20 0521";
+    echo "</address>"
     echo " <br />Copyright &copy;" . date('Y') . " Roydon Ky \n</footer>\n";
   }
 

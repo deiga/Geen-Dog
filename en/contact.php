@@ -36,7 +36,7 @@
         <?php printMenu(1);?>
       </div>
       <div id="sivusisalto">
-        <div id="content">
+        <section id="content">
           <div>
             <fieldset class="contentfield">
               <legend>Our contact information:</legend>

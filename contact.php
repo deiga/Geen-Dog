@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<?php 
+<?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -36,7 +36,7 @@
         <?php printMenu(0);?>
       </div>
       <div id="sivusisalto">
-        <div id="content">
+        <section id="content">
           <div>
             <fieldset class="contentfield">
               <legend>Meihin saat yhteyden:</legend>
@@ -45,7 +45,7 @@
                 Tuote-, saatavuus- ja hintakyselyt: <a href="mailto:&#109;&#121;&#121;&#110;&#116;&#105;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;">&#109;&#121;&#121;&#110;&#116;&#105;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;</a> <br />
                 Sivuihin liittyvät kysymykset ja kommentit: <a href="mailto:&#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;">&#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;</a> <br />
                 Postitse: <span>Roydon, Kuninkaantie 752, 07110 HINTHAARA</span> <br />
-                Puhelimella tai faksilla: <span>Tel/Fax: +358 (0)19 54 5304, GSM: +358 (0)400 20 0521</span> <br />
+                Puhelimella <span>+358 (0)400 20 0521</span> <br />
               </div>
             </fieldset>
           </div>
