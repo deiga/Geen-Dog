@@ -216,7 +216,7 @@
 
   // Function for printing language link
   function langLink($lang = 0) {
-    echo "<span style='display: hidden'>" . $_SERVER['PHP_SELF'] . "</span>";
+    echo "<span style='display: none;'>" . $_SERVER['PHP_SELF'] . "</span>";
     if ($lang == 0) {
       echo "<div id='lang'>\n
               <a href='en/' title='In English'>In English</a>\n
