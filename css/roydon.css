@@ -116,9 +116,9 @@ legend {
 }
 
 .shadow {
-  box-shadow: 5px 5px 2px #A9A9A9;
-  -moz-box-shadow: 5px 5px 2px #A9A9A9;
-  -webkit-box-shadow: 5px 5px 2px #A9A9A9;
+  box-shadow: 5px 5px 1px #A9A9A9;
+  -moz-box-shadow: 5px 5px 1px #A9A9A9;
+  -webkit-box-shadow: 5px 5px 1px #A9A9A9;
 }
 
 .rounded {
