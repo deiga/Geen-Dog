@@ -126,7 +126,7 @@
     }
     echo "<address>";
     echo "Kuninkaantie 752 <br /> FI 07110 HINTHAARA\n <br />";
-    echo "+358 (0)40 020 0521";
+    echo "<a href='tel:+358 40 020 0521'>+358 (0)40 020 0521</a>";
     echo "</address>";
     echo "Copyright &copy;" . date('Y') . " Roydon Ky \n</footer>\n";
   }
