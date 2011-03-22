@@ -216,12 +216,13 @@
 
   // Function for printing language link
   function langLink($lang = 0) {
-    echo "<span style='display: none;'>" . $_SERVER['PHP_SELF'] . "</span>";
     if ($lang == 0) {
+      echo "<span style='display: none;'>" . ltrim($_SERVER['PHP_SELF'], '/en') . "</span>";
       echo "<div id='lang'>\n
               <a href='en/' title='In English'>In English</a>\n
             </div>";
     } else if ($lang == 1) {
+      echo "<span style='display: none;'>/en" . $_SERVER['PHP_SELF'] . "</span>";
       echo "<div id='lang'>\n
               <a href='http://roydon.fi/' title='Suomeksi'>Suomeksi</a>\n
             </div>";
