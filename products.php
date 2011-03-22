@@ -27,7 +27,7 @@
   <body onload="curpage()">
     <div id="takala">
       <?php oldBrowse(); ?>
-      <div id="otsake" class="shadow">
+      <div id="otsake" class="shadow rounded-top">
         <?php langLink(0); ?>
         <div id="otsikko">
           <h1>roydon</h1>

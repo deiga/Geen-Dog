@@ -125,17 +125,22 @@ legend {
   -khtml-border-radius: 10px; /* for old Konqueror browsers */
 }
 
-.rounded-top {
-  -moz-border-radius-topleft: .5em;
-	-moz-border-radius-topright: .5em;
-  -webkit-border-radius-topleft: .5em;
-  -webkit-border-radius-topright: .5em;
+#otsake .rounded-top {
+  -moz-border-radius: 1em 1em 0 0;
+  -webkit-border-radius: 1em 1em 0 0 ;
   /* future proofing */
-  border-top-left-radius: .5em;
-	border-top-right-radius: .5em;
+  border-radius: 1em 1em 0 0;
   /* for old Konqueror browsers */
-  -khtml-border-radius-topleft: .5em;
-	-khtml-border-radius-topright: .5em;
+  -khtml-border-radius: 1em 1em 0 0;
+}
+
+.rounded-top {
+  -moz-border-radius: .5em .5em 0 0;
+  -webkit-border-radius: .5em .5em 0 0 ;
+  /* future proofing */
+  border-radius: .5em .5em 0 0;
+  /* for old Konqueror browsers */
+  -khtml-border-radius: .5em .5em 0 0;
 }
 
 #navilist li:hover {
