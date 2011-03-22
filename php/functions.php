@@ -225,9 +225,18 @@
   }
 
   // Function for printing language link
-  function langLink($lang = fi) {
+  function langLink($lang = 'fi') {
       echo "<div id='lang'>\n";
-      echo "  <a href='?lang=$lang' title='" . _('lang.text') . "'>" . _('lang.text') . "</a>\n";
+      switch ($lang) {
+        case 'en':
+          echo "  <a href='?lang=fi' title='" . _('lang.text') . "'>" . _('lang.text') . "</a>\n";
+          break;
+
+        case 'fi':
+          echo "  <a href='?lang=en' title='" . _('lang.text') . "'>" . _('lang.text') . "</a>\n";
+          break;
+      }
+
       echo "</div>";
   }
 
