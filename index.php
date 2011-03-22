@@ -77,7 +77,7 @@
 					</div>
 				</div>
 				<div id="oikea">
-					<div class="sisalto">
+					<aside class="sisalto">
 						<section id="nayttely">
 							<h3>Seuraavaksi löydät meidät:</h3>
 							<span>
@@ -99,7 +99,7 @@
 								<a href="nayttelyt.php?year=<?php echo $year ?>" title="Attending dogshows">Lisää näyttelyitä...</a>
 							</p>
 						</section>
-						<div id="links" class="robots-nocontent">
+						<section id="links" class="robots-nocontent">
 							<h4>Linkkejä</h4>
 							<ul>
 								<li><a href="http://www.kennelliitto.fi/fi" title="Suomen Kennelliitto">Suomen Kennelliitto</a></li>
@@ -107,8 +107,8 @@
 								<li><a href="http://www.terrierijarjesto.fi/" title="STJ Ry">Suomen Terrierijärjestö Ry</a></li>
 								<li><a href="http://www.lakelandinterrierit.net/" title="Lakelandinterrierit ry">Lakelandinterrierit Ry</a></li>
 							</ul>
-						</div>
-					</div>
+						</section>
+					</aside>
 				</div>
 			</div>
 			<?php printFoot();?>
