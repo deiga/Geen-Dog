@@ -27,7 +27,7 @@
   <body>
     <div id="takala">
       <!-- !HEADER -->
-      <div id="otsake">
+      <div id="otsake" class="shadow">
         <div>
           <h1>roydon <br /> <span>Kenneltarvikkeet</span></h1>
         </div>

@@ -21,7 +21,7 @@
 	</head>
 	<body>
 		<div id="takala">
-			<div id="otsake">
+			<div id="otsake" class="shadow">
 				<div id="lang">
 					<a href="http://roydon.fi/en" title="In English" target="_top">In English</a>
 				</div>

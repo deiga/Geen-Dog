@@ -27,7 +27,7 @@
 	</head>
 	<body >
 		<div id="takala">
-			<div id="otsake">
+			<div id="otsake" class="shadow">
 				<div id="otsikko">
 					<h1>roydon</h1>
 					<p>Kenneltarvikkeet</p>
