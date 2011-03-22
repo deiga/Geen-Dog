@@ -127,7 +127,7 @@
     echo "<address>";
     echo "Address: Roydon, Kuninkaantie 752, FI 07110 HINTHAARA\n";
     echo "Phone: +358 (0)400 20 0521";
-    echo "</address>"
+    echo "</address>";
     echo " <br />Copyright &copy;" . date('Y') . " Roydon Ky \n</footer>\n";
   }
 
