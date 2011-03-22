@@ -105,7 +105,7 @@
 								<li><a href="http://www.kennelliitto.fi/fi" title="Suomen Kennelliitto"><?php echo _('links.kennelclub'); ?></a></li>
 								<li><a href="http://www.airedalenterrieri.fi/" title="SATY Ry"><?php echo _('links.airedale'); ?></a></li>
 								<li><a href="http://www.terrierijarjesto.fi/" title="STJ Ry"><?php echo _('links.terriers'); ?></a></li>
-								<li><a href="http://www.lakelandinterrierit.net/" title="Lakelandinterrierit ry"><?php echo _('links.lakelands'); ?></a></li>
+								<li><a href="http://www.lakelandinterrierit.net/" title="Lakelandinterrierit ry"><?php echo _('links.lakeland'); ?></a></li>
 							</ul>
 						</section>
 					</aside>
