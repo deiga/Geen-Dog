@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Roydon Ky localization 0.8\n"
+"Report-Msgid-Bugs-To: timo@timosand.com\n"
+"POT-Creation-Date: 2011-03-22 17:06+0200\n"
+"PO-Revision-Date: 2011-03-22 17:16+0200\n"
+"Last-Translator: Timo Sand <timo@timosand.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: /home/roydonf/public_html\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: contact.php:34
+#: index.php:52
+#: nayttelyt.php:63
+msgid "header.subtitle"
+msgstr "Kennelaccessories"
+
+#: contact.php:42
+msgid "contact.title"
+msgstr "Our contact information"
+
+#: contact.php:44
+msgid "contact.general"
+msgstr "General questions"
+
+#: contact.php:45
+msgid "contact.products"
+msgstr "Product, availability and price questions"
+
+#: contact.php:46
+msgid "contact.web"
+msgstr "Questions and comments regarding the web page"
+
+#: contact.php:47
+msgid "contact.mail"
+msgstr "By mail"
+
+#: contact.php:48
+msgid "contact.phone"
+msgstr "By phone"
+
+#: index.php:82
+msgid "show.next.title"
+msgstr "You can find us next in"
+
+#: index.php:99
+msgid "show.next.more"
+msgstr "More dog shows"
+
+#: index.php:103
+msgid "links.title"
+msgstr "Links"
+
+#: nayttelyt.php:70
+msgid "show.title"
+msgstr "You can find us at these dow shows in"
+
+#: nayttelyt.php:81
+msgid "show.time"
+msgstr "Time"
+
+#: nayttelyt.php:82
+msgid "show.name"
+msgstr "Name"
+
+#: nayttelyt.php:83
+msgid "show.location"
+msgstr "Place"
+
+#: products.php:43
+msgid "product.title"
+msgstr "Products"
+
+#: php/functions.php:98
+msgid "navi.home"
+msgstr "Homepage"
+
+#: php/functions.php:101
+msgid "navi.shows"
+msgstr "Dog shows"
+
+#: php/functions.php:102
+msgid "navi.contact"
+msgstr "Contact Us"
+
