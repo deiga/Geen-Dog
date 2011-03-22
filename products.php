@@ -46,10 +46,10 @@
                 <li><a href="">Koulutus</a></li>
                 <li><a href="">Syötävät</a></li>
                 <li><a href="">Makupalat</a></li>
-                <li><a href="">Taluttimet, pannat ja valjaat</a></li>
-                <li><a href="">Häkit ja makuualustat, trimmauspöydät</a></li>
+                <li><a href="">Taluttimet,&nbsp;pannat&nbsp;ja&nbsp;valjaat</a></li>
+                <li><a href="">Häkit&nbsp;ja&nbsp;makuualustat,&nbsp;trimmauspöydät</a></li>
                 <li><a href="">Lelut</a></li>
-                <li><a href="">Muuttuotteet</a></li>
+                <li><a href="">Muut&nbsp;tuotteet</a></li>
               </ul>
             </nav>
           </header>
