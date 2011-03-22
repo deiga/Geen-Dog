@@ -49,7 +49,7 @@
                 <li><a href="">Taluttimet, pannat ja valjaat</a></li>
                 <li><a href="">Häkit ja makuualustat, trimmauspöydät</a></li>
                 <li><a href="">Lelut</a></li>
-                <li><a href="">Muut tuotteet</a></li>
+                <li><a href="">Muuttuotteet</a></li>
               </ul>
             </nav>
           </header>
