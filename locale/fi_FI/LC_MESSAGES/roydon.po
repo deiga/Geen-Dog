@@ -120,7 +120,7 @@ msgid "links.lakeland"
 msgstr "Lakelandinterrieri Ry"
 
 #: nayttelyt.php:100
-msgid "show.info.more"
+msgid "show.more.info"
 msgstr "Lisätietoja suomen koiranäyttelyistä"
 
 #: php/functions.php:132
