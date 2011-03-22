@@ -33,7 +33,7 @@
           <h1>roydon</h1>
           <p>Kenneltarvikkeet</p>
         </div>
-        <?php printMenu(0); var_dump($_SERVER);?>
+        <?php printMenu(0);?>
       </div>
       <div id="sivusisalto" class="shadow">
         <section id="content" class="products">
