@@ -118,13 +118,13 @@
 
   // Function to print the pages footers, depending on language.
   function printFoot($lang = 0) {
-    echo "<div id='footer'>\n";
+    echo "<footer id='footer'>\n";
     if ($lang == 1) {
       echo "\tQuestions or comments regarding the site to &#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;";
     } else if ($lang == 0) {
       echo "\tSivuihin liittyvät kysymykset ja kommentit &#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105; <a class='robots-nocontent' href='/login'>Ylläpito</a>";
     }
-    echo " <br />Copyright &copy;" . date('Y') . " Roydon Ky \n</div>\n";
+    echo " <br />Copyright &copy;" . date('Y') . " Roydon Ky \n</footer>\n";
   }
 
   // Function to print link list fo different years
