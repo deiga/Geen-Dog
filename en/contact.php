@@ -1,4 +1,4 @@
-<?php 
+<?php
   require($_SERVER['DOCUMENT_ROOT'].'/php/functions.php');
   echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
@@ -40,13 +40,13 @@
           <div>
             <fieldset class="contentfield">
               <legend>Our contact information:</legend>
-              <div>
+              <address>
                 For general questions: <a href="mailto:&#114;&#111;&#121;&#100;&#111;&#110;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;">&#114;&#111;&#121;&#100;&#111;&#110;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;</a> <br />
                 Product, availability and price questions: <a href="mailto:&#109;&#121;&#121;&#110;&#116;&#105;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;">&#109;&#121;&#121;&#110;&#116;&#105;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;</a> <br />
                 Questions and comments regarding the web page: <a href="mailto:&#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;">&#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#111;&#121;&#100;&#111;&#110;&#046;&#102;&#105;</a> <br />
                 By mail: <span>Roydon, Kuninkaantie 752, 07110 HINTHAARA</span> <br />
-                By phone or Fax: <span>Tel/Fax: +358 (0)19 54 5304, GSM: +358 (0)400 20 0521</span> <br />
-              </div>
+                By phone: <span>+358 (0)40 020 0521</span> <br />
+              </address>
             </fieldset>
           </div>
         </div>
