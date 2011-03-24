@@ -95,7 +95,7 @@
 							              ->where("aika > ?", 'CURDATE()')
 							              ->order('aika ASC')
 							              ->limit(1);
-							if (count($show) > 0 ) {
+							if ($show != '' ) {
 
 								  /* row has 5 fields, 0 = Paikkakunta, 1 = date, 2 = length of show, 3 = Name of the show, 4 = link to homepage of show */
 							      echo date_conv($show['aika'], $show['kesto'])." ".$show['paikka']."<br /><a href='$show[4]' >$row[3]</a><br />\n";
