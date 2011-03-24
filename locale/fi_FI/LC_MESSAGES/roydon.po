@@ -131,4 +131,7 @@ msgstr "Ylläpito"
 msgid "show.past"
 msgid "Menneet näyttelyt tältä vuodelta"
 
+#: index.php:99
+msgid "show.next.negative"
+msgstr "Ei tulevia näyttelyitä tällähetkellä"
 

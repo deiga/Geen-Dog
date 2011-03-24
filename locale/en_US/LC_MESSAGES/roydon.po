@@ -54,6 +54,10 @@ msgstr "You can find us next in"
 msgid "show.next.more"
 msgstr "More dog shows"
 
+#: index.php:99
+msgid "show.next.negative"
+msgstr "No upcoming shows at the moment"
+
 #: index.php:103
 msgid "links.title"
 msgstr "Links"
