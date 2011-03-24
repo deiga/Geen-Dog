@@ -179,9 +179,7 @@
     $year = date('Y');
     $month = date('m');
     $day = date('d');
-    $shows = $db->shows()
-                ->where("aika > ?", "$year-$month-$day")
-                ->order("aika ASC");
+    $shows = $db->shows()->where("aika > ?", "$year-$month-$day")->order("aika ASC");
 
     foreach ($shows as $show) {
       printShowRow($show);
@@ -193,10 +191,7 @@
     $year = date('Y');
     $month = date('m');
     $day = date('d');
-    $shows = $db->shows()
-                ->where("aika < ?", "$year-$month-$day")
-                ->where("aika > ?", "$year-00-00")
-                ->order("aika ASC");
+    $shows = $db->shows()->where("aika < ?", "$year-$month-$day")->where("aika > ?", "$year-00-00")->order("aika ASC");
 
     foreach ($shows as $show) {
       printShowRow($show);
@@ -205,10 +200,7 @@
 
   function printYearsShows($year, $db) {
     echo "<span style='display: none;'>$year</span>";
-      $shows = $db->shows()
-                  ->where("aika > ?", $year . '-00-00')
-                  ->where("aika < ?", $year1+1 . '-00-00')
-                  ->order("aika ASC");
+      $shows = $db->shows()->where("aika > ?", $year . '-00-00')->where("aika < ?", $year1+1 . '-00-00')->order("aika ASC");
 
     foreach ($shows as $show) {
       printShowRow($show);
