@@ -101,7 +101,7 @@
 							if (count($shows) > 0 ) {
 
 								  /* row has 5 fields, 0 = Paikkakunta, 1 = date, 2 = length of show, 3 = Name of the show, 4 = link to homepage of show */
-							      echo date_conv($show[0]['aika'], $show[0]['kesto'])." ".$show[0]['paikka']."<br /><a href='$show[0][link]' >$show[0][nimi]</a><br />\n";
+							      echo date_conv($show['aika'], $show['kesto'])." ".$show['paikka']."<br /><a href='$show[link]' >$show[nimi]</a><br />\n";
 						  } else {
 						    echo _('show.next.negative')  . '.';
 						  }
