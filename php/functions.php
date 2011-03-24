@@ -204,7 +204,6 @@
   }
 
   function printYearsShows($year, $db) {
-    echo "Hep";
       $shows = $db->shows()
                   ->where("aika > ?", "$year-00-00")
                   ->where("aika < ?", $year1+1 . '-00-00')
