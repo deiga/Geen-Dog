@@ -100,7 +100,7 @@
 								  /* row has 5 fields, 0 = Paikkakunta, 1 = date, 2 = length of show, 3 = Name of the show, 4 = link to homepage of show */
 							      echo date_conv($show['aika'], $show['kesto'])." ".$show['paikka']."<br /><a href='$show[4]' >$row[3]</a><br />\n";
 						  } else {
-						    echo _('show.next.negative') . '.';
+						    echo _('show.next.negative')  . '.';
 						  }
 							?>
 							</span>
