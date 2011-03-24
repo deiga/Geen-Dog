@@ -92,7 +92,7 @@
 							<span>
 							<?php
 							$shows = $roydon->shows()
-							              ->where("aika > ?", "NOW()")
+							              ->where("aika > NOW()")
 							              ->order('aika ASC')
 							              ->limit(1);
                               echo "<span style='display: none;'>$shows</span>";
