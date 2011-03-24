@@ -204,8 +204,9 @@
   }
 
   function printYearsShows($year, $db) {
+    echo "<span style='display: none;'>$year</span>";
       $shows = $db->shows()
-                  ->where("aika > ?", "$year-00-00")
+                  ->where("aika > ?", $year . '-00-00')
                   ->where("aika < ?", $year1+1 . '-00-00')
                   ->order("aika ASC");
 
