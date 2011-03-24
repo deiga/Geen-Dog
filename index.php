@@ -91,7 +91,6 @@
 							<h3><?php echo _('show.next.title'); ?></h3>
 							<span>
 							<?php
-              // 'SELECT * FROM `shows` ORDER BY aika ASC';
 							$show = $roydon->shows()
 							              ->where("aika > ?", 'CURDATE()')
 							              ->order('aika ASC')
@@ -99,12 +98,9 @@
 							if (count($show) > 0 ) {
 
 								  /* row has 5 fields, 0 = Paikkakunta, 1 = date, 2 = length of show, 3 = Name of the show, 4 = link to homepage of show */
-                  // if (soonShow($row[1],$row[2])) {
 							      echo date_conv($show['aika'], $show['kesto'])." ".$show['paikka']."<br /><a href='$show[4]' >$row[3]</a><br />\n";
-							      // break;
-							     //            }
 						  } else {
-						    echo "<?php echo _('show.next.negative'); ?>.";
+						    echo _('show.next.negative'); . '.';
 						  }
 							?>
 							</span>
