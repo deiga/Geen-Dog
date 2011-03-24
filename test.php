@@ -1,5 +1,4 @@
 <?php
-  require_once "php/NotORM.php";
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
   initSession('shows');
   locale($_GET['lang']);

@@ -126,3 +126,9 @@ msgstr "Lisätietoja suomen koiranäyttelyistä"
 #: php/functions.php:132
 msgid "footer.admin"
 msgstr "Ylläpito"
+
+#: php/functions:157
+msgid "show.past"
+msgid "Menneet näyttelyt tältä vuodelta"
+
+

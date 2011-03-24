@@ -5,17 +5,19 @@
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
-  $link = connect();
-  not_connected($link);
+  // $link = connect();
+  //   not_connected($link);
   $year = $_REQUEST['year'];
   if ($year == '') {
     $year = date('Y');
   }
 
-  $db = 'roydonf_roydon';
-  inv_db($db);
-  $q = date_query($year);
+  // $db = 'roydonf_roydon';
+  //   inv_db($db);
+  //   $q = date_query($year);
 
+  $connection = new PDO("mysql:dbname=roydonf_roydon", getUN(), getPWD());
+  $roydon = new NotORM($connection);
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
   <head>
@@ -91,7 +93,7 @@
               </thead>
               <tbody>
                 <?php
-                  printTbody($year, $q, 0);
+                  printTbody($year, $roydon);
                 ?>
               </tbody>
             </table>

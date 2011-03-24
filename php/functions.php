@@ -1,5 +1,6 @@
 <?php
   require_once "arka.php";
+  require_once "php/NotORM.php";
 
   /* date_default_timezone_set('Europe/Helsinki'); */
 
@@ -146,51 +147,100 @@
     echo' </ul>';
   }
 
-  // Function to print table body for shows
-  function printTbody($year, $q, $lang = 0) {
+  // // Function to print table body for shows
+  // function printTbody($year, $q, $lang = 0) {
+  //
+  //   printNewShows($year, $q);
+  //   if ($year == date('Y') && date('m') >= 06) {
+  //     echo "<tr>\n";
+  //     echo "\t<td headers='show_name' colspan='4'>\n";
+  //     echo "\t\t<strong>" . _('show.past') . "</strong>\n";
+  //     echo "\t</td>\n";
+  //     echo "</tr>\n";
+  //     printPastShows($q[2]);
+  //   }
+  // }
 
-   printNewShows($year, $q);
+  function printTbody($year, $db) {
     if ($year == date('Y') && date('m') >= 06) {
+      printUpcomingShows($db);
       echo "<tr>\n";
       echo "\t<td headers='show_name' colspan='4'>\n";
-      if ($lang == 0) {
-        echo "\t\t<strong>Menneet näyttelyt tältä vuodelta</strong>\n";
-      } else if ($lang == 1) {
-        echo "\t\t<strong>Past shows this year</strong>\n";
-      }
+      echo "\t\t<strong>" . _('show.past') . "</strong>\n";
       echo "\t</td>\n";
       echo "</tr>\n";
-      printPastShows($q[2]);
+      printPastShows($db);
+    } else {
+      printYearsShows($year, $db);
     }
   }
 
-  // Function to print upcoming shows
-  function printNewShows($year, $query) {
-    if ($year == date('Y') && date('m') >= 06) {
-      $result = mysql_query($query[1]);
-    } else $result = mysql_query($query);
+  function printUpcomingShows($db) {
+    $year = date('Y')
+    $month = date('m');
+    $day = date('d');
+    $shows = $db->shows()
+                ->where('aika > ?', "$year-$month-$day")
+                ->order('aika ASC');
 
-    inv_query($result);
-
-    while ($row = mysql_fetch_row($result)) {
-      printShowRow($row);
+    foreach ($shows as $show) {
+      printShowRow($show);
     }
   }
 
   // Function to print shows from the beginning of the year
-  function printPastShows($query) {
-    $result = mysql_query($query);
-    inv_query($result);
-    while ($row = mysql_fetch_row($result)) {
-      printShowRow($row);
+  function printPastShows($db) {
+    $year = date('Y')
+    $month = date('m');
+    $day = date('d');
+    $shows = $db->shows()
+                ->where('aika < ?', "$year-$month-$day")
+                ->where('aika > ?', "$year-00-00")
+                ->order('aika ASC');
+
+    foreach ($shows as $show) {
+      printShowRow($show);
     }
   }
 
+  function printYearsShows($year, $db) {
+      $shows = $db->shows()
+                  ->where('aika > ?', "$year-00-00")
+                  ->where('aika < ?', $year1+1 . '-00-00')
+                  ->order('aika ASC');
+
+    foreach ($shows as $show) {
+      printShowRow($show);
+    }
+  }
+
+  // // Function to print upcoming shows
+  // function printNewShows($year, $query) {
+  //   if ($year == date('Y') && date('m') >= 06) {
+  //     $result = mysql_query($query[1]);
+  //   } else $result = mysql_query($query);
+  //
+  //   inv_query($result);
+  //
+  //   while ($row = mysql_fetch_row($result)) {
+  //     printShowRow($row);
+  //   }
+  // }
+
+  // // Function to print shows from the beginning of the year
+  // function printPastShows($query) {
+  //   $result = mysql_query($query);
+  //   inv_query($result);
+  //   while ($row = mysql_fetch_row($result)) {
+  //     printShowRow($row);
+  //   }
+  // }
+
   // Function to print table rows for shows
   function printShowRow($row) {
-    echo "<tr id='$row[1]'><td headers='show_time'>".date_conv($row[1], $row[2])."</td>\n";
-    echo "<td headers='show_name'><a href='$row[4]'>$row[3]</a></td>\n";
-    echo "<td headers='show_place'>$row[0]</td>";
+    echo "<tr id='$row[aika]'><td headers='show_time'>".date_conv($row['aika'], $row['kesto'])."</td>\n";
+    echo "<td headers='show_name'><a href='$row[link]'>$row[nimi]</a></td>\n";
+    echo "<td headers='show_place'>$row[paikka]</td>";
     if (loggedIn()) {
       echo "<td header='show_admin'><a href='' class='delete'>Poista</a></td>";
     }
