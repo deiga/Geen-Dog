@@ -103,7 +103,6 @@
 							      echo date_conv($show['aika'], $show['kesto'])." ".$show['paikka']."<br /><a href='$show[4]' >$row[3]</a><br />\n";
 							      // break;
 							     //            }
-								}
 						  } else {
 						    echo "<?php echo _('show.next.negative'); ?>.";
 						  }
