@@ -93,7 +93,7 @@
 							<?php
               // 'SELECT * FROM `shows` ORDER BY aika ASC';
 							$show = $roydon->shows()
-							              ->where('aika > ?', 'NOW()')
+							              ->where("aika > ?", 'CURDATE()')
 							              ->order('aika ASC')
 							              ->limit(1);
 							if (count($show) > 0 ) {
