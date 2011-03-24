@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
-
+  locale($_GET['lang']);
   // $link = connect();
   // not_connected($link);
   $year = date('Y');
@@ -15,15 +15,6 @@
   } catch (PDOException $e) {
       echo 'Connection failed: ' . $e->getMessage();
   }
-
-  // $db = 'roydonf_roydon';
-  //   $newsquery = 'SELECT * FROM `news` ORDER BY date DESC';
-
-  // $db_selected = mysql_select_db($db);
-  //   inv_db($db, $db_selected);
-
-  // $newsresult = mysql_query($newsquery);
-  //   inv_query($newsresult);
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
   <head>

@@ -5,20 +5,26 @@
 <?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
   locale($_GET['lang']);
-	$link = connect();
-	not_connected($link);
+	// $link = connect();
+	//   not_connected($link);
 	$year = date('Y');
 
-	$db = 'roydonf_roydon';
-	$showquery = 'SELECT * FROM `shows` ORDER BY aika ASC';
-	$newsquery = 'SELECT * FROM `news` WHERE date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) ORDER BY date DESC';
-
-	$db_selected = mysql_select_db($db);
-	inv_db($db, $db_selected);
-
-	$showresult = mysql_query($showquery);
-	$newsresult = mysql_query($newsquery);
-	inv_query($showresult, $newsresult);
+	// $db = 'roydonf_roydon';
+	//   $showquery = 'SELECT * FROM `shows` ORDER BY aika ASC';
+	//   $newsquery = 'SELECT * FROM `news` WHERE date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) ORDER BY date DESC';
+	//
+	//   $db_selected = mysql_select_db($db);
+	//   inv_db($db, $db_selected);
+	//
+	//   $showresult = mysql_query($showquery);
+	//   $newsresult = mysql_query($newsquery);
+	//   inv_query($SHOWRESult, $newsresult);
+	try {
+      $connection = new PDO("mysql:dbname=roydonf_roydon", getUN(), getPWD());
+      $roydon = new NotORM($connection);
+  } catch (PDOException $e) {
+      echo 'Connection failed: ' . $e->getMessage();
+  }
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
 	<head>
@@ -61,19 +67,22 @@
 								Roydon on koiranäyttelyitä kiertävä kenneltarvikeliike. Sivuiltamme löydät tiedot näyttelyistä, joissa käymme, ja myös tiedot miten meihin saa yhteyden.
 							</section>
 							<?php
-							 if (mysql_num_rows($newsresult) > 0) {
-							   echo '<div id="uutiset">
-								  <fieldset class="contentfield">
-									<legend>_("news.title")</legend>';
-										while ($row = mysql_fetch_row($newsresult)) {
-
-											echo "<p class='uutinen'>\n".date_conv_short($row[0])." - $row[1] <br />\n$row[2]\n</p>";
-										}
-								  echo '</fieldset>\n
-								  <a href="/uutiset.php" title="Lisää uutisia">_("news.more")...</a>\n
-							   </div>';
+              // SELECT * FROM `news` WHERE date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) ORDER BY date DESC
+                $news = $roydon->news()
+							              ->where('date >= ?', 'DATE_SUB(CURDATE(), INTERVAL 3 MONTH)')
+							              ->order('date DESC');
+                if (count($news) > 0) {
+                  echo '<div id="uutiset">
+                    <fieldset class="contentfield">
+                    <legend>_("news.title")</legend>';
+                  foreach ($news as $new) {
+                    echo "<p class='uutinen'>\n".date_conv_short($new['date'])." - $new[head] <br />\n$new[content]\n</p>";
+									}
+                  echo '</fieldset>\n
+                    <a href="/uutiset.php" title="Lisää uutisia">_("news.more")...</a>\n
+                    </div>';
                 };
-                ?>
+              ?>
 					</section>
 				</div>
 				<div id="oikea">
@@ -82,13 +91,18 @@
 							<h3><?php echo _('show.next.title'); ?></h3>
 							<span>
 							<?php
-							if (mysql_num_rows($showresult) > 0 ) {
-								while ($row = mysql_fetch_row($showresult)) {
+              // 'SELECT * FROM `shows` ORDER BY aika ASC';
+							$show = $roydon->shows()
+							              ->where('aika > ?', 'NOW()')
+							              ->order('aika ASC');
+							              ->limit(1)
+							if (count($show) > 0 ) {
+
 								  /* row has 5 fields, 0 = Paikkakunta, 1 = date, 2 = length of show, 3 = Name of the show, 4 = link to homepage of show */
-									if (soonShow($row[1],$row[2])) {
-										echo date_conv($row[1], $row[2])." ".$row[0]."<br /><a href='$row[4]' >$row[3]</a><br />\n";
-										break;
-									}
+                  // if (soonShow($row[1],$row[2])) {
+							      echo date_conv($show['aika'], $show['kesto'])." ".$show['paikka']."<br /><a href='$show[4]' >$row[3]</a><br />\n";
+							      // break;
+							     //            }
 								}
 						  } else {
 						    echo "<?php echo _('show.next.negative'); ?>.";
