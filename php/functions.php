@@ -147,20 +147,6 @@
     echo' </ul>';
   }
 
-  // // Function to print table body for shows
-  // function printTbody($year, $q, $lang = 0) {
-  //
-  //   printNewShows($year, $q);
-  //   if ($year == date('Y') && date('m') >= 06) {
-  //     echo "<tr>\n";
-  //     echo "\t<td headers='show_name' colspan='4'>\n";
-  //     echo "\t\t<strong>" . _('show.past') . "</strong>\n";
-  //     echo "\t</td>\n";
-  //     echo "</tr>\n";
-  //     printPastShows($q[2]);
-  //   }
-  // }
-
   function printTbody($year, $db) {
     if ($year == date('Y') && date('m') >= 06) {
       printUpcomingShows($db);
@@ -214,28 +200,6 @@
       printShowRow($show);
     }
   }
-
-  // // Function to print upcoming shows
-  // function printNewShows($year, $query) {
-  //   if ($year == date('Y') && date('m') >= 06) {
-  //     $result = mysql_query($query[1]);
-  //   } else $result = mysql_query($query);
-  //
-  //   inv_query($result);
-  //
-  //   while ($row = mysql_fetch_row($result)) {
-  //     printShowRow($row);
-  //   }
-  // }
-
-  // // Function to print shows from the beginning of the year
-  // function printPastShows($query) {
-  //   $result = mysql_query($query);
-  //   inv_query($result);
-  //   while ($row = mysql_fetch_row($result)) {
-  //     printShowRow($row);
-  //   }
-  // }
 
   // Function to print table rows for shows
   function printShowRow($row) {

@@ -5,18 +5,25 @@
 <?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
 
-  $link = connect();
-  not_connected($link);
+  // $link = connect();
+  // not_connected($link);
   $year = date('Y');
 
-  $db = 'roydonf_roydon';
-  $newsquery = 'SELECT * FROM `news` ORDER BY date DESC';
+  try {
+      $connection = new PDO("mysql:dbname=roydonf_roydon", getUN(), getPWD());
+      $roydon = new NotORM($connection);
+  } catch (PDOException $e) {
+      echo 'Connection failed: ' . $e->getMessage();
+  }
 
-  $db_selected = mysql_select_db($db);
-  inv_db($db, $db_selected);
+  // $db = 'roydonf_roydon';
+  //   $newsquery = 'SELECT * FROM `news` ORDER BY date DESC';
 
-  $newsresult = mysql_query($newsquery);
-  inv_query($newsresult);
+  // $db_selected = mysql_select_db($db);
+  //   inv_db($db, $db_selected);
+
+  // $newsresult = mysql_query($newsquery);
+  //   inv_query($newsresult);
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
   <head>
@@ -58,10 +65,10 @@
               echo '<div id="uutiset">
                 <fieldset class="contentfield">
                 <legend>Uutiset</legend>';
-                  while ($row = mysql_fetch_row($newsresult)) {
-
-                    echo "<p class='uutinen'>\n".date_conv_short($row[0])." - $row[1] <br />\n$row[2]\n</p>";
-                  }
+              $news = $roydon->news()->order('date DESC');
+              foreach ( $news as $new) {
+                echo "<p class='uutinen'>\n".date_conv_short($new[0])." - $row[head] <br />\n$row[content]\n</p>";
+              }
                 echo '</fieldset>
               </div>';
             ?>

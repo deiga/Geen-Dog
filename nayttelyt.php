@@ -12,12 +12,13 @@
     $year = date('Y');
   }
 
-  // $db = 'roydonf_roydon';
-  //   inv_db($db);
-  //   $q = date_query($year);
+  try {
+      $connection = new PDO("mysql:dbname=roydonf_roydon", getUN(), getPWD());
+      $roydon = new NotORM($connection);
+  } catch (PDOException $e) {
+      echo 'Connection failed: ' . $e->getMessage();
+  }
 
-  $connection = new PDO("mysql:dbname=roydonf_roydon", getUN(), getPWD());
-  $roydon = new NotORM($connection);
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
   <head>
