@@ -67,7 +67,7 @@
                 <legend>Uutiset</legend>';
               $news = $roydon->news()->order('date DESC');
               foreach ( $news as $new) {
-                echo "<p class='uutinen'>\n".date_conv_short($new['date'])." - $row[head] <br />\n$row[content]\n</p>";
+                echo "<p class='uutinen'>\n".date_conv_short($new['date'])." - $new[head] <br />\n$new[content]\n</p>";
               }
                 echo '</fieldset>
               </div>';
