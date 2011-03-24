@@ -200,7 +200,7 @@
 
   function printYearsShows($year, $db) {
     // echo "<span style='display: none;'>$db</span>";
-      $shows = $db->shows()->where("aika > ?", $year . '-00-00')->where("aika < ?", $year1+1 . '-00-00')->order("aika ASC");
+      $shows = $db->shows()->where("aika > ?", $year . '-00-00')->where("aika < ?", $year1+1 . '-00-00');//->order("aika ASC");
 
     foreach ($shows as $show) {
       printShowRow($show);
