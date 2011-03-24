@@ -9,16 +9,6 @@
 	//   not_connected($link);
 	$year = date('Y');
 
-	// $db = 'roydonf_roydon';
-	//   $showquery = 'SELECT * FROM `shows` ORDER BY aika ASC';
-	//   $newsquery = 'SELECT * FROM `news` WHERE date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) ORDER BY date DESC';
-	//
-	//   $db_selected = mysql_select_db($db);
-	//   inv_db($db, $db_selected);
-	//
-	//   $showresult = mysql_query($showquery);
-	//   $newsresult = mysql_query($newsquery);
-	//   inv_query($SHOWRESult, $newsresult);
 	try {
       $connection = new PDO("mysql:dbname=roydonf_roydon", getUN(), getPWD());
       $roydon = new NotORM($connection);
@@ -69,7 +59,7 @@
 							<?php
               // SELECT * FROM `news` WHERE date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) ORDER BY date DESC
                 $news = $roydon->news()
-							              ->where('date >= ?', 'DATE_SUB(CURDATE(), INTERVAL 3 MONTH)')
+							              ->where('date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH)')
 							              ->order('date DESC');
                 if (count($news) > 0) {
                   echo '<div id="uutiset">
@@ -95,17 +85,14 @@
 							              ->where("aika > NOW()")
 							              ->order('aika ASC')
 							              ->limit(1);
-                              echo "<span style='display: none;'>$shows</span>";
+
               foreach($shows as $show) {
-
-							if (count($shows) > 0 ) {
-
-								  /* row has 5 fields, 0 = Paikkakunta, 1 = date, 2 = length of show, 3 = Name of the show, 4 = link to homepage of show */
-							      echo date_conv($show['aika'], $show['kesto'])." ".$show['paikka']."<br /><a href='$show[link]' >$show[nimi]</a><br />\n";
-						  } else {
-						    echo _('show.next.negative')  . '.';
-						  }
-					  }
+							  if (count($shows) > 0 ) {
+                  echo date_conv($show['aika'], $show['kesto'])." ".$show['paikka']."<br /><a href='$show[link]' >$show[nimi]</a><br />\n";
+                } else {
+                  echo _('show.next.negative')  . '.';
+                }
+              }
 							?>
 							</span>
 							<p>
