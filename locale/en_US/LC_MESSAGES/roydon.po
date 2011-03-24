@@ -133,4 +133,4 @@ msgstr "Administration"
 
 #: php/functions:157
 msgid "show.past"
-msgid "Past shows this year"
+msgstr "Past shows this year"

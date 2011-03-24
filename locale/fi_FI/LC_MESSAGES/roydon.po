@@ -129,7 +129,7 @@ msgstr "Ylläpito"
 
 #: php/functions:157
 msgid "show.past"
-msgid "Menneet näyttelyt tältä vuodelta"
+msgstr "Menneet näyttelyt tältä vuodelta"
 
 #: index.php:99
 msgid "show.next.negative"
