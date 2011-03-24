@@ -94,8 +94,8 @@
               // 'SELECT * FROM `shows` ORDER BY aika ASC';
 							$show = $roydon->shows()
 							              ->where('aika > ?', 'NOW()')
-							              ->order('aika ASC');
-							              ->limit(1)
+							              ->order('aika ASC')
+							              ->limit(1);
 							if (count($show) > 0 ) {
 
 								  /* row has 5 fields, 0 = Paikkakunta, 1 = date, 2 = length of show, 3 = Name of the show, 4 = link to homepage of show */
