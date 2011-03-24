@@ -91,18 +91,22 @@
 							<h3><?php echo _('show.next.title'); ?></h3>
 							<span>
 							<?php
-							$show = $roydon->shows()
+							$shows = $roydon->shows()
 							              ->where("aika > ?", 'CURDATE()')
 							              ->order('aika ASC')
 							              ->limit(1);
-              echo "<span style='display: none;'>$show</span>";
-							if ($show[0] != '' ) {
+
+              foreach($shows as $show) {
+                echo "<span style='display: none;'>$show</span>";
+
+							if ($show != '' ) {
 
 								  /* row has 5 fields, 0 = Paikkakunta, 1 = date, 2 = length of show, 3 = Name of the show, 4 = link to homepage of show */
 							      echo date_conv($show[0]['aika'], $show[0]['kesto'])." ".$show[0]['paikka']."<br /><a href='$show[0][link]' >$show[0][nimi]</a><br />\n";
 						  } else {
 						    echo _('show.next.negative')  . '.';
 						  }
+					  }
 							?>
 							</span>
 							<p>
