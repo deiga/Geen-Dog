@@ -176,7 +176,7 @@
   }
 
   function printUpcomingShows($db) {
-    $year = date('Y')
+    $year = date('Y');
     $month = date('m');
     $day = date('d');
     $shows = $db->shows()
@@ -190,7 +190,7 @@
 
   // Function to print shows from the beginning of the year
   function printPastShows($db) {
-    $year = date('Y')
+    $year = date('Y');
     $month = date('m');
     $day = date('d');
     $shows = $db->shows()
