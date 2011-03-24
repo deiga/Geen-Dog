@@ -95,7 +95,7 @@
 							              ->where("aika > ?", 'CURDATE()')
 							              ->order('aika ASC')
 							              ->limit(1);
-
+                              echo "<span style='display: none;'>$shows</span>";
               foreach($shows as $show) {
                 echo "<span style='display: none;'>$show</span>";
 
