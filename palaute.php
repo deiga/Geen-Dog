@@ -55,6 +55,8 @@
 
         $('a[href="#contactForm"]').click( function() {
           $('#takala').fadeTo( 'slow', .2 );
+          $('#takala').css('z-index', 0);
+          $('#contactForm').css('z-index', 10);
           $('#contactForm').fadeIn( 'slow', function() {
             $('#senderName').focus();
           } )
