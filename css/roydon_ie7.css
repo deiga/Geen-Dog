@@ -7,7 +7,7 @@
 	padding-left: 3%;
 }
 
-#otsake {	
+#otsake {
 }
 
 #sivusisalto {
@@ -18,7 +18,7 @@
 }
 
 #footer {
-	
+
 }
 
 #oikea .sisalto {
@@ -33,5 +33,23 @@
 #content fieldset {
 	padding: 1%;
 }
+
+/** Contactform */
+
+#contactForm.positioned, .statusMessage {
+  left: 50%;
+  top: 50%;
+}
+
+#contactForm.positioned {
+  margin-left: -20em;
+  margin-top: -16.5em;
+}
+
+.statusMessage {
+  margin-left: -15em;
+  margin-top: -1em;
+}
+
 
 

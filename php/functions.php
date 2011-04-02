@@ -1,6 +1,6 @@
 <?php
   require_once "arka.php";
-  require_once "php/NotORM.php";
+  require_once "NotORM.php";
 
   /* date_default_timezone_set('Europe/Helsinki'); */
 

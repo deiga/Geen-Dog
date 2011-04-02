@@ -134,3 +134,45 @@ msgstr "Administration"
 #: php/functions:157
 msgid "show.past"
 msgstr "Past shows this year"
+
+msgid "contact.form"
+msgstr "Feedback"
+
+msgid "contact.form.title"
+msgstr "Send us an email"
+
+msgid "contact.form.name"
+msgstr "Your name"
+
+msgid "contact.form.email"
+msgstr "Your email address"
+
+msgid "contact.form.msg"
+msgstr "Message"
+
+msgid "contact.form.send"
+msgstr "Send"
+
+msgid "contact.form.cancel"
+msgstr "Cancel"
+
+msgid "contact.form.sending"
+msgstr "Sending your message. Please wait"
+
+msgid "contact.form.thanks"
+msgstr "Thanks for sending your message! We'll get back to you shortly"
+
+msgid "contact.form.error"
+msgstr "There was a problem sending your message. Please try again"
+
+msgid "contact.form.incomplete"
+msgstr "Please complete all the fields in the form before sending"
+
+msgid "contact.form.type.name"
+msgstr "Please type your name"
+
+msgid "contact.form.type.email"
+msgstr "Please type your email address"
+
+msgid "contact.form.type.msg"
+msgstr "Please type your message"

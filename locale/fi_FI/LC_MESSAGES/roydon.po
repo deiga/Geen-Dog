@@ -135,3 +135,44 @@ msgstr "Menneet näyttelyt tältä vuodelta"
 msgid "show.next.negative"
 msgstr "Ei tulevia näyttelyitä tällähetkellä"
 
+msgid "contact.form"
+msgstr "Palautelomake"
+
+msgid "contact.form.title"
+msgstr "Lähetä meille sähköpostia"
+
+msgid "contact.form.name"
+msgstr "Nimesi"
+
+msgid "contact.form.email"
+msgstr "Sähköpostiosoite"
+
+msgid "contact.form.msg"
+msgstr "Viesti"
+
+msgid "contact.form.send"
+msgstr "Lähetä"
+
+msgid "contact.form.cancel"
+msgstr "Peru"
+
+msgid "contact.form.sending"
+msgstr "Viestiä lähetetään. Ole hyvä ja odota"
+
+msgid "contact.form.thanks"
+msgstr "Kiitos viestistä, palaamme pian"
+
+msgid "contact.form.error"
+msgstr "Viestin lähettäminen epäonnistui. Ole hyvä ja yritä uudestaan"
+
+msgid "contact.form.incomplete"
+msgstr "Ole hyvä ja täytä kaikki kentät lomakkeelta"
+
+msgid "contact.form.type.name"
+msgstr "Kirjoita nimesi"
+
+msgid "contact.form.type.email"
+msgstr "Kirjoita sähköposti osoitteesi"
+
+msgid "contact.form.type.msg"
+msgstr "Kirjoita viesti tähän"

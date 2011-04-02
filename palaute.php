@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
   require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
-  require_once('php/recaptchalib.php');
+  locale($_GET['lang']);
+  require_once($_SERVER['DOCUMENT_ROOT'].'/php/recaptchalib.php');
   $publickey = "6LcFtcISAAAAAO_K4LUS51ESMyF3ggacwFRcqDOn ";
 
 ?>
@@ -39,7 +40,7 @@
         <?php langLink($_GET['lang']); ?>
         <div id="otsikko">
           <h1>roydon</h1>
-          <p>Kenneltarvikkeet</p>
+          <p><?php echo _('header.subtitle'); ?></p>
         </div>
         <?php printMenu();?>
       </div>
@@ -47,19 +48,41 @@
         <section id="content">
           <div id="captcha">
             <fieldset>
-              <legend>Palautelomake</legend>
-              <form method="post" action="php/mail.php">
-                Aihe:
-                <input type="text" name="subject" /><br />
-                Lähettäjä:
-                <input type="text" name="email" /><br />
-                Viesti:
-                <textarea name="message" rows="7" cols="50"></textarea><br />
-                <?php echo recaptcha_get_html($publickey); ?>
-                <input type="submit" value="Lähetä" />
-                <input type="reset" value="Tyhjennä lomake" />
+              <legend><?php echo _('contact.form'); ?></legend>
+              <form  id="contactForm" class="rounded" method="post" action="php/mail.php">
+                <h2><?php echo _('contact.form.title'); ?>...</h2>
+
+                  <ul>
+
+                    <li>
+                      <label for="senderName"><?php echo _('contact.form.name'); ?></label>
+                      <input type="text" name="senderName" id="senderName" placeholder="<?php echo _('contact.form.type.name'); ?>" required="required" maxlength="40" />
+                    </li>
+
+                    <li>
+                      <label for="senderEmail"><?php echo _('contact.form.email'); ?></label>
+                      <input type="email" name="senderEmail" id="senderEmail" placeholder="<?php echo _('contact.form.type.email'); ?>" required="required" maxlength="50" />
+                    </li>
+
+                    <li>
+                      <label for="message" style="padding-top: .5em;"><?php echo _('contact.form.msg'); ?></label>
+                      <textarea name="message" id="message" placeholder="<?php echo _('contact.form.type.msg'); ?>" required="required" cols="80" rows="10" maxlength="10000"></textarea>
+                    </li>
+                    <li>
+                      <?php echo recaptcha_get_html($publickey); ?>
+                    </li>
+                  </ul>
+
+                  <div id="formButtons">
+                    <input type="submit" id="sendMessage" name="sendMessage" value="<?php echo _('contact.form.send'); ?>" />
+                    <input type="button" id="cancel" name="cancel" value="<?php echo _('contact.form.cancel'); ?>" />
+                  </div>
               </form>
             </fieldset>
+            <div id="sendingMessage" class="statusMessage"><p><?php echo _('contact.form.sending'); ?>...</p></div>
+            <div id="successMessage" class="statusMessage"><p><?php echo _('contact.form.thanks'); ?>.</p></div>
+            <div id="failureMessage" class="statusMessage"><p><?php echo _('contact.form.error'); ?>.</p></div>
+            <div id="incompleteMessage" class="statusMessage"><p><?php echo _('contact.form.incomplete'); ?>.</p></div>
           </div>
         </section>
       </div>
