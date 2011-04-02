@@ -597,7 +597,7 @@ a:link {
   color: #666;
   background-color: #ebedf2;
   background: -webkit-gradient( linear, left bottom, left top, color-stop(0,#dfe1e5), color-stop(1, #ebedf2) );
-  background: -moz-linear-gradient( center bottom, #dfe1e5 0%, #ebedf2 100% );  
+  background: -moz-linear-gradient( center bottom, #dfe1e5 0%, #ebedf2 100% );
   border: 1px solid #aaa;
   -moz-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
   -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
@@ -609,7 +609,7 @@ a:link {
 
 #contactForm {
   width: 40em;
-  height: 33em;
+  height: auto;
   padding: 0 1.5em 1.5em 1.5em;
   margin: 0 auto;
 }
@@ -658,12 +658,12 @@ a:link {
   letter-spacing: .05em;
   margin: 0 0 1em -.75em;
   padding: 1em;
-  width: 19.5em;  
+  width: 19.5em;
   color: #aeb6aa;
   background: #dfe0e5 url('images/stamp.jpg') no-repeat 15em -3em; /* http://morguefile.com/archive/display/606433 */
   border-bottom: 1px solid #aaa;
   -moz-border-radius: 10px 10px 0 0;
-  -webkit-border-radius: 10px 10px 0 0;  
+  -webkit-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0;
 }
 
@@ -711,7 +711,7 @@ input, textarea {
   font-size: 1em;
   border: 1px solid #aaa;
   -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;    
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   -moz-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
   -webkit-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
@@ -753,7 +753,7 @@ input[type="submit"], input[type="button"] {
   padding: .5em;
   border: 1px solid #666;
   -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;  
+  -webkit-border-radius: 10px;
   border-radius: 10px;
   -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
   -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);

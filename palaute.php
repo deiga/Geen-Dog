@@ -47,8 +47,6 @@
       <div id="sivusisalto" class="shadow">
         <section id="content">
           <div id="captcha">
-            <fieldset>
-              <legend><?php echo _('contact.form'); ?></legend>
               <form  id="contactForm" class="rounded" method="post" action="php/mail.php">
                 <h2><?php echo _('contact.form.title'); ?>...</h2>
 
@@ -78,7 +76,6 @@
                     <input type="button" id="cancel" name="cancel" value="<?php echo _('contact.form.cancel'); ?>" />
                   </div>
               </form>
-            </fieldset>
             <div id="sendingMessage" class="statusMessage"><p><?php echo _('contact.form.sending'); ?>...</p></div>
             <div id="successMessage" class="statusMessage"><p><?php echo _('contact.form.thanks'); ?>.</p></div>
             <div id="failureMessage" class="statusMessage"><p><?php echo _('contact.form.error'); ?>.</p></div>
