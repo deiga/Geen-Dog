@@ -54,7 +54,7 @@
         // 4. Prevent the link being followed
 
         $('a[href="#contactForm"]').click( function() {
-          $('#content').fadeTo( 'slow', .2 );
+          $('#takala').fadeTo( 'slow', .2 );
           $('#contactForm').fadeIn( 'slow', function() {
             $('#senderName').focus();
           } )
@@ -65,14 +65,14 @@
         // When the "Cancel" button is clicked, close the form
         $('#cancel').click( function() {
           $('#contactForm').fadeOut();
-          $('#content').fadeTo( 'slow', 1 );
+          $('#takala').fadeTo( 'slow', 1 );
         } );
 
         // When the "Escape" key is pressed, close the form
         $('#contactForm').keydown( function( event ) {
           if ( event.which == 27 ) {
             $('#contactForm').fadeOut();
-            $('#content').fadeTo( 'slow', 1 );
+            $('#takala').fadeTo( 'slow', 1 );
           }
         } );
 
