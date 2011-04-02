@@ -92,7 +92,7 @@
       </div>
       <div id="sivusisalto" class="shadow">
         <section id="content">
-          <div id="captcha">
+          <a href="#contactForm"><?php echo _('contact.form.title'); ?></a>
               <form  id="contactForm" class="rounded" method="post" action="php/mail.php">
                 <h2><?php echo _('contact.form.title'); ?>...</h2>
 
@@ -126,7 +126,6 @@
             <div id="successMessage" class="statusMessage"><p><?php echo _('contact.form.thanks'); ?>.</p></div>
             <div id="failureMessage" class="statusMessage"><p><?php echo _('contact.form.error'); ?>.</p></div>
             <div id="incompleteMessage" class="statusMessage"><p><?php echo _('contact.form.incomplete'); ?>.</p></div>
-          </div>
         </section>
       </div>
       <?php printFoot();?>
