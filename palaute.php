@@ -77,6 +77,38 @@
         } );
 
       }
+
+      // Submit the form via Ajax
+
+      function submitForm() {
+        var contactForm = $(this);
+
+        // Are all the fields filled in?
+
+        if ( !$('#senderName').val() || !$('#senderEmail').val() || !$('#message').val() ) {
+
+          // No; display a warning message and return to the form
+          $('#incompleteMessage').fadeIn().delay(messageDelay).fadeOut();
+          contactForm.fadeOut().delay(messageDelay).fadeIn();
+
+        } else {
+
+          // Yes; submit the form to the PHP script via Ajax
+
+          $('#sendingMessage').fadeIn();
+          contactForm.fadeOut();
+
+          $.ajax( {
+            url: contactForm.attr( 'action' ) + "?ajax=true",
+            type: contactForm.attr( 'method' ),
+            data: contactForm.serialize(),
+            success: submitFinished
+          } );
+        }
+
+        // Prevent the default form submission occurring
+        return false;
+      }
     </script>
   </head>
   <body onload="curpage()">
