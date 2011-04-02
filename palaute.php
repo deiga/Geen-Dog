@@ -66,9 +66,9 @@
                       <label for="message" style="padding-top: .5em;"><?php echo _('contact.form.msg'); ?></label>
                       <textarea name="message" id="message" placeholder="<?php echo _('contact.form.type.msg'); ?>" required="required" cols="80" rows="10" maxlength="10000"></textarea>
                     </li>
-                    <li>
-                      <?php echo recaptcha_get_html($publickey); ?>
-                    </li>
+                    <!-- <li>
+                                          <?php echo recaptcha_get_html($publickey); ?>
+                                        </li> -->
                   </ul>
 
                   <div id="formButtons">
