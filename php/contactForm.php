@@ -1,6 +1,6 @@
 <?php
   require_once $_SERVER['DOCUMENT_ROOT'].'/php/recaptchalib.php';
-  $publickey = "6LcFtcISAAAAAO_K4LUS51ESMyF3ggacwFRcqDOn ";
+  $publickey = getenv('RECAPTCHA_PUBLIC');
 ?>
 <script type="text/javascript" src="/js/contact.js"></script>
 <form  id="contactForm" class="rounded" method="post" action="php/mail.php">

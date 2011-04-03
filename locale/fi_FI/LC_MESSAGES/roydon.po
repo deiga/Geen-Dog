@@ -160,7 +160,7 @@ msgid "contact.form.sending"
 msgstr "Viestiä lähetetään. Ole hyvä ja odota"
 
 msgid "contact.form.thanks"
-msgstr "Kiitos viestistä, palaamme pian"
+msgstr "Kiitos viestistä, otamme mahdollisimman pian yhteyttä"
 
 msgid "contact.form.error"
 msgstr "Viestin lähettäminen epäonnistui. Ole hyvä ja yritä uudestaan"
