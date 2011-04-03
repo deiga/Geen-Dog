@@ -93,6 +93,11 @@ function submitForm() {
         data: contactForm.serialize(),
         success: submitFinished
       } );
+    } else {
+      $('#recaptchaError').insertAfter('#takala');
+      $('#recaptchaError').fadeIn().delay(messageDelay).fadeOut();
+      contactForm.fadeOut().delay(messageDelay).fadeIn();
+  		Recaptcha.reload();
     }
   }
 
@@ -149,10 +154,6 @@ function validateCaptcha() {
   	if(html == "success") {
   		return true;
   	} else {
-  		$('#recaptchaError').insertAfter('#takala');
-      $('#recaptchaError').fadeIn().delay(messageDelay).fadeOut();
-      contactForm.fadeOut().delay(messageDelay).fadeIn();
-  		Recaptcha.reload();
   		return false;
   	}
 }
