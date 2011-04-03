@@ -140,9 +140,9 @@ function submitFinished( response ) {
 function validateCaptcha() {
   challengeField = $("input#recaptcha_challenge_field").val();
   	responseField = $("input#recaptcha_response_field").val();
-  	console.log(challengeField);
-  	console.log(responseField);
-  	return false;
+    // console.log(challengeField);
+    // console.log(responseField);
+    // return false;
   	var html = $.ajax({
   		type: "POST",
   		url: "/php/ajax.recaptcha.php",
@@ -150,7 +150,7 @@ function validateCaptcha() {
   		async: false
   		}).responseText;
 
-  	//console.log( html );
+  	console.log( html );
   	if(html == "success") {
   		return true;
   	} else {
