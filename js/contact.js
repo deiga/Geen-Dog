@@ -71,7 +71,7 @@ function submitForm() {
 
   // Are all the fields filled in?
 
-  if ( !$('#senderName').val() || !$('#senderEmail').val() || !$('#message').val() ) {
+  if ( !$('#senderName').val() || !$('#senderEmail').val() || !$('#message').val() || !$('#recaptcha_response_field').val() || !$('#recaptcha_challenge_field').val() ) {
 
     // No; display a warning message and return to the form
     $('#incompleteMessage').insertAfter('#takala');

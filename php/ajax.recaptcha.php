@@ -9,7 +9,8 @@ $resp = recaptcha_check_answer ($privatekey,
 if (!$resp->is_valid) {
   echo 'success';
 } else {
+  var_dump($resp);
   die ("The reCAPTCHA wasn't entered correctly. Go back and try it again." .
-    "(reCAPTCHA said: " . $resp->error . ")");
+    "(reCAPTCHA said: $resp->error)");
 }
 ?>
