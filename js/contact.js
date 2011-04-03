@@ -17,7 +17,7 @@ tryReady = function(time_elapsed) {
 tryReady(0);
 
 var RecaptchaOptions = {
-  theme : 'blackglass'
+  theme : 'clear'
 };
 
 var messageDelay = 2000;  // How long to display status messages (in milliseconds)
