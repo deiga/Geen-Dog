@@ -4,16 +4,12 @@ tryReady = function(time_elapsed) {
   // Continually polls to see if jQuery is loaded.
   if (typeof $ == "undefined") { // if jQuery isn't loaded yet...
     if (time_elapsed <= 5000) { // and we havn't given up trying...
-      setTimeout("load.tryReady(" + (time_elapsed + 200) + ")", 200); // set a timer to check again in 200 ms.
+      setTimeout("tryReady(" + (time_elapsed + 200) + ")", 200); // set a timer to check again in 200 ms.
     } else {
       alert("Timed out while loading jQuery.")
     }
   } else {
     // Any code to run after jQuery loads goes here!
-    // for example:
-    $("#status").css({
-    'font-size':'20px',
-   'color':'green'}).text("jQuery is loaded and ready to go!");
   }
 }
 
