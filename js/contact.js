@@ -10,6 +10,7 @@ tryReady = function(time_elapsed) {
     }
   } else {
     // Any code to run after jQuery loads goes here!
+    $( init );
   }
 }
 
@@ -20,10 +21,6 @@ var RecaptchaOptions = {
 };
 
 var messageDelay = 2000;  // How long to display status messages (in milliseconds)
-
-// Init the form once the document is ready
-$( init );
-
 
 // Initialize the form
 
