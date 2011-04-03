@@ -45,7 +45,8 @@
         // Hide the form initially.
         // Make submitForm() the form's submit handler.
         // Position the form so it sits in the centre of the browser window.
-        $('#contactForm').hide().submit( submitForm ).addClass( 'positioned' );
+        $('#contactForm').submit( submitForm ).addClass( 'positioned' );
+        $('#contactForm').insertAfter('#takala');
 
         // When the "Send us an email" link is clicked:
         // 1. Fade the content out
@@ -54,7 +55,6 @@
         // 4. Prevent the link being followed
 
         $('a[href="#contactForm"]').click( function() {
-          $('#contactForm').insertAfter('#takala');
           $('#takala').fadeTo( 'slow', .2 );
           $('#contactForm').fadeIn( 'slow', function() {
             $('#senderName').focus();
@@ -174,9 +174,7 @@
                 <label for="message" style="padding-top: .5em;"><?php echo _('contact.form.msg'); ?></label>
                 <textarea name="message" id="message" placeholder="<?php echo _('contact.form.type.msg'); ?>" required="required" cols="80" rows="10" maxlength="10000"></textarea>
               </li>
-              <li>
-                <?php echo recaptcha_get_html($publickey); ?>
-              </li>
+              <?php echo recaptcha_get_html($publickey); ?>
             </ul>
 
             <div id="formButtons">
