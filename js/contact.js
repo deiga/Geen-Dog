@@ -40,6 +40,7 @@ function init() {
 
   $('a[href="#contactForm"]').click( function() {
     $('#takala').fadeTo( 'slow', .2 );
+    Recaptcha.reload();
     $('#contactForm').fadeIn( 'slow', function() {
       $('#senderName').focus();
     } )
@@ -70,7 +71,7 @@ function submitForm() {
 
   // Are all the fields filled in?
 
-  if ( !$('#senderName').val() || !$('#senderEmail').val() || !$('#message').val() || !$('#recaptcha_response_field').val() ) {
+  if ( !$('#senderName').val() || !$('#senderEmail').val() || !$('#message').val() ) {
 
     // No; display a warning message and return to the form
     $('#incompleteMessage').insertAfter('#takala');
@@ -118,7 +119,7 @@ function submitFinished( response ) {
     $('#senderEmail').val( "" );
     $('#message').val( "" );
 
-    $('#content').delay(messageDelay+500).fadeTo( 'slow', 1 );
+    $('#takala').delay(messageDelay+500).fadeTo( 'slow', 1 );
 
   } else {
 
@@ -134,9 +135,9 @@ function submitFinished( response ) {
 function validateCaptcha() {
   challengeField = $("input#recaptcha_challenge_field").val();
   	responseField = $("input#recaptcha_response_field").val();
-  	//console.log(challengeField);
-  	//console.log(responseField);
-  	//return false;
+  	console.log(challengeField);
+  	console.log(responseField);
+  	return false;
   	var html = $.ajax({
   		type: "POST",
   		url: "/php/ajax.recaptcha.php",
