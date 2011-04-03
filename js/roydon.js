@@ -7,6 +7,9 @@ function curpage() {
   if (name.length == 0) {
     document.getElementById('index').className += ' currpage'
   } else {
-    document.getElementById(name).className += ' currpage'
+    var element = document.getElementById(name)
+    if (element != null) {
+      element.className += ' currpage'
+    }
   }
 }

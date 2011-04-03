@@ -70,9 +70,10 @@ function submitForm() {
 
   // Are all the fields filled in?
 
-  if ( !$('#senderName').val() || !$('#senderEmail').val() || !$('#message').val() ) {
+  if ( !$('#senderName').val() || !$('#senderEmail').val() || !$('#message').val() || !$('#recaptcha_response_field').val() ) {
 
     // No; display a warning message and return to the form
+    $('#incompleteMessage').insertAfter('#takala');
     $('#incompleteMessage').fadeIn().delay(messageDelay).fadeOut();
     contactForm.fadeOut().delay(messageDelay).fadeIn();
 
@@ -80,6 +81,7 @@ function submitForm() {
 
     // Yes; submit the form to the PHP script via Ajax
 
+    $('#sendingMessage').insertAfter('#takala');
     $('#sendingMessage').fadeIn();
     contactForm.fadeOut();
 
@@ -108,6 +110,7 @@ function submitFinished( response ) {
     // 2. Clear the form fields
     // 3. Fade the content back in
 
+    $('#successMessage').insertAfter('#takala');
     $('#successMessage').fadeIn().delay(messageDelay).fadeOut();
     $('#senderName').val( "" );
     $('#senderEmail').val( "" );
@@ -119,6 +122,7 @@ function submitFinished( response ) {
 
     // Form submission failed: Display the failure message,
     // then redisplay the form
+    $('#failureMessage').insertAfter('#takala');
     $('#failureMessage').fadeIn().delay(messageDelay).fadeOut();
     $('#contactForm').delay(messageDelay+500).fadeIn();
   }

@@ -20,7 +20,7 @@
       <label for="message" style="padding-top: .5em;"><?php echo _('contact.form.msg'); ?></label>
       <textarea name="message" id="message" placeholder="<?php echo _('contact.form.type.msg'); ?>" required="required" cols="80" rows="10" maxlength="10000"></textarea>
     </li>
-    <li><?php echo recaptcha_get_html($publickey); ?></li>
+    <li><?php echo recaptcha_get_html($publickey, $_GET['rer']); ?></li>
   </ul>
 
   <div id="formButtons">
@@ -28,7 +28,9 @@
     <input type="button" id="cancel" name="cancel" value="<?php echo _('contact.form.cancel'); ?>" />
   </div>
 </form>
-<div id="sendingMessage" class="statusMessage"><p><?php echo _('contact.form.sending'); ?>...</p></div>
-<div id="successMessage" class="statusMessage"><p><?php echo _('contact.form.thanks'); ?>.</p></div>
-<div id="failureMessage" class="statusMessage"><p><?php echo _('contact.form.error'); ?>.</p></div>
-<div id="incompleteMessage" class="statusMessage"><p><?php echo _('contact.form.incomplete'); ?>.</p></div>
+<div id="formMessage">
+  <div id="sendingMessage" class="statusMessage"><p><?php echo _('contact.form.sending'); ?>...</p></div>
+  <div id="successMessage" class="statusMessage"><p><?php echo _('contact.form.thanks'); ?>.</p></div>
+  <div id="failureMessage" class="statusMessage"><p><?php echo _('contact.form.error'); ?>.</p></div>
+  <div id="incompleteMessage" class="statusMessage"><p><?php echo _('contact.form.incomplete'); ?>.</p></div>
+</div>
