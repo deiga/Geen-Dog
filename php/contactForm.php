@@ -28,9 +28,18 @@
     <input type="button" id="cancel" name="cancel" value="<?php echo _('contact.form.cancel'); ?>" />
   </div>
 </form>
-<div id="formMessage">
-  <div id="sendingMessage" class="statusMessage"><p><?php echo _('contact.form.sending'); ?>...</p></div>
-  <div id="successMessage" class="statusMessage"><p><?php echo _('contact.form.thanks'); ?>.</p></div>
-  <div id="failureMessage" class="statusMessage"><p><?php echo _('contact.form.error'); ?>.</p></div>
-  <div id="incompleteMessage" class="statusMessage"><p><?php echo _('contact.form.incomplete'); ?>.</p></div>
-</div>
+  <div id="sendingMessage" class="statusMessage">
+    <p><?php echo _('contact.form.sending'); ?>...</p>
+  </div>
+  <div id="successMessage" class="statusMessage">
+    <p><?php echo _('contact.form.thanks'); ?>.</p>
+  </div>
+  <div id="failureMessage" class="statusMessage">
+    <p><?php echo _('contact.form.error'); ?>.</p>
+  </div>
+  <div id="incompleteMessage" class="statusMessage">
+    <p><?php echo _('contact.form.incomplete'); ?>.</p>
+  </div>
+  <div id="recaptchaError" class="statusMessage">
+    <p><?php echo _('contact.form.captcha.error'); ?></p>
+  </div>
