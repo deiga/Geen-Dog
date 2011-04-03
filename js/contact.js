@@ -81,16 +81,18 @@ function submitForm() {
 
     // Yes; submit the form to the PHP script via Ajax
 
-    $('#sendingMessage').insertAfter('#takala');
-    $('#sendingMessage').fadeIn();
-    contactForm.fadeOut();
+    if (validateCaptcha()) {
+      $('#sendingMessage').insertAfter('#takala');
+      $('#sendingMessage').fadeIn();
+      contactForm.fadeOut();
 
-    $.ajax( {
-      url: contactForm.attr( 'action' ) + "?ajax=true",
-      type: contactForm.attr( 'method' ),
-      data: contactForm.serialize(),
-      success: submitFinished
-    } );
+      $.ajax( {
+        url: contactForm.attr( 'action' ) + "?ajax=true",
+        type: contactForm.attr( 'method' ),
+        data: contactForm.serialize(),
+        success: submitFinished
+      } );
+    }
   }
 
   // Prevent the default form submission occurring
@@ -124,6 +126,32 @@ function submitFinished( response ) {
     // then redisplay the form
     $('#failureMessage').insertAfter('#takala');
     $('#failureMessage').fadeIn().delay(messageDelay).fadeOut();
+    Recaptcha.reload();
     $('#contactForm').delay(messageDelay+500).fadeIn();
   }
+}
+
+function validateCaptcha() {
+  challengeField = $("input#recaptcha_challenge_field").val();
+  	responseField = $("input#recaptcha_response_field").val();
+  	//console.log(challengeField);
+  	//console.log(responseField);
+  	//return false;
+  	var html = $.ajax({
+  		type: "POST",
+  		url: "/php/ajax.recaptcha.php",
+  		data: "recaptcha_challenge_field=" + challengeField + "&recaptcha_response_field=" + responseField,
+  		async: false
+  		}).responseText;
+
+  	//console.log( html );
+  	if(html == "success") {
+  		return true;
+  	} else {
+  		$('#recaptchaError').insertAfter('#takala');
+      $('#recaptchaError').fadeIn().delay(messageDelay).fadeOut();
+      contactForm.fadeOut().delay(messageDelay).fadeIn();
+  		Recaptcha.reload();
+  		return false;
+  	}
 }
