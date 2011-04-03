@@ -1,6 +1,6 @@
 <?php
   setcookie("testCookie", "1", time()+(60*60*2));
-  require($_SERVER['DOCUMENT_ROOT'].'/php/functions.php');
+  require_once $_SERVER['DOCUMENT_ROOT'].'/php/functions.php';
   $link = connect();
   not_connected($link);
 

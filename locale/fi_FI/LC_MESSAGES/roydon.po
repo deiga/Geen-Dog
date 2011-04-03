@@ -142,7 +142,7 @@ msgid "contact.form.title"
 msgstr "Lähetä meille sähköpostia"
 
 msgid "contact.form.name"
-msgstr "Nimih"
+msgstr "Nimi"
 
 msgid "contact.form.email"
 msgstr "Sähköpostiosoite"

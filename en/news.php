@@ -3,7 +3,7 @@
 ?>
 <!DOCTYPE html>
 <?php
-  require_once($_SERVER['DOCUMENT_ROOT']."/php/functions.php");
+  require_once $_SERVER['DOCUMENT_ROOT']."/php/functions.php";
 
   $link = connect();
   not_connected($link);

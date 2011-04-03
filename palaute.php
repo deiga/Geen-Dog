@@ -38,7 +38,7 @@
       <div id="sivusisalto" class="shadow">
         <section id="content">
           <a href="#contactForm"><?php echo _('contact.form.title'); ?></a>
-          <?php require_once 'php/contactForm.php'?>
+          <?php require_once 'php/contactForm.php';?>
         </section>
       </div>
       <?php printFoot();?>

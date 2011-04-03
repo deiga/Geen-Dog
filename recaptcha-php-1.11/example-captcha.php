@@ -3,7 +3,7 @@
     <form action="" method="post">
 <?php
 
-require_once('recaptchalib.php');
+require_once 'recaptchalib.php';
 
 // Get a key from https://www.google.com/recaptcha/admin/create
 $publickey = "";

@@ -596,8 +596,11 @@ a:link {
 #contactForm, .statusMessage {
   color: #666;
   background-color: #ebedf2;
-  background: -webkit-gradient( linear, left bottom, left top, color-stop(0,#dfe1e5), color-stop(1, #ebedf2) );
-  background: -moz-linear-gradient( center bottom, #dfe1e5 0%, #ebedf2 100% );
+  background-image: -moz-linear-gradient( center bottom, #dfe1e5 0%, #ebedf2 100% );
+  background-image: -o-linear-gradient( center bottom, #dfe1e5 0%, #ebedf2 100% ); /* Opera 11.10+ */
+  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0,#dfe1e5), color-stop(1, #ebedf2) );
+  background-image: -webkit-linear-gradient( center bottom, #dfe1e5 0%, #ebedf2 100% ); /* Chrome 10+, Saf5.1+ */
+  background-image: linear-gradient( center bottom, #dfe1e5 0%, #ebedf2 100% );
   border: 1px solid #aaa;
   -moz-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
   -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
@@ -661,7 +664,7 @@ a:link {
   padding: 1em;
   width: 19.5em;
   color: white;
-  background: green url('http://mrg.bz/Naejh9') no-repeat 15em -3em;
+  background: green;
   border-bottom: 1px solid #aaa;
   -moz-border-radius: 10px 10px 0 0;
   -webkit-border-radius: 10px 10px 0 0;
@@ -732,9 +735,9 @@ textarea {
 #contactForm *:focus {
   border: 1px solid #66f;
   outline: none;
-  box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 
@@ -769,6 +772,7 @@ input[type="submit"], input[type="button"] {
   -moz-transition: opacity .5s;
   -webkit-transition: opacity .5s;
   -o-transition: opacity .5s;
+  -ms-transition: opacity .5s;
   transition: opacity .5s;
 }
 
