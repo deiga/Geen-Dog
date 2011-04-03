@@ -1,7 +1,5 @@
 document.write("<script type='text/javascript'  src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js'></script>");
 
-tryReady(0);
-
 tryReady = function(time_elapsed) {
   // Continually polls to see if jQuery is loaded.
   if (typeof $ == "undefined") { // if jQuery isn't loaded yet...
@@ -18,6 +16,8 @@ tryReady = function(time_elapsed) {
    'color':'green'}).text("jQuery is loaded and ready to go!");
   }
 }
+
+tryReady(0);
 
 var RecaptchaOptions = {
   theme : 'blackglass'
