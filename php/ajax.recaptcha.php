@@ -6,7 +6,7 @@ $resp = recaptcha_check_answer ($privatekey,
   $_POST["recaptcha_challenge_field"],
   $_POST["recaptcha_response_field"]);
 
-if (!$resp->is_valid) {
+if ($resp->is_valid) {
   echo 'success';
 } else {
   var_dump($resp);

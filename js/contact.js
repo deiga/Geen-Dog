@@ -150,7 +150,7 @@ function validateCaptcha() {
   		async: false
   		}).responseText;
 
-  	console.log( html );
+  	//console.log( html );
   	if(html == "success") {
   		return true;
   	} else {
