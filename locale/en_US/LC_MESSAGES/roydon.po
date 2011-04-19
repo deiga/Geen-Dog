@@ -20,7 +20,7 @@ msgstr ""
 #: index.php:52
 #: nayttelyt.php:63
 msgid "header.subtitle"
-msgstr "Kennelaccessories"
+msgstr "Kennelaccessories with emotion and skill since 1988"
 
 #: contact.php:42
 msgid "contact.title"
@@ -176,3 +176,14 @@ msgstr "Please type your email address"
 
 msgid "contact.form.type.msg"
 msgstr "Please type your message"
+
+msgid "contact.form.captcha.error"
+msgstr "The reCAPTCHA wasn't entered correctly. Please try again"
+
+#: index.php:56
+msgid "welcome.heading"
+msgstr "Welcome to our homepage"
+
+#: index.php:57
+msgid "welcome.text"
+msgstr "Olemme koiratarvikkeisiin erikoistunut yritys. Meiltä löydät monipuolisesti koulutustarvikkeita. Koko valikoimaamme pääset tutustumaan koiranäyttelyissä."

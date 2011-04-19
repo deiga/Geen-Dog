@@ -53,8 +53,8 @@
 				<div id="vasen">
 					<section class="sisalto">
 							<section id="lyhes">
-								<h2>Tervetuloa Roydon Ky:n kotisivuille</h2>
-								Roydon on koiranäyttelyitä kiertävä kenneltarvikeliike. Sivuiltamme löydät tiedot näyttelyistä, joissa käymme, ja myös tiedot miten meihin saa yhteyden.
+								<h2><?php echo _('welcome.heading'); ?>!</h2>
+								<?php echo _('welcome.text'); ?>
 							</section>
 							<?php
               // SELECT * FROM `news` WHERE date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) ORDER BY date DESC

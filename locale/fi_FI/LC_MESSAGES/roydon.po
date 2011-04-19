@@ -20,7 +20,7 @@ msgstr ""
 #: index.php:52
 #: nayttelyt.php:63
 msgid "header.subtitle"
-msgstr "Kenneltarvikkeet"
+msgstr "Koiratarvikkeita tunteella ja taidolla jo vuodesta 1988"
 
 #: contact.php:42
 msgid "contact.title"
@@ -44,7 +44,7 @@ msgstr "Postitse"
 
 #: contact.php:48
 msgid "contact.phone"
-msgstr "Puhelimella"
+msgstr "Puhelimitse"
 
 #: index.php:82
 msgid "show.next.title"
@@ -88,7 +88,7 @@ msgstr "Näyttelyt"
 
 #: php/functions.php:102
 msgid "navi.contact"
-msgstr "Ota Yhteyttä"
+msgstr "Yhteystiedot"
 
 #: php/functions.php:243
 msgid "lang.text"
@@ -121,7 +121,7 @@ msgstr "Lakelandinterrieri Ry"
 
 #: nayttelyt.php:100
 msgid "show.more.info"
-msgstr "Lisätietoja suomen koiranäyttelyistä"
+msgstr "Lisätietoja Suomen koiranäyttelyistä"
 
 #: php/functions.php:132
 msgid "footer.admin"
@@ -176,3 +176,16 @@ msgstr "Kirjoita sähköposti osoitteesi"
 
 msgid "contact.form.type.msg"
 msgstr "Kirjoita viesti tähän"
+
+msgid "contact.form.captcha.error"
+msgstr "Syöttämäsi sanat eivät olleet oikein, ole hyvä ja koita uudestaan"
+
+#: index.php:56
+msgid "welcome.heading"
+msgstr "Tervetuloa sivuillemme"
+
+#: index.php:57
+msgid "welcome.text"
+msgstr "Olemme koiratarvikkeisiin erikoistunut yritys. Meiltä löydät monipuolisesti koulutustarvikkeita. Koko valikoimaamme pääset tutustumaan koiranäyttelyissä."
+
+
