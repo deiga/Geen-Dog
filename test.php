@@ -24,14 +24,8 @@
     <link rel="icon" type="image/ico" href="images/favicon.ico" />
     <link rel="shortcut icon" type="image/ico" href="http://roydon.fi/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/roydon.css" media="all" />
-     <!--[if IE 6]>
-      <link rel="stylesheet" type="text/css" href="css/roydon_ie6.css" />
-    <![endif]-->
     <!--[if IE 7]>
       <link rel="stylesheet" type="text/css" href="css/roydon_ie7.css" />
-    <![endif]-->
-    <!--[if lte IE 6]>
-      <link rel="stylesheet" type="text/css" href="css/roydon_ie5.css" />
     <![endif]-->
     <script type="text/javascript" src="/js/roydon.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>

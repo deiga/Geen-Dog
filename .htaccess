@@ -1,4 +1,7 @@
 # BEGIN EXPIRES
+
+RedirectEngine On
+
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresDefault "access plus 10 days"
@@ -39,10 +42,10 @@ FileETag None
 
 # BEGIN ERROR PAGES
 
-# ErrorDocument 400 /errors/badrequest.html 
-# ErrorDocument 401 /errors/authreqd.html 
+# ErrorDocument 400 /errors/badrequest.html
+# ErrorDocument 401 /errors/authreqd.html
 ErrorDocument 403 /errors/403.php
-ErrorDocument 404 /errors/404.php 
+ErrorDocument 404 /errors/404.php
 # ErrorDocument 500 /errors/serverr.html
 
 # END ERROR PAGES
@@ -108,3 +111,11 @@ ErrorDocument 404 /errors/404.php
  Satisfy All
 </Files>
 # END PHP ERROR
+
+# Environment variables
+SetEnv RECAPTCHA_PRIVATE 6LcFtcISAAAAADkAdRNFXMAx3rCKhMbUa3z-NvJG
+SetEnv RECAPTCHA_PUBLIC 6LcFtcISAAAAAO_K4LUS51ESMyF3ggacwFRcqDOn
+
+# Redirect non-www traffic to www doamin
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]

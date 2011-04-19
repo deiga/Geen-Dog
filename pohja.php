@@ -15,24 +15,19 @@
     <link rel="stylesheet" type="text/css" href="css/roydon.css" media="all" />
     <link rel="icon" type="image/ico" href="images/favicon.ico" />
     <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
-    <!--[if IE 6]>
-      <link rel="stylesheet" type="text/css" href="css/roydon_ie6.css" />
-    <![endif]-->
     <!--[if IE 7]>
       <link rel="stylesheet" type="text/css" href="css/roydon_ie7.css" />
     <![endif]-->
-    <!--[if lte IE 6]>
-      <link rel="stylesheet" type="text/css" href="css/roydon_ie5.css" />
-    <![endif]-->
+    <script type="text/javascript" src="/js/roydon.js"></script>
   </head>
-  <body>
+  <body onload="curpage()">
     <div id="takala">
       <?php oldBrowse(); ?>
       <div id="otsake" class="shadow">
         <?php langLink($_GET['lang']); ?>
         <div id="otsikko">
           <h1>roydon</h1>
-          <p>Kenneltarvikkeet</p>
+          <p><?php echo _('header.subtitle'); ?></p>
         </div>
         <?php printMenu();?>
       </div>
