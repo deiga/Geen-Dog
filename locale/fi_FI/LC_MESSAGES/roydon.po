@@ -186,6 +186,6 @@ msgstr "Tervetuloa sivuillemme"
 
 #: index.php:57
 msgid "welcome.text"
-msgstr "Olemme koiratarvikkeisiin erikoistunut yritys. Meiltä löydät monipuolisesti koulutustarvikkeita. Koko valikoimaamme pääset tutustumaan koiranäyttelyissä."
+msgstr "Olemme koiratarvikkeisiin erikoistunut yritys. Valikoimastamme löydät myös koulutustarvikkeita moneen tarpeeseen. Koko valikoimaamme pääset tutustumaan koiranäyttelyissä."
 
 
