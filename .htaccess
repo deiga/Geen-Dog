@@ -1,6 +1,6 @@
 # BEGIN EXPIRES
 
-RedirectEngine On
+RewriteEngine On
 
 <IfModule mod_expires.c>
     ExpiresActive On
