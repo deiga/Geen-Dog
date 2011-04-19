@@ -217,8 +217,9 @@ legend {
 }
 
 #lyhes {
-	text-align: left;
+	text-align: center;
 	padding-left: 5%;
+	width: 80%;
 }
 
 #content > #uutiset {
