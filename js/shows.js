@@ -16,17 +16,21 @@ tryReady = function(time_elapsed) {
 
 tryReady(0);
 
-$(document).ready(function() {
-  $('a.delete').click(function(e) {
-    e.preventDefault();
-    var parent = $(this).parent().parent();
-    $.post("php/delShow.php", { del: parent.attr("id") },
-      function() {
-        parent.fadeOut("fast");
-      });
+function init() {
+
+  $(document).ready(function() {
+    $('a.delete').click(function(e) {
+      e.preventDefault();
+      var parent = $(this).parent().parent();
+      $.post("php/delShow.php", { del: parent.attr("id") },
+        function() {
+          parent.fadeOut("fast");
+        });
+    });
+
+    $('.yearLink').click(function() {
+      $('pretty-tbl').load('nayttelyt.php','year=' . $('yearLink').text())
+    });
   });
 
-  $('.yearLink').click(function() {
-    $('pretty-tbl').load('nayttelyt.php','year=' . $('yearLink').text())
-  });
-});
+}
