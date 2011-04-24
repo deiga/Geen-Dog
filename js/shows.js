@@ -18,23 +18,22 @@ tryReady(0);
 
 function init() {
 
-  $(document).ready(function() {
-    $('a.delete').click(function(e) {
-      e.preventDefault();
-      var parent = $(this).parent().parent();
-      $.post("php/delShow.php", { del: parent.attr("id") },
-        function() {
-          parent.fadeOut("fast");
-        });
-    });
-
-    $('.yearLink > a').click(function(event) {
-      event.preventDefault();
-      var year = $(this).attr('title');
-      $('#shows-tbl').load('nayttelyt.php .pretty-tbl', { 'year': year }, function() {
-        $('html, body').animate({scrollTop: $('#shows-tbl').offset().top});
+  $('a.delete').click(function(e) {
+    e.preventDefault();
+    var parent = $(this).parent().parent();
+    $.post("php/delShow.php", { del: parent.attr("id") },
+      function() {
+        parent.fadeOut("fast");
       });
+  });
+
+  $('.yearLink > a').click(function(event) {
+    event.preventDefault();
+    var year = $(this).attr('title');
+    $('#shows-tbl').load('nayttelyt.php .pretty-tbl', { 'year': year }, function() {
+      $('html, body').animate({scrollTop: $('#shows-tbl').offset().top});
     });
+    document.title = "Roydon - Näyttelyt - " . year;
   });
 
 }

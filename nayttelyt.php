@@ -25,7 +25,7 @@
     <title>Roydon - Näyttelyt - <?php echo $year; ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="author" content="Roydon Ky" />
-    <meta name="description" content="Näyttelyt, joissa olemme paikalla myymässä kenneltarvikkeita vuonna <?php echo $year; ?>." />
+    <meta name="description" content="Näyttelyt, joissa olemme myymässä kenneltarvikkeita." />
     <meta name="keywords" content=" roydon, kennel tarvikkeet, koira tarvikkeet, koira näyttely" />
     <link rel="icon" type="image/ico" href="images/favicon.ico" />
     <link rel="shortcut icon" type="image/ico" href="http://roydon.fi/images/favicon.ico" />
