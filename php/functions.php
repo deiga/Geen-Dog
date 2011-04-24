@@ -141,8 +141,13 @@
   // Function to print link list fo different years
   function yearList() {
     echo '<ul id="yearslist">';
-    for ($i = 2008; $i <= date('Y'); $i++) {
-      echo "<li class='yearLink ylistI'><a href='nayttelyt.php?year=$i' title='$i'>$i</a></li>" . PHP_EOL;
+    $year = date('Y')
+    for ($i = 2008; $i <= $year; $i++) {
+      echo "<li class='yearLink ylistI";
+      if ($i < $year-2) {
+        echo " hidden";
+      }
+      echo "'><a href='nayttelyt.php?year=$i' title='$i'>$i</a></li>" . PHP_EOL;
     }
     echo' </ul>';
   }
