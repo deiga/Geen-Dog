@@ -30,7 +30,7 @@ function init() {
 
     $('.yearLink > a').attr('href', '#');
     $('.yearLink').click(function() {
-      $('pretty-tbl').load('nayttelyt.php','year=' . $('yearLink').text())
+      $('pretty-tbl').load('nayttelyt.php .pretty-tbl', { 'year': $('yearLink').text() })
     });
   });
 
