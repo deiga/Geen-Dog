@@ -28,7 +28,7 @@ function init() {
         });
     });
 
-    $('.yearLink').attr('href', '#');
+    $('.yearLink > a').attr('href', '#');
     $('.yearLink').click(function() {
       $('pretty-tbl').load('nayttelyt.php','year=' . $('yearLink').text())
     });
