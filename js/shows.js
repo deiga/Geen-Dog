@@ -28,8 +28,8 @@ function init() {
         });
     });
 
-    $('yearLink').attr('href', '#');
-    $('.yearLink').click(function() {
+    $('#yearLink').attr('href', '#');
+    $('#yearLink').click(function() {
       $('pretty-tbl').load('nayttelyt.php','year=' . $('yearLink').text())
     });
   });
