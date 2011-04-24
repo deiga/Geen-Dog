@@ -89,7 +89,7 @@
 							<span>
 							<?php
 							$shows = $roydon->shows()
-							              ->where("aika > NOW()")
+							              ->where("ADDDATE(aika, kesto) > CURDATE()")
 							              ->order('aika ASC')
 							              ->limit(1);
 
