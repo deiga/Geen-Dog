@@ -539,7 +539,7 @@ footer > a:active , footer > a:visited , footer > a {
 
 .hidden {
   visibility: hidden;
-
+  display: none !important;
 }
 
 .ylistI {
