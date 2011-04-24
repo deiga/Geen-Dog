@@ -142,7 +142,7 @@
   function yearList() {
     echo '<ul id="yearslist">';
     for ($i = 2008; $i <= date('Y'); $i++) {
-      echo "<li id='yearLink' class='ylistI'><a href='nayttelyt.php?year=$i'>$i</a></li>" . PHP_EOL;
+      echo "<li class='yearLink' class='ylistI'><a href='nayttelyt.php?year=$i'>$i</a></li>" . PHP_EOL;
     }
     echo' </ul>';
   }
