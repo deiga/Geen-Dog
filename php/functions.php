@@ -141,7 +141,7 @@
   // Function to print link list fo different years
   function yearList() {
     echo '<ul id="yearslist">';
-    $year = date('Y')
+    $year = date('Y');
     for ($i = 2008; $i <= $year; $i++) {
       echo "<li class='yearLink ylistI";
       if ($i < $year-2) {
