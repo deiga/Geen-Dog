@@ -34,23 +34,7 @@
       <link rel="stylesheet" type="text/css" href="css/roydon_ie7.css" />
     <![endif]-->
     <script type="text/javascript" src="/js/roydon.js"></script>
-    <script type="text/javascript">
-      document.write("<script type='text/javascript'  src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js'></sc"+"ript>");
-
-      $(document).ready(function() {
-        $('a.delete').click(function(e) {
-          e.preventDefault();
-          var parent = $(this).parent().parent();
-          $.post("php/delShow.php", { del: parent.attr("id") },
-            function() {
-              parent.fadeOut("fast");
-            });
-        });
-        $('.yearLink').click(function() {
-          $('pretty-tbl').load('nayttelyt.php','year=' . $('yearLink').text())
-        });
-      });
-    </script>
+    <script type="text/javascript" src="/js/shows.js"></script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];

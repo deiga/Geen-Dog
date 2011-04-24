@@ -426,7 +426,7 @@ footer > a:active , footer > a:visited , footer > a {
 	color: #006400; /*DarkGreen*/
 }
 
-.pretty-tbl tr:nth-child(2n+0) td {
+.pretty-tbl tr:nth-of-type(2n+0) td {
 	background-color: #3CB371;
 }
 
