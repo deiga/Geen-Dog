@@ -109,10 +109,10 @@
 						<section id="links" class="robots-nocontent">
 							<h4><?php echo _('links.title'); ?></h4>
 							<ul>
-								<li><a href="http://www.kennelliitto.fi/fi" title="Suomen Kennelliitto"><?php echo _('links.kennelclub'); ?></a></li>
-								<li><a href="http://www.airedalenterrieri.fi/" title="SATY Ry"><?php echo _('links.airedale'); ?></a></li>
-								<li><a href="http://www.terrierijarjesto.fi/" title="STJ Ry"><?php echo _('links.terriers'); ?></a></li>
-								<li><a href="http://www.lakelandinterrierit.net/" title="Lakelandinterrierit ry"><?php echo _('links.lakeland'); ?></a></li>
+								<li><a href="http://www.kennelliitto.fi/fi" rel="external" title="Suomen Kennelliitto"><?php echo _('links.kennelclub'); ?></a></li>
+								<li><a href="http://www.airedalenterrieri.fi/" rel="external" title="SATY Ry"><?php echo _('links.airedale'); ?></a></li>
+								<li><a href="http://www.terrierijarjesto.fi/" rel="external" title="STJ Ry"><?php echo _('links.terriers'); ?></a></li>
+								<li><a href="http://www.lakelandinterrierit.net/" rel="external" title="Lakelandinterrierit ry"><?php echo _('links.lakeland'); ?></a></li>
 							</ul>
 						</section>
 					</aside>

@@ -240,11 +240,11 @@
       echo "<div id='lang'>\n";
       switch ($lang) {
         case 'en':
-          echo "  <a href='?lang=fi' title='" . _('lang.text') . "'>" . _('lang.text') . "</a>\n";
+          echo "  <a href='?lang=fi' rel='alternate' title='" . _('lang.text') . "'>" . _('lang.text') . "</a>\n";
           break;
 
         default:
-          echo "  <a href='?lang=en' title='" . _('lang.text') . "'>" . _('lang.text') . "</a>\n";
+          echo "  <a href='?lang=en' rel='alternate' title='" . _('lang.text') . "'>" . _('lang.text') . "</a>\n";
           break;
       }
 
