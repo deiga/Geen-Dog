@@ -62,7 +62,7 @@
       </div>
       <div id="sivusisalto" class="shadow">
         <section id="content">
-            <table class="pretty-tbl" summary="Taulukko näkymä tulevista näyttelyistä.">
+            <table id="shows-tbl" class="pretty-tbl" summary="Taulukko näkymä tulevista näyttelyistä.">
               <caption><?php echo _('show.title'); ?>
               <?php
                if ($year == date('Y') ) {
