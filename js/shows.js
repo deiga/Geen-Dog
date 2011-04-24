@@ -33,7 +33,7 @@ function init() {
     $('#shows-tbl').load('nayttelyt.php .pretty-tbl', { 'year': year }, function() {
       $('html, body').animate({scrollTop: $('#shows-tbl').offset().top});
     });
-    document.title = "Roydon - Näyttelyt - " . year;
+    document.title = "Roydon - Näyttelyt - " + year;
   });
 
 }
