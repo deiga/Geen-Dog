@@ -28,9 +28,9 @@ function init() {
         });
     });
 
-    $('.yearLink > a').attr('href', '#');
-    $('.yearLink').click(function() {
-      $('pretty-tbl').load('nayttelyt.php .pretty-tbl', { 'year': $('yearLink').text() })
+    $('.yearLink > a').click(function(event) {
+      event.preventDefault();
+      $('#shows-tbl').load('nayttelyt.php .pretty-tbl', { 'year': $('yearLink').text() })
     });
   });
 
