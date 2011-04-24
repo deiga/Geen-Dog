@@ -31,8 +31,9 @@ function init() {
     $('.yearLink > a').click(function(event) {
       event.preventDefault();
       var year = $(this).attr('title');
-      $('#shows-tbl').load('nayttelyt.php .pretty-tbl', { 'year': year })
-      $('html, body').delay(300).animate({scrollTop: $('#shows-tbl').offset().top});
+      $('#shows-tbl').load('nayttelyt.php .pretty-tbl', { 'year': year }, function() {
+        $('html, body').animate({scrollTop: $('#shows-tbl').offset().top});
+      });
     });
   });
 
