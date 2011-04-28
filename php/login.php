@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-	require_once $_SERVER['DOCUMENT_ROOT']."/php/functions.php";;
+	require_once $_SERVER['DOCUMENT_ROOT']."/php/functions.php";
   // $link = connect();
   // not_connected($link);
 
@@ -33,7 +33,9 @@ while($row = mysql_fetch_row($result)){
     }
 
 */
-
+echo count($users);
+echo $users->count(*);
+echo $users;
 	if (count($users) == 1) {
 	  $user = $users->fetch;
 	  $_SESSION['userName'] = $user['name'];
