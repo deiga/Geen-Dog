@@ -37,7 +37,7 @@
                <br />Jos sinulla ei ole tunnuksia, eikä kuuluisi ollakkaan, sitten ehdotan siirtymään meidän etusivulle.
                     </p>
             </div>
-            <form id="loginform" action="http://roydon.fi/php/login.php" method="post">
+            <form id="loginform" action="/php/login.php" method="post">
               <fieldset class="contentfield">
                 <legend>Login</legend>
                 <table id="logintbl">
