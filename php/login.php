@@ -48,7 +48,7 @@ while($row = mysql_fetch_row($result)){
     // header('Location: http://roydon.fi/login');
 		echo " Login Failed! ";
 		echo count($roydon->user()->where('username = ?', $user));
-		echo count($roydon->user()->where('password = ?', "MD5($pass)"))
+		echo count($roydon->user()->where('password = ?', "MD5($pass)"));
 		echo " " . (string) $users;
 	}
 
