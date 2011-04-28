@@ -33,7 +33,6 @@ while($row = mysql_fetch_row($result)){
     }
 
 */
-echo "Pre:" . count($users);
 
 	if (count($users) == 1) {
 	  $row = $users->fetch;
@@ -45,8 +44,9 @@ echo "Pre:" . count($users);
 
 	else {
 	  $_SESSION['loggedIn'] = -1;
-		header('Location: http://roydon.fi/login');
-		echo " Login Failed!";
+    // header('Location: http://roydon.fi/login');
+		echo " Login Failed! ";
+		echo count($roydon->user());
 	}
 
 
