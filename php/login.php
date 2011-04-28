@@ -16,7 +16,7 @@
 	$pass = $_POST['passwd'];
 
   $users = $roydon->user()
-    ->where("username = ?", $user)
+    ->where("username = ?", "$user")
     ->where("password = MD5($pass)");
   // $db = 'roydonf_roydon';
   // $query = "SELECT * FROM user WHERE username = '$user' AND password = md5('$pass')";
@@ -33,8 +33,6 @@ while($row = mysql_fetch_row($result)){
     }
 
 */
-echo $user . ' ';
-echo (string) $users;
 echo "Pre:" . count($users);
 
 	if (count($users) == 1) {
