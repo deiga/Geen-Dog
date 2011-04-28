@@ -16,8 +16,8 @@
 	$pass = $_POST['passwd'];
 
   $users = $roydon->user()
-    ->where("username = $user")
-    ->where("password = MD5($pass)");
+    ->where("username = ?", $user)
+    ->where("password = md5($pass)");
   // $db = 'roydonf_roydon';
   // $query = "SELECT * FROM user WHERE username = '$user' AND password = md5('$pass')";
   //
