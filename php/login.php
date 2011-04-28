@@ -18,7 +18,7 @@
   $users = $roydon->user()
     ->select('name')
     ->where('username = ?', $user)
-    ->where("password = ?", "MD5('$pass')");
+    ->where("password = MD5(?)", $pass);
   // $db = 'roydonf_roydon';
   // $query = "SELECT * FROM user WHERE username = '$user' AND password = md5('$pass')";
   //
@@ -45,13 +45,8 @@ while($row = mysql_fetch_row($result)){
 
 	else {
 	  $_SESSION['loggedIn'] = -1;
-    // header('Location: http://roydon.fi/login');
+    header('Location: http://roydon.fi/login');
 		echo " Login Failed! ";
-		echo count($roydon->user()->where('username = ?', $user));
-		echo " " . count($roydon->user()->where('password = ?', "MD5('$pass')"));
-		echo " " . count($roydon->user()->where("password = MD5(?)", $pass));
-		echo " " . (string) $roydon->user()->where('password = ?', "MD5('$pass')");
-		echo " " . (string) $users;
 	}
 
 
