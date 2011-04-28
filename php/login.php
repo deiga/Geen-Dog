@@ -33,9 +33,9 @@ while($row = mysql_fetch_row($result)){
     }
 
 */
-echo count($users);
-echo $users->count('*');
-echo $users;
+echo "Pre:" . count($users);
+echo "Post:" . $users->count('*');
+echo (string)$users;
 	if (count($users) == 1) {
 	  $user = $users->fetch;
 	  $_SESSION['userName'] = $user['name'];
