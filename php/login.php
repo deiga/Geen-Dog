@@ -33,13 +33,13 @@ while($row = mysql_fetch_row($result)){
     }
 
 */
-echo (string)$users;
+echo $user . ' ';
+echo (string) $users;
 echo "Pre:" . count($users);
-echo "Post:" . $users->count('*');
 
 	if (count($users) == 1) {
-	  $user = $users->fetch;
-	  $_SESSION['userName'] = $user['name'];
+	  $row = $users->fetch;
+	  $_SESSION['userName'] = $row['name'];
   	$_SESSION['loggedIn'] = 1;
 		header('Location: http://roydon.fi/login/home.php');
 		echo "Login OK!";
