@@ -28,7 +28,7 @@
         </div>
         <?php printMenu();?>
       </div>
-      <div id="login">
+      <div id="login" class="shadow">
         <section id="content">
             <div id="logTex">
               <h2>Ylläpito</h2>
