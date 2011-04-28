@@ -46,7 +46,7 @@ while($row = mysql_fetch_row($result)){
 	  $_SESSION['loggedIn'] = -1;
     // header('Location: http://roydon.fi/login');
 		echo " Login Failed! ";
-		echo count($roydon->user());
+		echo count($roydon->user()->where("username = ?", $user));
 	}
 
 
