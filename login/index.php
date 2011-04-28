@@ -44,13 +44,13 @@
                   <tr>
                      <td>
                          <label for="user">Tunnus:</label>
-                         <input type="text" value="Username" size="15" id="user" name="user" onfocus="this.value=''" />
+                         <input type="text" placeholder="Username" size="15" id="user" name="user" required="required" />
                      </td>
                     </tr>
                   <tr>
                      <td>
                          <label for="passwd">Salasana:</label>
-                         <input type="password" value="Password" size="15" id="passwd" name="passwd" onfocus="this.value=''" />
+                         <input type="password" placeholder="Password" size="15" id="passwd" name="passwd" required="required" />
                      </td>
                     </tr>
                   <tr>
