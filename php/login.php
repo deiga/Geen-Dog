@@ -34,7 +34,7 @@ while($row = mysql_fetch_row($result)){
 
 */
 echo count($users);
-echo $users->count(*);
+echo $users->count('*');
 echo $users;
 	if (count($users) == 1) {
 	  $user = $users->fetch;
