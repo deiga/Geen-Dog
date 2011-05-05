@@ -47,8 +47,9 @@
 
     if ( $length > 1 ) {
       $date = new DateTime($in);
+      $interval = new DateInterval('P' . $length . 'D');
       $out = $date->format('d.') . '-';
-      $out .= $date->add(new DateInterval('P' . $length . 'D'))->format('d.m.');
+      $out .= $date->add($interval)->format('d.m.');
 //      $out = date('d.', (strtotime($in)))."-".date('d.m.', (strtotime($in))+lengthConv($length));
     } else {
       $out = date('d.m.', (strtotime($in)));
