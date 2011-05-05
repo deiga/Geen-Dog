@@ -43,13 +43,17 @@
   }
 
   // Function to convert mysql date's into representation of a duration.
-  function date_conv($in, $long) {
+  function date_conv($in, $length) {
 
-    if ( $long > 1 ) {
-      $out = date('d.', (strtotime($in)))."-".date('d.m.', (strtotime($in))+lengthConv($long));
-      return $out;
+    if ( $length > 1 ) {
+      $date = new DateTime($in);
+      $out = $date->format('d.') . '-'
+        . $date->add(new DateInterval('P' . $length . 'D'))->format('d.m.');
+//      $out = date('d.', (strtotime($in)))."-".date('d.m.', (strtotime($in))+lengthConv($length));
+    } else {
+      $out = date('d.m.', (strtotime($in)));
     }
-    $out = date('d.m.', (strtotime($in)));
+
     return $out;
   }
 

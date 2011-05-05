@@ -19,21 +19,6 @@
     ->select('name')
     ->where('username = ?', $user)
     ->where("password = MD5(?)", $pass);
-  // $db = 'roydonf_roydon';
-  // $query = "SELECT * FROM user WHERE username = '$user' AND password = md5('$pass')";
-  //
-  // $db_selected = mysql_select_db($db);
-  // inv_db($db, $db_selected);
-  //
-  // $result = mysql_query($query);
-  // inv_query($result);
-
-    /*
-while($row = mysql_fetch_row($result)){
-        print_r($row);
-    }
-
-*/
 
 	if (count($users) == 1) {
 	  $row = $users->fetch;
