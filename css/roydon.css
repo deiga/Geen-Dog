@@ -50,6 +50,14 @@ legend {
 	font-size: 1.7em;
 }
 
+#otsake h1 {
+	text-transform: uppercase;
+}
+
+#otsake h1 {
+	font-size: 1.7em;
+}
+
 #otsikko {
   margin: 0 auto;
   width: 70%;
