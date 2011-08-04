@@ -44,6 +44,7 @@
         <?php printMenu();?>
       </div>
       <div id="sivusisalto" class="shadow">
+        <navi style="border: 1px solid black; width: 10px; height: 30px; position:fixed;">This is a test</navi>
         <section id="content" class="products">
           <header>
             <h2><?php echo _("product.title"); ?></h2>

@@ -52,6 +52,7 @@
       //       $out .= $date->add($interval)->format('d.m.');
       $out = date('d.', (strtotime($in)))."-".date('d.m.', (strtotime($in))+lengthConv($length));
     } else {
+      //$out = new DateTime($in)->format('d.m.');
       $out = date('d.m.', (strtotime($in)));
     }
 
@@ -61,31 +62,9 @@
   // Function to convert mysql date's into a normal representation.
   function date_conv_short($in) {
 
+    //$out = new DateTime($in)->format('d.m.Y');
     $out = date('d.m.Y', (strtotime($in)));
     return $out;
-  }
-
-  // Function to determine query statement by date
-  function date_query($year) {
-
-    $month = 0;
-    $year1 = $year + 1;
-
-    if ($year == date('Y')) {
-      $month = date('m');
-      $day = date('d');
-    } else {
-      $qer = "SELECT * FROM `shows` WHERE aika > '$year-00-00' AND aika < '$year1-00-00' ORDER BY aika ASC";
-      return $qer;
-    }
-
-    $qer2 = "SELECT * FROM `shows` WHERE aika > '$year-00-00' ORDER BY aika ASC";
-    $qer[1] = "SELECT * FROM `shows` WHERE aika > '$year-$month-$day' ORDER BY aika ASC";
-    $qer[2] = "SELECT * FROM `shows` WHERE aika > '$year-00-00' AND aika <= '$year-$month-$day' ORDER BY aika ASC";
-
-    if ( $month < 06 ) {
-      return $qer2;
-    } else return $qer;
   }
 
   // Function to print out the menu of a page. Languages are 0 = Finnish, 1 = English
@@ -110,6 +89,8 @@
   // Function to determine if the upcoming show has alreadu begun, if yes display the next show.
   function soonShow($date, $long) {
 
+    // $date = new DateTime($date)->add(new DateInteral('P' . $long . 'D'));
+    // $today = $date->format('Y-m-d');
     $date = strtotime($date) + lengthConv($long);
     $today = strtotime(date('Y-m-d'));
 
