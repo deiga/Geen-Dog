@@ -44,23 +44,22 @@
         <?php printMenu();?>
       </div>
       <div id="sivusisalto" class="shadow">
-        <navi style="border: 1px solid black; width: 10px; height: 30px; position:fixed;">This is a test</navi>
+        <nav style="border: 1px solid black; left: 10%; position:fixed;">
+          <ul id="prod-navi">
+            <li><a href="">Turkinhoitoaineet</a></li>
+            <li><a href="">Turkinhoitotarvikkeet</a></li>
+            <li><a href="">Koulutus</a></li>
+            <li><a href="">Syötävät</a></li>
+            <li><a href="">Makupalat</a></li>
+            <li><a href="">Taluttimet,&nbsp;pannat&nbsp;ja&nbsp;valjaat</a></li>
+            <li><a href="">Häkit&nbsp;ja&nbsp;makuualustat,&nbsp;trimmauspöydät</a></li>
+            <li><a href="">Lelut</a></li>
+            <li><a href="">Muut&nbsp;tuotteet</a></li>
+          </ul>
+        </nav>
         <section id="content" class="products">
           <header>
             <h2><?php echo _("product.title"); ?></h2>
-            <nav>
-              <ul id="prod-navi">
-                <li><a href="">Turkinhoitoaineet</a></li>
-                <li><a href="">Turkinhoitotarvikkeet</a></li>
-                <li><a href="">Koulutus</a></li>
-                <li><a href="">Syötävät</a></li>
-                <li><a href="">Makupalat</a></li>
-                <li><a href="">Taluttimet,&nbsp;pannat&nbsp;ja&nbsp;valjaat</a></li>
-                <li><a href="">Häkit&nbsp;ja&nbsp;makuualustat,&nbsp;trimmauspöydät</a></li>
-                <li><a href="">Lelut</a></li>
-                <li><a href="">Muut&nbsp;tuotteet</a></li>
-              </ul>
-            </nav>
           </header>
           <section>
             <h3>Turkinhoitoaineet</h3>

@@ -71,7 +71,7 @@
   function printMenu() {
     $year = date('Y');
     $month = date('m');
-    echo "<navi id='navi'>\n";
+    echo "<nav id='navi'>\n";
     echo "      <ul id='navilist'>\n";
       echo "        <li id='index' class='rounded-top'><a href='/index.php' title='Homepage'>" . _('navi.home') . "</a></li>\n";
       //echo "        <li id='info' class='rounded-top'><a href='/info.php' title='About Us'>Esittely</a></li>\n";
@@ -83,7 +83,7 @@
       echo "              <li id='logout' class='rounded-top'><a href='/php/logout.php' title='Logout'>Logout</a></li>\n";
     }
     echo "      </ul>\n";
-    echo "</navi>\n";
+    echo "</nav>\n";
   }
 
   // Function to determine if the upcoming show has alreadu begun, if yes display the next show.
