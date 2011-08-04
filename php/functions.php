@@ -75,7 +75,7 @@
     echo "      <ul id='navilist'>\n";
       echo "        <li id='index' class='rounded-top'><a href='/index.php' title='Homepage'>" . _('navi.home') . "</a></li>\n";
       //echo "        <li id='info' class='rounded-top'><a href='/info.php' title='About Us'>Esittely</a></li>\n";
-      //echo "        <li id='products' class='rounded-top'><a href='/products.php' title='Products'>" . _('navi.products') . "</a></li>\n";
+      echo "        <li id='products' class='rounded-top'><a href='/products.php' title='Products'>" . _('navi.products') . "</a></li>\n";
       echo "        <li id='nayttelyt' class='rounded-top'><a href='/nayttelyt.php?year=$year' title='Attending dogshows'>" . _('navi.shows') . "</a></li>\n";
       echo "        <li id='contact' class='rounded-top'><a href='/contact.php' title='Contact Us'>" . _('navi.contact') . "</a></li>\n";
 
