@@ -44,15 +44,15 @@
         <?php printMenu();?>
       </div>
       <div id="sivusisalto" class="shadow">
-        <nav class="rounded shadow" style="left: 0.5%; position:fixed; width: 170px; margin-top: 15px;padding: 2px; background-color: lightgray;">
-          <ul id="prod-navi">
+        <nav id="prod-navi" class="rounded shadow">
+          <ul>
             <li><a href="">Turkinhoitoaineet</a></li>
             <li><a href="">Turkinhoitotarvikkeet</a></li>
             <li><a href="">Koulutus</a></li>
             <li><a href="">Syötävät</a></li>
             <li><a href="">Makupalat</a></li>
-            <li><a href="">Taluttimet,&nbsp;pannat&nbsp;ja&nbsp;valjaat</a></li>
-            <li><a href="">Häkit&nbsp;ja&nbsp;makuualustat,&nbsp;trimmauspöydät</a></li>
+            <li><a href="">Taluttimet,&nbsp;pannat ja&nbsp;valjaat</a></li>
+            <li><a href="">Häkit&nbsp;ja&nbsp;makuualustat, trimmauspöydät</a></li>
             <li><a href="">Lelut</a></li>
             <li><a href="">Muut&nbsp;tuotteet</a></li>
           </ul>
@@ -69,14 +69,13 @@
               <li>Ring 5</li>
               <li>#1 All systems</li>
               <li>Wild Animal</li>
-              <li>Groomer</li>
               <li>Vellus</li>
               <li>Chris Christensen</li>
               <li>Kotimainen Turvashampoo</li>
               <li>KW</li>
               <li>Coat Handler</li>
               <li>Groomer's Edge</li>
-              <li>(Pet Silk, Gottlieb)</li>
+              <li>K9</li>
               <li>Leewards</li>
             </ul>
           </section>
@@ -90,7 +89,7 @@
               <li>Mikki trimmipuukot</li>
               <li>Laaja valikoima harjoja, kampoja, karstoja, haroja ja skrapoja</li>
               <li>Madan harjat</li>
-              <li>Eicker, Rose Line,</li>
+              <li>Eicker, Rose Line, Jaguar -sakset</li>
               <li>Furminator-pohjavillapoistaja</li>
               <li>Trimmikivet ja trimmiraspit</li>
               <li>Moser-trimmikoneet</li>
@@ -120,8 +119,8 @@
               <li>Naudan kuivaliha</li>
               <li>Monenlaiset keksit, myös vehnättömät</li>
               <li>Kuivattu maha ja keuhko</li>
-              <li>Possunkorvat</li>
-              <li>Siansaparot</li>
+              <li>Possunkorvat, Siansaparot &amp; Korvapuustit</li>
+              <li>Kalkkunankaulat, kanankaulat ja töpselit</li>
             </ul>
           </section>
           <section>
@@ -130,8 +129,7 @@
               <li>Frolic</li>
               <li>Natural Menu</li>
               <li>Dogman makupalat</li>
-              <li>Racinel-täyterullat</li>
-              <li>Snackie</li>
+              <li>Dogman-täyterullat</li>
               <li>Maksapalat</li>
               <li>Maksaherkku</li>
               <li>Coachies</li>
@@ -144,13 +142,12 @@
           <section>
             <h3>Taluttimet, pannat ja valjaat</h3>
             <ul>
-              <li>Itse valmistetut nahkahihnat, 1- ja 2-lukkoiset</li>
+              <li>Itse valmistetut, punotut nahkahihnat, 1- ja 2-lukkoiset</li>
               <li>Erittäin laaja valikoima itse valmistettuja nylonhihnoja näyttelyihin ja kotikäyttöön
                 <ul>
                   <li>useita eri värejä, pituuksia, leveyksiä/paksuuksia, myös heijastimella</li>
                 </ul></li>
               <li>Eripaksuiset ja -väriset noutajahihnat</li>
-              <li>Resco-näyttelytaluttimet</li>
               <li>Jakajat</li>
               <li>Flexit</li>
               <li>Solkipannat</li>
@@ -180,7 +177,7 @@
             <ul>
               <li>Puuhapallot</li>
               <li>Kestävät everlastingpallot</li>
-              <li>Kestävät Romp n' roll ja ?? pallot</li>
+              <li>Kestävät Romp n' roll ja Tug 'n Toss -pallot</li>
               <li>Hyvä valikoima lateksi-, pehmo-, vinyyli- ja kumileluja</li>
               <li>Vesilelut</li>
               <li>Vinkuvat karvahiiret</li>
