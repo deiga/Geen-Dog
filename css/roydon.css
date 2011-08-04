@@ -42,20 +42,8 @@ legend {
   border-radius: 1em 1em 0 0;
 }
 
-#otsake h1:first-line {
+#otsikko h1 {
 	text-transform: uppercase;
-}
-
-#otsake h1:first-letter {
-	font-size: 1.7em;
-}
-
-#otsake h1 {
-	text-transform: uppercase;
-}
-
-#otsake h1 {
-	font-size: 1.7em;
 }
 
 #otsikko {
@@ -87,7 +75,7 @@ legend {
 }
 
 #otsikko h1 {
-	font-size: 4em;
+	font-size: 7.5em;
 	margin-top: 2%;
 	padding-top: 1%;
 	margin-bottom: -2%;
