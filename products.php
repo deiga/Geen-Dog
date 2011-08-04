@@ -44,7 +44,7 @@
         <?php printMenu();?>
       </div>
       <div id="sivusisalto" class="shadow">
-        <nav style="border: 1px solid black; left: 10%; position:fixed;">
+        <nav class="rounded shadow" style="left: 0.5%; position:fixed; width: 170px; margin-top: 15px;padding: 2px; background-color: lightgray;">
           <ul id="prod-navi">
             <li><a href="">Turkinhoitoaineet</a></li>
             <li><a href="">Turkinhoitotarvikkeet</a></li>
