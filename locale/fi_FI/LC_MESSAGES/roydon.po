@@ -90,6 +90,10 @@ msgstr "Näyttelyt"
 msgid "navi.contact"
 msgstr "Yhteystiedot"
 
+#: php/functions.php:78
+msgid "navi.products"
+msgstr "Tuotteet"
+
 #: php/functions.php:243
 msgid "lang.text"
 msgstr "In English"

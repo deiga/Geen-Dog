@@ -94,6 +94,11 @@ msgstr "Dog shows"
 msgid "navi.contact"
 msgstr "Contact Us"
 
+#: php/functions.php:78
+msgid "navi.products"
+msgstr "Products"
+
+
 #: php/functions.php:243
 msgid "lang.text"
 msgstr "Suomeksi"
