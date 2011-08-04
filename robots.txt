@@ -3,6 +3,7 @@ Allow: /
 Disallow: /login/*
 Disallow: /php/*
 Disallow: /pohja.php
+Disallow: /products.php
 
 User-Agent: *
 Allow: /sitemap.xml
