@@ -46,15 +46,15 @@
       <div id="sivusisalto" class="shadow">
         <nav id="prod-navi" class="rounded shadow">
           <ul>
-            <li><a href="">Turkinhoitoaineet</a></li>
-            <li><a href="">Turkinhoitotarvikkeet</a></li>
-            <li><a href="">Koulutus</a></li>
-            <li><a href="">Syötävät</a></li>
-            <li><a href="">Makupalat</a></li>
-            <li><a href="">Taluttimet,&nbsp;pannat ja&nbsp;valjaat</a></li>
-            <li><a href="">Häkit&nbsp;ja&nbsp;makuualustat, trimmauspöydät</a></li>
-            <li><a href="">Lelut</a></li>
-            <li><a href="">Muut&nbsp;tuotteet</a></li>
+            <li><a href="#turkkiaineet">Turkinhoitoaineet</a></li>
+            <li><a href="#turkkitarvikkeet">Turkinhoitotarvikkeet</a></li>
+            <li><a href="#koulutus">Koulutus</a></li>
+            <li><a href="#ruoka">Syötävät</a></li>
+            <li><a href="#herkut">Makupalat</a></li>
+            <li><a href="#remmit">Taluttimet,&nbsp;pannat ja&nbsp;valjaat</a></li>
+            <li><a href="#alustat">Häkit&nbsp;ja&nbsp;makuualustat, trimmauspöydät</a></li>
+            <li><a href="#lelut">Lelut</a></li>
+            <li><a href="#muut">Muut&nbsp;tuotteet</a></li>
           </ul>
         </nav>
         <section id="content" class="products">
@@ -62,7 +62,7 @@
             <h2><?php echo _("product.title"); ?></h2>
           </header>
           <section>
-            <h3>Turkinhoitoaineet</h3>
+            <h3 id="turkkiaineet">Turkinhoitoaineet</h3>
             <ul>
               <li>Kelco</li>
               <li>Bio Groom</li>
@@ -80,7 +80,7 @@
             </ul>
           </section>
           <section>
-            <h3>Turkinhoitotarvikkeet</h3>
+            <h3 id="turkkitarvikkeet">Turkinhoitotarvikkeet</h3>
             <ul>
               <li>Mars trimmipuukot</li>
               <li>Pearson trimmipuukot</li>
@@ -96,7 +96,7 @@
             </ul>
           </section>
           <section>
-            <h3>Koulutus</h3>
+            <h3 id="koulutus">Koulutus</h3>
             <ul>
               <li>Laadukkaat dummyt (250g-2,5 kg), vesidummyt</li>
               <li>Gappayn patukat, purutyynyt ja narupallot</li>
@@ -109,7 +109,7 @@
             </ul>
           </section>
           <section>
-            <h3>Syötävät</h3>
+            <h3 id="ruoka">Syötävät</h3>
             <ul>
               <li>Naudan ja possun puruluut</li>
               <li>Kotimaiset Ariston hirviluut</li>
@@ -124,7 +124,7 @@
             </ul>
           </section>
           <section>
-            <h3>Makupalat</h3>
+            <h3 id="herkut">Makupalat</h3>
             <ul>
               <li>Frolic</li>
               <li>Natural Menu</li>
@@ -140,7 +140,7 @@
           </section>
 
           <section>
-            <h3>Taluttimet, pannat ja valjaat</h3>
+            <h3 id="remmit">Taluttimet, pannat ja valjaat</h3>
             <ul>
               <li>Itse valmistetut, punotut nahkahihnat, 1- ja 2-lukkoiset</li>
               <li>Erittäin laaja valikoima itse valmistettuja nylonhihnoja näyttelyihin ja kotikäyttöön
@@ -162,7 +162,7 @@
             </ul>
           </section>
           <section>
-            <h3>Häkit ja makuualustat, trimmauspöydät</h3>
+            <h3 id="alustat">Häkit ja makuualustat, trimmauspöydät</h3>
             <ul>
               <li>Savic metallihäkit, myös automalli</li>
               <li>Laadukkaat kevythäkit</li>
@@ -173,7 +173,7 @@
             </ul>
           </section>
           <section>
-            <h3>Lelut</h3>
+            <h3 id="lelut">Lelut</h3>
             <ul>
               <li>Puuhapallot</li>
               <li>Kestävät everlastingpallot</li>
@@ -186,7 +186,7 @@
             </ul>
           </section>
           <section>
-            <h3>Muut tuotteet</h3>
+            <h3 id="muut">Muut tuotteet</h3>
             <ul>
               <li>Metalliset ruokakupit reunalla ja ilman</li>
               <li>Metalliset pentubaarit</li>

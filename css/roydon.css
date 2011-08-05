@@ -20,6 +20,7 @@ legend {
 }
 #takala {
 	width: 80%;
+	min-width: 45em;
 	margin: 0 auto;
 	position: relative;
 }
@@ -286,18 +287,20 @@ footer > a:active , footer > a:visited , footer > a {
 }
 
 #prod-navi {
-  left: 0.5%;
+  right: 2em;
   position:fixed;
-  width: 170px;
-  margin-top: 15px;
-  padding: 10px 25px 6px 8px;
+  min-width: 10em;
+  max-width: 15em;
+  margin-top: -1em;
+  padding: 0.5em 1em 0.5em 0.5em;
   background-color: lightgray;
+  border: 1px solid green;
 }
 
 #prod-navi > ul {
   margin: 0;
   padding: 0;
-  padding-left: 23px;
+  padding-left: 12%;
 }
 
 #prod-navi > ul > li {
@@ -306,6 +309,10 @@ footer > a:active , footer > a:visited , footer > a {
 
 #prod-navi > ul > li:first-child {
   padding: 0;
+}
+
+.products > * {
+  padding-left: 2%;
 }
 
 .products > section {
